@@ -22,15 +22,15 @@ After clicking a specific resource, you land on its details page, which provides
 
 {{% alert color="info" %}} The **Consumption** tab is available for Model resources only.{{% /alert %}} 
 
-{{% alert color="warning" %}}A resource that reaches its monthly GenAI Unit allocation is blocked. A blocked resource stays blocked until a company admin increases its GenAI Unit capacity or the current bundle month ends. For details, see [Consumption Limit Notifications](#consumption-limit-notifications).{{% /alert %}}
+{{% alert color="warning" %}}A resource that reaches its monthly GenAI Unit allocation is blocked. A blocked resource stays blocked until a Company Admin increases its GenAI Unit capacity or the current bundle month ends. For details, see [Consumption Limit Notifications](#consumption-limit-notifications).{{% /alert %}}
 
 The **Consumption** tab provides an overview of GenAI Unit and Large Language Model (LLM) token consumption for the resource. Use this overview to see current usage, view daily consumption insights, and compare the current period with previous periods. 
 
 Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/token-consumption-monitor.png" alt="" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/token-consumption-monitor.png" alt="Token Consumption Monitor with the GenAI Units consumption chart showing text generation and guardrail consumption stacked, and a tooltip with both values and the total" >}}
 
-**Current Consumption** shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 1,521 / 1.6k). **Plan** shows the resource pack model type (for example, Anthropic Claude Opus) and the total GenAI Unit allocation for the bundle month. The bundle refill date is shown at the top of the page.
+**Current Consumption** shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 627 / 800). The bundle fill date and the number of days until the next refill are shown next to the **Current Consumption** heading. **Resource Pack** shows the model provider (for example, Anthropic Claude) and the total GenAI Unit allocation for the bundle month.
 
 Below the summary, the page shows **Consumption Over Selected Time Range**. You can switch between weekly (**W**), bundle month (**BM**), month to date (**MTD**), and six months (**6M**) views. Use the **Model** drop-down list to filter the charts by a specific model, and the **Key** dropdown to filter them by a specific resource key. The charts show the following metrics:
 
@@ -39,6 +39,17 @@ Below the summary, the page shows **Consumption Over Selected Time Range**. You 
 * **Monthly Bundle Output Consumption** – Raw LLM output tokens consumed per day.
 * **Monthly Bundle API Calls** – Number of API calls made under the resource per day within a bundle month.
 
+### Guardrail Consumption {#guardrail-consumption}
+
+If a text generation resource has a [guardrail](/agents/mx-cloud-genai/guardrails/), each chart stacks guardrail consumption in a lighter shade on top of model consumption. The chart legends and tooltips use the following names:
+
+* Model consumption – **Text Generation GenAI Units**, **Text Generation Input Tokens**, **Text Generation Output Tokens**, and **Text Generation API Calls**
+* Guardrail consumption – **Guardrail GenAI Units**, **Guardrail Input Tokens**, **Guardrail Output Tokens**, and **Guardrail API Calls**
+
+Guardrail consumption is only shown when the selected period has guardrail usage. **Current Consumption** and the consumption limits always include both model and guardrail consumption.
+
+When you filter by **Model**, the charts hide guardrail consumption and show model consumption only, because guardrail consumption is not tied to a model. The **Key** filter applies to both model and guardrail consumption.
+
 ### Consumption Limit Notifications {#consumption-limit-notifications}
 
 Mendix notifies you when a resource approaches or reaches its monthly GenAI Unit allocation:
@@ -46,9 +57,11 @@ Mendix notifies you when a resource approaches or reaches its monthly GenAI Unit
 * **80% of the allocation** – The resource's [Technical Contact](#technical-contact) receives an email that the resource is approaching its limit. A yellow **Consumption limit warning** banner and a **REACHING TOKEN LIMIT** label appear on the resource in the resource overview and on the resource details page.
 * **100% of the allocation** – The Technical Contact receives an email that the resource has reached its limit. A red **Token limit reached** banner and a **TOKEN LIMIT EXCEEDED** label appear on the resource in the resource overview and on the resource details page. From this point, the resource is blocked. When the resource is blocked, the Technical Contact receives an email. A red **Blocked** banner appears at the top of the resource details page, and the **GenAI Units** card on the **Consumption** tab is highlighted in red with a **BLOCKED** label.
 
+Other resource members can opt in to receive the same emails as the Technical Contact, including alerts about new models and model deprecations. To opt in, click **Notify Me** on the resource's **Overview** page. To stop receiving these emails, click **Turn Notifications Off**.
+
 A blocked resource stays blocked until one of the following happens:
 
-* A company admin increases the GenAI Unit capacity of the resource so that it covers a value above the current consumption. For more information, see [Adjusting the GenAI Unit Capacity of a Resource](#adjusting-the-genai-unit-capacity-of-a-resource).
+* A Company Admin increases the GenAI Unit capacity of the resource so that it covers a value above the current consumption. For more information, see [Adjusting the GenAI Unit Capacity of a Resource](#adjusting-the-genai-unit-capacity-of-a-resource).
 * The current bundle month ends and the allocation resets.
 
 To avoid blocking, increase the allocation as soon as you receive the 80% or 100% notification.
@@ -63,13 +76,19 @@ GenAI Units are the unit of measure for consumption across all models on a resou
 
 Text generation resources consume both LLM input and output tokens, which are converted to GenAI Units using the model-specific exchange rate.
 
+If a text generation resource has an active [guardrail](/agents/mx-cloud-genai/guardrails/), the guardrail consumes additional GenAI Units for the text it evaluates. For the guardrail rates, see [Guardrail GenAI Unit Rates](/agents/mx-cloud-genai/resource-packs/#guardrail-genai-unit-rates).
+
 Embeddings resources only consume input tokens. This is because only the generated embedding vectors are returned and the generated output is not tokenized.
 
 Knowledge base resources do not consume tokens directly. Uploading a document to a knowledge base connected to an embeddings resource consumes tokens in that embeddings resource.
 
 ### Exporting Consumption Data
 
-Click **Export** to export consumption data in CSV format. The export contains information about input tokens, output tokens, and dates. Days with no consumption are not exported.
+Click **Export** to export consumption data in CSV format. The export contains information about input tokens, output tokens, and dates. Days with no consumption are not exported. For resources with a guardrail, the exported values include guardrail consumption.
+
+## Guardrails (Only for Text Generation Resources) {#guardrails}
+
+The **Guardrails** tab lets resource members configure and manage a guardrail that filters the prompts and responses of the resource. A Company Admin must first enable guardrails for the resource. For more information, see [Guardrails for Mendix Cloud GenAI Resources](/agents/mx-cloud-genai/guardrails/).
 
 ## Team
 
@@ -100,7 +119,7 @@ You cannot remove the Technical Contact from the team. To remove them, first set
 
 ### Inviting External Members
 
-You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your company admin has enabled external user invitations.
+You can invite members from outside your organization to access your GenAI resources by entering their email address in **Add Member**. This option is available only if your Company Admin has enabled external user invitations.
 
 You can track invitations in the **Pending Invites** tab. Invited users receive an email with a link to accept or decline the invitation. If they do not yet have a Mendix account, the link redirects them to create one. When they accept the invitation, the resource appears in their GenAI portal overview.
 
@@ -204,7 +223,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 * **Capacity** – The monthly [GenAI Unit](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) allocation for the resource, for example, 1,000 GenAI Units.
 * **Environment** – The environment, for example, Test, Acceptance, or Production.
 
-¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default.
+¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available through the CRI type by default.
 
 ### Additional Details for Knowledge Base Resources
 
@@ -212,4 +231,4 @@ For knowledge base resources, you can also see details of the associated embeddi
 
 ### Adjusting the GenAI Unit Capacity of a Resource
 
-After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.
+After a resource is provisioned, you can change its GenAI Unit capacity to match your actual usage. Company Admins can adjust the capacity through the GenAI Resources self-service in the Control Center. For more information, see the [Adjusting Resource GenAI Unit Capacity](/control-center/genai-resources-self-service/#adjusting-resource-genai-unit-capacity) section of *GenAI Resources*.

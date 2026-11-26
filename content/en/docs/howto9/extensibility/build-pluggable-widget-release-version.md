@@ -49,7 +49,7 @@ Use this *.mpk* file to publish your widget to the Marketplace or to include it 
 The release build also copies the *.mpk* file to the **widgets** folder of your Mendix app, the same way a development build does.
 
 {{% alert color="info" %}}
-Copying the release build to your app requires Pluggable Widgets Tools 11.16.1 or above. If you are using an earlier version of Pluggable Widget Tools, you must copy the *.mpk* file to the **widgets** folder of your app manually. For more information on updating, see [Update Pluggable Widgets Tools](/howto9/extensibility/update-pluggable-widgets-tools/).
+Copying the release build to your app requires Pluggable Widgets Tools 11.16.1 or above. If you are using Studio Pro 9, you must copy the *.mpk* file to the **widgets** folder of your app manually.
 {{% /alert %}}
 
 ## Testing the Release Build
@@ -63,5 +63,4 @@ To test the release build in your app, do the following:
 
 * [Build a Pluggable Web Widget: Part 1](/howto9/extensibility/create-a-pluggable-widget-one/)
 * [Build a Pluggable Native Widget](/howto9/extensibility/build-native-widget/)
-* [Update Pluggable Widgets Tools](/howto9/extensibility/update-pluggable-widgets-tools/)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)

@@ -9,16 +9,17 @@ description: "Agents Kit 2: Reference documentation for experimental features of
 
 This page describes experimental features of the [Agent Editor](/agents/agents-kit-2/reference-guide/agent-editor/) module. Experimental features are available for you to try and are still under development. Their behavior and user interface can change in later releases.
 
-Your feedback helps shape these features. To share your experience, use the feedback link in the **Experimental feature** banner or the feedback card in the **Get Started** tab, which can be accessed from the **Extensions** menu.
+Your feedback helps shape these features. To share your experience, use the feedback link in the **Experimental feature** banner or the feedback card in the **Get Started** tab, which you can open from the **Extensions** menu.
+
 ## Agent Evaluation {#evaluation}
 
-Agent Evaluation enables you to test your agent systematically and improve it iteratively without leaving Studio Pro. You define test cases that represent realistic inputs, run them against your agent, and review the results. An LLM judge evaluates each response and reports whether it passed or failed, and why. You decide what counts as a pass by using the built-in evaluator or by defining your own. Each run can yield a number of targeted changes that you can use to rewrite the system prompt in one click.
+Agent Evaluation lets you test your agent systematically and improve it iteratively without leaving Studio Pro. You define test cases that represent realistic inputs, run them against your agent, and review the results. An LLM judge evaluates each response and reports whether it passed or failed, and why. You decide what counts as a pass by using the built-in evaluator or by defining your own. Each run can yield a number of targeted changes that you can use to rewrite the system prompt in one click.
 
 Agent Evaluation is available for Task agents and Chat agents that you define in Studio Pro.
 
 To evaluate an agent, follow this workflow:
 
-1. [Create test cases](#test-cases) that represent the inputs your agent should handle.
+1. [Create test cases](#test-cases) that represent the inputs your agent handles.
 2. Optionally, [choose an evaluator](#choose-evaluator) that defines what counts as a pass.
 3. [Run the evaluation](#run-evaluation).
 4. [Review the results](#review-results).
@@ -34,11 +35,11 @@ After you define the agent, make sure the app is running locally. If you change 
 
 ### Creating Test Cases {#test-cases}
 
-Before you can evaluate your agent, you need to create test cases for it. Test cases are realistic scenarios that represent the inputs your agent should handle.
+Before you can evaluate your agent, you need to create test cases for it. Test cases are realistic scenarios that represent the inputs your agent handles.
 
-Open your agent and go to the **Evaluate** view, next to the **Build** and **Playground** views. A new agent has no test sets yet. To create one, click **Generate new test set** in the toolbar, or select **New test set** in the three-dots menu ({{% icon name="three-dots-menu-vertical" %}}) next to the test set drop-down list.
+Open your agent and go to the **Evaluate** view, next to the **Build** and **Playground** views. A new agent has no test sets yet. To create one, click **Generate new test set** in the toolbar, or select **New test set** in the **More Options** menu ({{% icon name="three-dots-menu-vertical" %}}) next to the test set drop-down list.
 
-A test set is a named collection of test cases. You can use a single test set or several, each with its own distinct name and each focusing on a specific aspect of your agent, such as tone, refusals, or intended use cases. Use the three-dots menu to edit or delete the selected test set, or to generate additional test cases.
+A test set is a named collection of test cases. You can use a single test set or several, each with its own distinct name and each focusing on a specific aspect of your agent, such as tone, refusals, or intended use cases. Use the **More Options** menu to edit or delete the selected test set, or to generate additional test cases.
 
 Each test case in a test set has the following properties:
 
@@ -46,7 +47,7 @@ Each test case in a test set has the following properties:
 | --- | --- |
 | **Name** | Required. Must be unique within the test set. |
 | **Description** | Optional. Describes what the test case probes, for example, "User asks about a topic the agent should decline." The judge receives it as the tester's intent, not as an expected answer. |
-| **User message** | Required for Chat agents only. The message that a user would send to the agent in a chat UI. |
+| **User message** | Required for Chat agents only. The message that a user sends to the agent in a chat UI. |
 | **Prompt variables** | A value for each prompt variable that the agent declares. |
 | **Ground truth** | Optional. The verified correct answer for the test case. |
 | **Enabled toggle** | Disabled test cases are skipped during a run but remain in the test set. |
@@ -58,7 +59,7 @@ When a test case has a ground truth, the judge treats it as the only source of t
 Instead of creating the test cases yourself, you can also generate them:
 
 * **Generate new test set** in the toolbar opens a dialog where you enter a name for the new test set, select a quantity (up to ten), and optionally enter a free-text test data context to guide the kind of cases that are produced. For example, you can ask for requests that the agent should decline because they are outside its scope. The generated cases are placed in a new test set, which is then selected.
-* **Generate test cases** in the three-dots menu adds generated cases to the selected test set without modifying existing test cases.
+* **Generate test cases** in the **More Options** menu adds generated cases to the selected test set without modifying existing test cases.
 
 The generated test cases include a mix of happy-path and adversarial cases, in roughly equal parts. Adversarial cases include requests outside the agent's scope, invalid or empty values, boundary values, and injection attempts. The test data context steers the subject matter of the cases but does not change this mix. Generated test cases do not include a ground truth. Review them and add the verified correct answer where you have one.
 
@@ -69,7 +70,7 @@ An evaluator defines what counts as a pass and what counts as a fail, and which 
 * If you leave the field empty, the built-in **LLM as a judge evaluator** is used. It judges with the agent's own model against built-in criteria. A response passes when it is appropriate, helpful, and consistent with the agent's purpose, given the test variables. A response fails when it is harmful, incorrect, irrelevant, or does not serve the agent's purpose. Refusing a request that is clearly outside the agent's scope is a pass. Appropriate tool usage supports a pass, and ignoring clearly needed tools supports a fail.
 * If you select an Evaluator document, the test set is judged with your own criteria and your own model. For more information, see [Defining an Evaluator](#evaluators).
 
-Changes made by selecting a different evaluator, or editing the selected one, require the local app to be rerun in order to become effective.
+If you select a different evaluator or edit the selected one, the change takes effect only after you run the local app again.
 
 #### Defining an Evaluator {#evaluators}
 
@@ -108,7 +109,7 @@ Select a test set and click **Run** in the **Evaluation setup** box. While a run
 Evaluation uses an LLM, so it consumes tokens and incurs cost with your model provider. Each test case in a run needs one call to the agent and one call to the judge. Suggestions, test case generation, and prompt optimization make additional calls. The **Token usage** in the results counts only the agent's responses.
 {{% /alert %}}
 
-Results arrive row by row. The agent is called for one test case at a time, and each response is judged separately as soon as it arrives. Each row shows **Executing** while it waits for the agent's response and **Evaluating** while the judge is working, and then settles on **Pass**, **Fail**, or **Error**.
+Results arrive row by row. The agent is called for one test case at a time, and each response is judged separately as soon as it arrives. Each row shows **Executing** while it waits for the agent's response and **Evaluating** while the judge is working, and then shows **Pass**, **Fail**, or **Error**.
 
 Expand a row at any time to read the following details:
 
@@ -160,7 +161,7 @@ Run files are versioned with your app and appear in the **Commit** dialog in Stu
 
 Runs are never deleted. For each agent and test set, the 30 most recent runs keep full detail. Older runs are compacted in place to the summary and the verdict for each test case. Compacted runs still count in the comparison and the trend.
 
-canceled runs are not saved. Runs that were abandoned before they had a summary, for example because the action is not registered or an evaluator could not be loaded, are not saved either. If writing a file fails, the results are still shown and you are notified. Renaming an agent or its module moves its run files along, so the comparison continues.
+Canceled runs are not saved. Runs that were abandoned before they had a summary, for example because the action is not registered or an evaluator could not be loaded, are not saved either. If writing a file fails, the results are still shown and you are notified. Renaming an agent or its module moves its run files along, so the comparison continues.
 
 #### Comparing Runs {#current-last-trend}
 
@@ -178,7 +179,7 @@ Maia can help you set up your evaluation suite. Describe what you want to check,
 
 ### Known Limitations {#evaluation-limitations}
 
-* Only agents defined in Studio Pro can be evaluated. If your agent is currently defined only in the running app, it needs to be moved into the project in Studio Pro first.
+* Only agents defined in Studio Pro can be evaluated. If your agent is defined only in the running app, move it into the project in Studio Pro first.
 * Chat agents are evaluated on a single turn. A Chat test case holds one user message. Multi-turn conversations, message history in a test case, and simulated users are not supported.
 * **LLM as judge** is the only evaluator type. Ground truth comparison is available per test case. Tool-call assertions and response-property assertions are planned for future releases.
 * A test set can currently be judged by only one evaluator.

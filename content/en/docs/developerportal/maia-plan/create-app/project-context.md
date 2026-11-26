@@ -1,7 +1,7 @@
 ---
 title: "Adding Project Context"
 url: /developerportal/maia-plan/project-context/
-description: "Describes the project context step of creating an app with Maia Plan."
+description: "Describes the project context step of creating an app with Maia Spec."
 weight: 10
 ---
 

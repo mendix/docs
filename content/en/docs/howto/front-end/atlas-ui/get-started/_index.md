@@ -8,7 +8,16 @@ weight: 10
 
 This section explains Atlas and how developers can get started with the Atlas UI framework.
 
-The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored re-usable design across all your apps.
+The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored reusable design across all your apps.
+
+This document will clarify the basics of using Atlas UI for you, as well as point you in the right direction for more advanced styling tasks and documentation. Before you read on, it can be helpful to have a basic idea of the expected styling architecture for a Mendix app. Here is a basic overview, which has links you can follow when the time is right in your development to learn more about that topic:
+
+* On a basic level, most apps are styled broadly with the [Atlas Core](/appstore/modules/atlas-core/) module's resources. Designers can browse the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/p/dashboard) website to look at components, and consult the [Figma UI Kit](/howto/front-end/figma-ui-kit/) for examples of how components can be styled.
+* Next, designers and developers can pick a few components relevant to the app, then use the instructions in [Customize Styling](/howto/front-end/customize-styling-new/) to alter those components per their preferences.
+    * Pay special attention to the [Creating a Theme Module](/howto/front-end/customize-styling-new/#create-theme-mod) section of *Customize Styling*. Understanding how [ordering UI Resource Modules](/howto/front-end/customize-styling-new/#ordering-ui-resource-modules) influences your app's styling is also key to a sustainable design system. For more information on usage, see the [UI Resources Package](/refguide/ui-resources-package/) module documentation.
+* Finally, when your team is aligned on general design direction, you will design a unified [Company Design System](/howto/front-end/create-a-company-design-system/) to be your company-wide source of truth for the app's design elements.
+
+Please read further into this document for more information about the basics of styling with the Atlas UI Framework.
 
 ## Design Principles
 

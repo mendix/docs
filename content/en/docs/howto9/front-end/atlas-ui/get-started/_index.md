@@ -8,7 +8,16 @@ weight: 10
 
 This section explains Atlas and how developers can get started with the Atlas UI framework.
 
-The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored re-usable design across apps.
+The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored reusable design across apps.
+
+This document will clarify the basics of using Atlas UI for you, as well as point you in the right direction for more advanced styling tasks and documentation. Before you read on, it can be helpful to have a basic idea of the expected styling architecture for a Mendix app. Here is a basic overview, which has links you can follow when the time is right in your development to learn more about that topic:
+
+* On a basic level, most apps are styled broadly with the [Atlas Core](/appstore/modules/atlas-core/) module's resources. Designers can browse the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/p/dashboard) website to look at components, and consult the [Figma UI Kit](/howto9/front-end/figma-ui-kit/) for examples of how components can be styled.
+* Next, designers and developers can pick a few components relevant to the app, then use the instructions in [Customize Styling](/howto9/front-end/customize-styling-new/) to alter those components per their preferences.
+    * Pay special attention to the [Creating a Theme Module](/howto9/front-end/customize-styling-new/#create-theme-mod) section of *Customize Styling*. Understanding how [ordering UI Resource Modules](/howto9/front-end/customize-styling-new/#ordering-ui-resource-modules) influences your app's styling is also key to a sustainable design system. For more information on usage, see the [UI Resources Package](/refguide9/ui-resources-package/) module documentation.
+* Finally, when your team is aligned on general design direction, you will design a unified [Company Design System](/howto9/front-end/create-a-company-design-system/) to be your company-wide source of truth for the app's design elements.
+
+Please read further into this document for more information about the basics of styling with the Atlas UI Framework.
 
 ## Design Principles
 
@@ -42,6 +51,6 @@ When Mendix releases a new version of these modules, these can be updated as reg
 
 Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto9/front-end/customize-styling-new/) and by [adding custom styling](/howto9/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/).
 
-## Re-Using Designs Across Apps
+## Reusing Designs Across Apps
 
-To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/) or to group certain UI functionality together.
+To enable reuse and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a reusable module as described in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/) or to group certain UI functionality together.

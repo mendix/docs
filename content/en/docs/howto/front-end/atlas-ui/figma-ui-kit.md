@@ -57,7 +57,7 @@ The following practices are recommended:
 1. Prioritize designing components from this kit, because they are already supported on Atlas and Studio Pro.
 1. Use typographies that are supported by Atlas and are in the Atlas UI Kit for Figma.
 
-The following practices are *not* recommended:
+The following practices are not recommended:
 
 1. Do not change the components' names (doing so will de-link them from the library).
 1. Do not change the component layers' names.

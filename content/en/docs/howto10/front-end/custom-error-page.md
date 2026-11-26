@@ -93,9 +93,9 @@ An example `offline.html`, `404.html`, or `403.html` page could look like this:
 
 This example refers to *style.css* and *script.js*, which you should also create and place in the **error_page** directory if you want to have special styling and/or JavaScript.
 
-## Creating a Re-Usable Custom Error Page {#create-reusable-error}
+## Creating a Reusable Custom Error Page {#create-reusable-error}
 
-It is also possible to create custom error pages inside [re-usable theme modules](/howto10/front-end/customize-styling-new/#create-theme-mod).
+It is also possible to create custom error pages inside [reusable theme modules](/howto10/front-end/customize-styling-new/#create-theme-mod).
 
 To create a custom error page inside your theme module, do the following:
 
@@ -120,7 +120,7 @@ To create a custom error page inside your theme module, do the following:
 
    {{< figure src="/attachments/howto10/front-end/custom-error-page/offline.png" class="no-border" >}}
 
-Now you have a custom error page inside a re-usable theme module! When this module is imported into other apps, its custom error pages will automatically become available.
+Now you have a custom error page inside a reusable theme module! When this module is imported into other apps, its custom error pages will automatically become available.
 
 This can also be used in a [company design system](/howto10/front-end/create-a-company-design-system/).
 

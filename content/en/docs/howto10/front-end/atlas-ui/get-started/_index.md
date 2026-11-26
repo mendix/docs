@@ -51,6 +51,6 @@ When Mendix releases a new version of these modules, these can be updated as reg
 
 Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto10/front-end/customize-styling-new/) and by [adding custom styling](/howto10/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto10/front-end/create-a-company-design-system/).
 
-## Re-Using Designs Across Apps
+## Reusing Designs Across Apps
 
-To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in [Create a Company Design System](/howto10/front-end/create-a-company-design-system/) or to group certain UI functionality together.
+To enable reuse and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a reusable module as described in [Create a Company Design System](/howto10/front-end/create-a-company-design-system/) or to group certain UI functionality together.

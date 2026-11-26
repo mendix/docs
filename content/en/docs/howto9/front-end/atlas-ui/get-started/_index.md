@@ -8,7 +8,7 @@ weight: 10
 
 This section explains Atlas and how developers can get started with the Atlas UI framework.
 
-The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored re-usable design across apps.
+The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored reusable design across apps.
 
 This document will clarify the basics of using Atlas UI for you, as well as point you in the right direction for more advanced styling tasks and documentation. Before you read on, it can be helpful to have a basic idea of the expected styling architecture for a Mendix app. Here is a basic overview, which has links you can follow when the time is right in your development to learn more about that topic:
 
@@ -51,6 +51,6 @@ When Mendix releases a new version of these modules, these can be updated as reg
 
 Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto9/front-end/customize-styling-new/) and by [adding custom styling](/howto9/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/).
 
-## Re-Using Designs Across Apps
+## Reusing Designs Across Apps
 
-To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/) or to group certain UI functionality together.
+To enable reuse and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a reusable module as described in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/) or to group certain UI functionality together.

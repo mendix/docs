@@ -11,8 +11,8 @@ The **Update Assistant (Beta)** pane scans the code in your app for deprecated M
 
 The pane has two scanners:
 
-* **Runtime API** – compiles the Java code in your app, such as Java actions, and finds calls to deprecated Mendix Runtime APIs
-* **Client API** – scans the JavaScript files in your app, such as JavaScript actions, and finds calls to deprecated Mendix Client APIs
+* **Runtime API** – This compiles the Java code in your app, such as Java actions, and finds calls to deprecated Mendix Runtime APIs.
+* **Client API** – This scans the JavaScript files in your app, such as JavaScript actions, and finds calls to deprecated Mendix Client APIs.
 
 To open the **Update Assistant (Beta)** pane, select **View** > **Update Assistant (Beta)**.
 
@@ -24,10 +24,10 @@ The pane consists of a top bar, a results table, and a details panel next to the
 
 The top bar contains the following buttons:
 
-* **Runtime API** – show or hide the findings of the Runtime API scanner
-* **Client API** – show or hide the findings of the Client API scanner
-* **Check now** – scan your app with both scanners and refresh the results; while a scan runs, this button changes to **Cancel**, which stops the scan
-* **Marketplace Modules** – show or hide the findings in Marketplace modules; these findings are hidden by default
+* **Runtime API** – This button shows or hides the findings of the Runtime API scanner.
+* **Client API** – This button shows or hides the findings of the Client API scanner.
+* **Check now** – This button scans your app with both scanners and refresh the results; while a scan runs, this button changes to **Cancel**, which stops the scan.
+* **Marketplace Modules** – This button shows or hides the findings in Marketplace modules; these findings are hidden by default.
 
 The **Runtime API**, **Client API**, and **Marketplace Modules** buttons only filter the results of the last scan. You do not have to scan again after you change them.
 
@@ -35,11 +35,11 @@ The **Runtime API**, **Client API**, and **Marketplace Modules** buttons only fi
 
 The results table lists each finding and contains the following columns:
 
-* **Type** – a Java icon for Runtime API findings, or a JavaScript icon for Client API findings
-* **Message** – a description of the finding
-* **Module** – the module that contains the finding
-* **Document** – the affected document, such as a Java action or a JavaScript action
-* **File path** – the path to the affected file; click the copy button next to the path to copy it
+* **Type** – A Java icon for Runtime API findings, or a JavaScript icon for Client API findings.
+* **Message** – A description of the finding.
+* **Module** – The module that contains the finding.
+* **Document** – The affected document, such as a Java action or a JavaScript action.
+* **File path** – The path to the affected file; click the copy button next to the path to copy it.
 
 Long messages and file paths can be truncated in the table. Select a row to show the full details of that finding in the details panel.
 
@@ -51,9 +51,9 @@ When the table has no findings to show, the pane shows a message instead. For ex
 
 The details panel shows the finding that you select in the results table. It contains the following information:
 
-* **Identified issue** – the full message of the finding
-* **Code snippet** – the code around the finding, with the affected line highlighted
-* **Suggested** – the suggested change to the code, shown as a comparison of the current code and the new code
+* **Identified issue** – The full message of the finding.
+* **Code snippet** – The code around the finding, with the affected line highlighted.
+* **Suggested** – The suggested change to the code, shown as a comparison of the current code and the new code.
 
 The **Suggested** tab is only available for Client API findings that can be migrated. For a Client API finding that needs manual review, and for Runtime API findings, the details panel only shows the code snippet.
 

@@ -2,67 +2,60 @@
 title: "Update Assistant (Beta)"
 url: /refguide/update-assistant/
 weight: 70
-description: "Describes the Update Assistant (Beta) pane for scanning Java deprecations in Mendix Studio Pro."
+description: "Describes the Update Assistant (Beta) pane for scanning Java and JavaScript code for deprecated Mendix APIs in Mendix Studio Pro."
 ---
 
 ## Introduction
 
-The **Update Assistant (Beta)** pane scans the Java code in your app for deprecated APIs. You can use it to review detected deprecations, see where they occur, and inspect the affected code.
+The **Update Assistant (Beta)** pane scans the code in your app for deprecated Mendix APIs. You can use it to review the findings, see where they occur, and inspect the affected code.
+
+The pane has two scanners:
+
+* **Runtime API** – This compiles the Java code in your app, such as Java actions, and finds calls to deprecated Mendix Runtime APIs.
+* **Client API** – This scans the JavaScript files in your app, such as JavaScript actions, and finds calls to deprecated Mendix Client APIs.
 
 To open the **Update Assistant (Beta)** pane, select **View** > **Update Assistant (Beta)**.
 
-The pane consists of a top bar and a results table.
+The pane consists of a top bar, a results table, and a details panel next to the table. You can drag the divider between the results table and the details panel to change their sizes.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/update-assistant/update-assistant-pane.png" alt="Update Assistant pane showing Java deprecations in a results table" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/update-assistant/update-assistant-pane.png" alt="Update Assistant pane showing findings in a results table and the details of the selected finding" >}}
 
 ## Top Bar {#top-bar}
 
 The top bar contains the following buttons:
 
-* **Check now** – scan your app for Java deprecations and refresh the results list
-* **Marketplace Modules** – include Marketplace modules in the scan results
-* **Export** – export the current scan results
+* **Runtime API** – This button shows or hides the findings of the Runtime API scanner.
+* **Client API** – This button shows or hides the findings of the Client API scanner.
+* **Check now** – This button scans your app with both scanners and refresh the results; while a scan runs, this button changes to **Cancel**, which stops the scan.
+* **Marketplace Modules** – This button shows or hides the findings in Marketplace modules; these findings are hidden by default.
+
+The **Runtime API**, **Client API**, and **Marketplace Modules** buttons only filter the results of the last scan. You do not have to scan again after you change them.
 
 ## Results Table {#results-table}
 
-The results table lists each detected deprecation and contains the following columns:
+The results table lists each finding and contains the following columns:
 
-* **Type** – a Java icon for Java deprecations
-* **Message** – the deprecation message
-* **Module** – the module that contains the issue
-* **Document** – the affected document, such as a Java action
-* **File path** – the path to the affected Java file
+* **Type** – A Java icon for Runtime API findings, or a JavaScript icon for Client API findings.
+* **Message** – A description of the finding.
+* **Module** – The module that contains the finding.
+* **Document** – The affected document, such as a Java action or a JavaScript action.
+* **File path** – The path to the affected file; click the copy button next to the path to copy it.
 
-Long messages and file paths can be truncated in the table. Double-click a row to open the full details for that result.
+Long messages and file paths can be truncated in the table. Select a row to show the full details of that finding in the details panel.
 
-## Export {#export}
+Findings in add-on modules and solution modules are not shown.
 
-Click **Export** to export the detected deprecations to an `.xlsx` file.
+When the table has no findings to show, the pane shows a message instead. For example, the message tells you that your app has no findings, that your current filters hide all findings, or that a scan failed.
 
-The exported workbook contains one sheet named `Document deprecations` with the following columns:
+## Finding Details {#finding-details}
 
-* `Message` – the deprecation message
-* `Module` – the module that contains the issue
-* `Document` – the affected document
-* `Path` – the path to the affected Java file
-* `Line` – the line number of the deprecated code
-* `Class` – the Java class that contains the deprecated member
-* `Method` – the deprecated method
-* `Marketplace module` – indicates with `true` or `false` whether the result belongs to a Marketplace module
+The details panel shows the finding that you select in the results table. It contains the following information:
 
-## Deprecation Details {#deprecation-details}
+* **Identified issue** – The full message of the finding.
+* **Code snippet** – The code around the finding, with the affected line highlighted.
+* **Suggested** – The suggested change to the code, shown as a comparison of the current code and the new code.
 
-Double-click a row to open a deprecation details dialog box for that file.
-
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/update-assistant/deprecation-details-dialog.png" alt="Deprecation details dialog box showing the issue, file path, and highlighted deprecated code" class="no-border" >}}
-
-This dialog box shows the following information:
-
-* **Identified issue** – the deprecation message
-* **File path** – the full path to the affected Java file; you can copy this path from the dialog box
-* **Problem highlight** – a code snippet with the deprecated code highlighted
-
-The highlighted code helps you locate the deprecated call in the file and update it.
+The **Suggested** tab is only available for Client API findings that can be migrated. For a Client API finding that needs manual review, and for Runtime API findings, the details panel only shows the code snippet.
 
 ## Fixing Mendix Java API Deprecations and Removals {#fixing-deprecations}
 

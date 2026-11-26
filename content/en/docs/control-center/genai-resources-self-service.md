@@ -60,7 +60,7 @@ If you turned on **Enable Guardrails Usage**, the guardrail is created after the
 
 ## Deprovisioning GenAI Resources
 
-To deprovision a resource, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the selected resource and select **Deprovision Resource**. A confirmation dialog box appears, displaying a message and the details of the selected resource, as shown in the example below.
+To deprovision a resource, click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) next to the selected resource and select **Deprovision Resource**. A confirmation dialog box appears, displaying a message and the details of the selected resource, as shown in the example below.
 
 {{< figure src="/attachments/control-center/genai-resources/deprovisioning.png" alt="Confirmation dialog for deprovisioning a GenAI resource showing resource details and Deprovision button" >}}
 
@@ -75,7 +75,7 @@ When you deprovision a resource, the actual deprovisioning occurs at the end of 
 After a resource is provisioned, you can edit it through the self-service capability of the Control Center. To edit a resource, do the following:
 
 1. Sign in to the Control Center as a Company Admin.
-2. On the **GenAI Resources** page, click the three-dot ({{% icon name="three-dots-menu-horizontal-filled" %}}) icon next to the selected resource and select **Edit Resource**.
+2. On the **GenAI Resources** page, click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) next to the selected resource and select **Edit Resource**.
 3. Make your changes. You can change the following:
     * **Name** and **Default Model** – Change the resource name or the model used when an API call does not specify one.
     * **Cloud Tokens** – For more information, see [Adjusting Resource GenAI Unit Capacity](#adjusting-resource-genai-unit-capacity).

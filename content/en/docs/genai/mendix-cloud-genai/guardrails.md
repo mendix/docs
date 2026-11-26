@@ -79,7 +79,7 @@ The prompt attacks filter detects and blocks user prompts that try to override t
 * **None** – The filter is on but does not block any prompts.
 * **Low** – Blocks only prompts that are clearly prompt attacks.
 * **Medium** – Blocks prompts that are likely to be prompt attacks.
-* **High** – Blocks any prompt that might be a prompt attack. This is the strictest setting, and it can also block some harmless prompts.
+* **High** – Blocks any prompt that may be a prompt attack. This is the strictest setting, and it can also block some harmless prompts.
 
 ### Sensitive Information Filters {#sensitive-information-filters}
 
@@ -91,18 +91,16 @@ Sensitive information filters detect personally identifiable information (PII) i
 
 The following PII types are supported:
 
-| Category | PII Types |
-| --- | --- |
-| General | Address, age, name, email, phone, username, password, driver ID, license plate, vehicle identification number |
-| Finance | Credit or debit card CVV, credit or debit card expiration, credit or debit card number, PIN, IBAN, SWIFT code |
-| IT | IP address, MAC address, URL, AWS access key, AWS secret key |
-| US-specific | US bank account number, US bank routing number, US individual taxpayer identification number, US passport number, US Social Security number |
-| Canada-specific | Canadian health number, Canadian social insurance number |
-| UK-specific | UK National Health Service (NHS) number, UK national insurance number, UK unique taxpayer reference number |
+* **General** – Address, age, name, email, phone, username, password, driver ID, license plate, vehicle identification number
+* **Finance** – Credit or debit card CVV, credit or debit card expiration, credit or debit card number, PIN, IBAN, SWIFT code
+* **IT** – IP address, MAC address, URL, AWS access key, AWS secret key
+* **US-specific** – US bank account number, US bank routing number, US individual taxpayer identification number, US passport number, US Social Security number
+* **Canada-specific** – Canadian health number, Canadian social insurance number
+* **UK-specific** – UK National Health Service (NHS) number, UK national insurance number, UK unique taxpayer reference number
 
 ## Managing a Guardrail {#managing-a-guardrail}
 
-After a guardrail is configured, the **Guardrails** tab shows the guardrail name with an **Activated** or **Deactivated** status. It also shows the message for blocked prompts, the prompt attacks filter strength, and the configured PII types with their guardrail behavior.
+After a guardrail is configured, the **Guardrails** tab shows the guardrail name with an **Activated** or **Deactivated** status. The tab also shows the message for blocked prompts, the prompt attacks filter strength, and the configured PII types with their guardrail behavior.
 
 {{< figure src="/attachments/genai/guardrails/guardrail-configured.png" alt="Guardrails tab showing an activated guardrail with its message for blocked prompts, the prompt attacks filter set to high strength, and a PII filters table" >}}
 
@@ -115,4 +113,4 @@ To remove the guardrail and its configuration, a Company Admin must disable guar
 
 ## Monitoring Guardrail Consumption
 
-Guardrail consumption is shown on the **Consumption** tab of the resource, together with the model consumption. For more information, see the [Guardrail Consumption](/agents/mx-cloud-genai/Navigate-MxGenAI/#guardrail-consumption) section of *Navigate Through the Mendix Cloud GenAI Portal*.
+The **Consumption** tab of the resource shows guardrail consumption together with model consumption. For more information, see the [Guardrail Consumption](/agents/mx-cloud-genai/Navigate-MxGenAI/#guardrail-consumption) section of *Navigate Through the Mendix Cloud GenAI Portal*.

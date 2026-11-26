@@ -17,7 +17,7 @@ Experimental features are not covered by your SLA, and Mendix can change or remo
 
 ## Agent Evaluation {#evaluation}
 
-Agent Evaluation lets you test your agent systematically and improve it iteratively without leaving Studio Pro. You define test cases that represent realistic inputs, run them against your agent, and review the results. An LLM judge evaluates each response and reports whether it passed or failed, and why. You decide what counts as a pass by using the built-in evaluator or by defining your own. Each run can yield a number of targeted changes that you can use to rewrite the system prompt in one click.
+Agent Evaluation lets you test your agent systematically and improve it iteratively without leaving Studio Pro. You define test cases that represent realistic inputs, run them against your agent, and review the results. An LLM judge evaluates each response and reports whether it passed or failed, and why. You decide what counts as a pass by using the built-in evaluator or by defining your own. Each run produces suggestions for improving the system prompt, which you can apply in one click.
 
 Agent Evaluation is available for Task agents and Chat agents that you define in Studio Pro.
 
@@ -47,16 +47,14 @@ A test set is a named collection of test cases. You can use a single test set or
 
 Each test case in a test set has the following properties:
 
-| Property | Description |
-| --- | --- |
-| **Name** | Required. Must be unique within the test set. |
-| **Description** | Optional. Describes what the test case probes, for example, "User asks about a topic the agent should decline." The judge receives it as the tester's intent, not as an expected answer. |
-| **User message** | Required for Chat agents only. The message that a user sends to the agent in a chat UI. |
-| **Prompt variables** | A value for each prompt variable that the agent declares. |
-| **Ground truth** | Optional. The verified correct answer for the test case. |
-| **Enabled toggle** | Disabled test cases are skipped during a run but remain in the test set. |
+* **Name**: Required. Must be unique within the test set.
+* **Description**: Optional. Describes what the test case tests, for example, "User asks about a topic the agent should decline." The judge receives it as the tester's intent, not as an expected answer.
+* **User message**: Required for Chat agents only. The message that a user sends to the agent in a chat UI.
+* **Prompt variables**: A value for each prompt variable that the agent declares.
+* **Ground truth**: Optional. The verified correct answer for the test case.
+* **Enabled toggle**: Disabled test cases are skipped during a run but remain in the test set.
 
-When a test case has a ground truth, the judge treats it as the only source of truth for that case. The response passes only if it contains the information in the ground truth and does not contradict it. Differences in wording, order, or formatting do not matter. A response that fails this comparison fails the test case regardless of the evaluator's criteria, and the judge's reason names what is missing or contradicting. Test cases without a ground truth are judged on the evaluator's criteria alone.
+When a test case has a ground truth, the judge treats it as the only source of truth for that case. The response passes only if it contains the information in the ground truth and does not contradict it. Differences in wording, order, or formatting do not matter. A response that fails this comparison fails the test case regardless of the evaluator's criteria, and the judge's reason names what is missing or contradicting. The judge evaluates test cases without a ground truth on the evaluator's criteria alone.
 
 #### Generating Test Cases {#generate-test-cases}
 
@@ -82,12 +80,10 @@ An Evaluator document is saved with your app, so you can reuse it across agents 
 
 An Evaluator document has the following fields:
 
-| Field | Description |
-| --- | --- |
-| **Type** | **LLM as judge**. This is the only type currently available, and it is shown disabled. |
-| **Description** | Optional. |
-| **Resource** | Required. The Model document that is used for judging, together with the model version or deployment. |
-| **Prompt** | Required. The evaluation criteria, in plain text. |
+* **Type**: **LLM as judge**. This is the only type currently available, and it is shown disabled.
+* **Description**: Optional.
+* **Resource**: Required. The Model document and the model version or deployment that the judge uses.
+* **Prompt**: Required. The evaluation criteria, in plain text.
 
 Describe in the prompt what makes a response pass and what makes it fail for your agent. For example: "A response passes when it answers the question by using the knowledge base and names its source. It fails when it …"
 
@@ -95,7 +91,7 @@ Keep the following in mind when you write the criteria:
 
 * Your criteria replace the built-in criteria completely. If you still want out-of-scope requests to be refused or tool usage to count, state this in your criteria.
 * The judge always answers with a pass or fail and a one-sentence reason in a fixed format, so you do not have to prompt it about the output format.
-* It is not possible to use `{{variables}}` in the prompt.
+* You cannot use `{{variables}}` in the prompt.
 
 Whichever evaluator you use, the following rules apply:
 
@@ -113,7 +109,7 @@ Select a test set and click **Run** in the **Evaluation setup** box. While a run
 Evaluation uses an LLM, so it consumes tokens and incurs cost with your model provider. Each test case in a run needs one call to the agent and one call to the judge. Suggestions, test case generation, and prompt optimization make additional calls. The **Token usage** in the results counts only the agent's responses.
 {{% /alert %}}
 
-Results arrive row by row. The agent is called for one test case at a time, and each response is judged separately as soon as it arrives. Each row shows **Executing** while it waits for the agent's response and **Evaluating** while the judge is working, and then shows **Pass**, **Fail**, or **Error**.
+Results arrive row by row. The agent is called for one test case at a time, and the judge evaluates each response as soon as it arrives. Each row shows **Executing** while it waits for the agent's response and **Evaluating** while the judge is working, and then shows **Pass**, **Fail**, or **Error**.
 
 Expand a row at any time to read the following details:
 
@@ -127,31 +123,29 @@ For each test case, the judge receives the agent's system prompt and user prompt
 
 While a run is in progress or is being canceled, the **Evaluation setup** box is locked. You cannot select another test set or evaluator, or add, edit, enable, disable, or delete test cases. You can still expand a test case to read its values.
 
-You can cancel a run at any time. The call that is in progress finishes, the run stops, and all partial results are discarded. A canceled run is not saved to the run history.
+You can cancel a run at any time. The call that is in progress finishes, the run stops, and Agent Editor discards all partial results and does not save the run to the run history.
 
 ### Reviewing Results {#review-results}
 
 When the run completes, the summary shows the following information:
 
-| Result | Description |
-| --- | --- |
-| **Pass rate** | The percentage and count of passed test cases out of the judged total. |
-| **Current**, **Last**, and **Trend** | A comparison of the run with earlier runs of the same agent and test set. For more information, see [Comparing Runs](#current-last-trend). |
-| **Evaluator** | The name of the evaluator that judged the run. |
-| **Token usage** | The total tokens consumed by the agent's responses. Judge and suggestion calls are not counted. Use it to understand the cost of a full evaluation pass. |
-| Unevaluated count | Test cases that could not be evaluated because the agent call failed or the judge's reply could not be read. They are reported separately and excluded from the pass rate. |
+* **Pass rate**: The percentage and count of passed test cases out of the judged total.
+* **Current**, **Last**, and **Trend**: A comparison of the run with earlier runs of the same agent and test set. For more information, see [Comparing Runs](#current-last-trend).
+* **Evaluator**: The name of the evaluator that judged the run.
+* **Token usage**: The total tokens consumed by the agent's responses. Judge and suggestion calls are not counted. Use it to understand the cost of a full evaluation pass.
+* **Unevaluated count**: Test cases that could not be evaluated because the agent call failed or the judge's reply could not be read. They are reported separately and excluded from the pass rate.
 
 ### Refining the Agent {#refine-agent}
 
 After all test cases are judged, a single call reviews the outcomes of the whole run and returns suggestions for improving the system prompt.
 
-The suggestions are based on the failed test cases. They are written as general instructions that help with any similar request, not as fixes for individual test cases. There is at most one suggestion per distinct cause, never more than the number of failed test cases, and at most five in total.
+The suggestions are based on the failed test cases. They are written as general instructions that help with any similar request, not as fixes for individual test cases. Agent Editor returns at most one suggestion per distinct cause. The total never exceeds the number of failed test cases or five suggestions.
 
 Suggestions are AI-generated. Treat them as a starting point, and select only the ones that make sense for your use case. To apply them, select them and click **Optimize prompt**. The selected suggestions and the current system prompt are sent to the optimizer, which returns a rewritten prompt. The optimizer uses the model of the evaluator that is selected on the test set at that moment. For the built-in evaluator, this is the agent's own model.
 
-Before anything is written, the editor checks that the rewrite contains exactly the same prompt variables as the original. If a variable was added or dropped, the rewrite is refused and you are told which variables are affected.
+Before anything is written, the editor checks that the rewrite contains exactly the same prompt variables as the original. If the rewrite adds or drops a variable, the editor refuses it and tells you which variables are affected.
 
-A rewrite that passes this check is applied directly to the system prompt. The document is left unsaved, so review the prompt and save it manually. After a rewrite is applied, the suggestions from that run are marked as stale, and **Optimize prompt** is disabled until you run a new evaluation.
+The editor applies a rewrite that passes this check directly to the system prompt. It leaves the document unsaved, so review the prompt and save it manually. After the editor applies a rewrite, it marks the suggestions from that run as stale and disables **Optimize prompt** until you run a new evaluation.
 
 To evaluate the rewritten prompt, run the local app again so that the new agent definition is available for the next run. Prompt improvement is iterative. A single round of suggestions covers the weaknesses that are visible in one run, so several rounds are often needed.
 
@@ -165,11 +159,11 @@ Run files are versioned with your app and appear in the **Commit** dialog in Stu
 
 Runs are never deleted. For each agent and test set, the 30 most recent runs keep full detail. Older runs are compacted in place to the summary and the verdict for each test case. Compacted runs still count in the comparison and the trend.
 
-Canceled runs are not saved. Runs that were abandoned before they had a summary, for example because the action is not registered or an evaluator could not be loaded, are not saved either. If writing a file fails, the results are still shown and you are notified. Renaming an agent or its module moves its run files along, so the comparison continues.
+Canceled runs are not saved. Agent Editor also does not save runs that it abandons before they have a summary, for example because the action is not registered or an evaluator cannot load. If writing a file fails, the results are still shown and you are notified. Renaming an agent or its module moves its run files along, so the comparison continues.
 
 #### Comparing Runs {#current-last-trend}
 
-The summary shows three columns with the same rows: pass rate, passed out of judged, tokens, and duration.
+The summary shows three columns with the same rows: pass rate, number of test cases passed out of those judged, tokens, and duration.
 
 * **Current** shows the run that you are looking at, with the date and time it ended. During a run, it shows the progress so far.
 * **Last** shows the previous saved run of the same agent and test set, with the date and time it ended.

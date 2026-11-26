@@ -44,7 +44,7 @@ A secure context typically means one of the following:
 * the app is loaded over HTTPS
 * the app is accessed from `localhost` during local development
 
-If the wrapped app is loaded from an insecure HTTP origin, capabilities that depend on Web APIs such as geolocation, notifications, permission handling, network information, or Share API flows may not work as expected.
+If the wrapped app is loaded from an insecure HTTP origin, capabilities that depend on Web APIs such as geolocation, notifications, permission handling, network information, or Share API flows may not work as expected. For information on how to run your app over HTTPS for local development and testing, see the [Running Your App over HTTPS](/developerportal/deploy/reverse-proxy/#local-https) section in *Configuring a Reverse Proxy*.
 
 ## Capability to Permission Mapping
 

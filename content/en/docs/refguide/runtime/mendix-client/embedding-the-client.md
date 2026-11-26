@@ -182,6 +182,14 @@ An embedded app does not react to changes in the browser address bar or to the b
 
 The embedded Mendix app can still navigate internally. For example, it can open other pages by using [Show Page](/refguide/show-page/) actions or buttons that open a page. When the browser reloads, the Mendix app restarts as well, and the home page is shown.
 
+## Cross-Site Cookies
+
+Cross-site cookies must be enabled in the browser when the Mendix application is hosted on a different domain from the host application.
+
+If the host application runs on HTTPS, the Mendix app is rendered inside a secure context, and the Mendix runtime has to set its cookies as `Secure` and `SameSite=None`. For information on how to set `SameSite=None`, see the [Settings to Configure](/refguide/configure-cors/#settings) section in *Configuring CORS in the Mendix Runtime*.
+
+The Mendix runtime sets the `Secure` attribute on its cookies when the app is served over HTTPS. When you run the Mendix app locally, it is not served over HTTPS. To make the runtime set the attribute anyway, see the [Setting Secure Cookies](/developerportal/deploy/reverse-proxy/#local-secure-cookies) section in *Configuring a Reverse Proxy*.
+
 ## Cross-Origin Requests
 
 If the host app and the Mendix runtime use different origins, make sure the Mendix runtime accepts requests from the host origin. This enables the host app to load the embedded bundle and subsequent client resources from the Mendix runtime. For more information, see [Configure CORS](/refguide/configure-cors/).
@@ -189,10 +197,6 @@ If the host app and the Mendix runtime use different origins, make sure the Mend
 ## Content Security Policy(CSP)
 
 If the host app uses CSP, make sure its policy allows JavaScript to load from the Mendix runtime domain. This enables the host app to load the embedded bundle and other client resources from that domain. For more information, see [Content Security Policy](/howto/security/csp/).
-
-## Cross-Site Cookies
-
-Cross-site cookies must be enabled in the browser when the Mendix application is hosted on a different domain from the host application.
 
 ## Read More
 

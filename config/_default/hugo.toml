@@ -65,15 +65,41 @@ replacements = "github.com/FortAwesome/Font-Awesome -> @fortawesome/fontawesome-
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
-    section = ["HTML", "print"]
+    home = ["HTML", "LLMSTXT", "LLMSFULL", "PAGEMD"]
+    section = ["HTML", "print", "PAGEMD"]
     # MvM - add line below to print every page
-    page = ["HTML", "print"]
+    page = ["HTML", "print", "PAGEMD"]
 
 # MvM - add line below to activate production of RSS pages
 [outputFormats]
     [outputFormats.RSS]
         mediatype = "application/rss"
         baseName = "rss"
+
+    # AI agent discovery: llms.txt index (home-level)
+    [outputFormats.LLMSTXT]
+        baseName = "llms"
+        mediaType = "text/plain"
+        isPlainText = true
+        notAlternative = true
+
+    # AI agent discovery: llms-full.txt with full page content (home-level)
+    [outputFormats.LLMSFULL]
+        baseName = "llms-full"
+        mediaType = "text/plain"
+        isPlainText = true
+        notAlternative = true
+
+    # AI agent discovery: clean Markdown version of each page at index.md
+    [outputFormats.PAGEMD]
+        baseName = "index.html"
+        mediaType = "text/markdown"
+        isPlainText = true
+        notAlternative = true
+
+[mediaTypes]
+    [mediaTypes."text/markdown"]
+        suffixes = ["md"]
 
 # MvM - Set default priority for sitemap = 0.5
 # Can override in front matter for each section using

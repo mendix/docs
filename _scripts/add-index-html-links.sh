@@ -23,7 +23,7 @@
 #
 # Example (siemens-internal build):
 #   bash _scripts/add-index-html-links.sh public \
-#     https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/
+#     https://internal.docs.sw.siemens.com/documentation/internal/PL20261124532499526/en-US/Mendix-Docs/public/
 
 set -euo pipefail
 

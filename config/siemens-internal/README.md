@@ -7,7 +7,7 @@ This directory contains the Hugo environment configuration for deploying the Men
 The site is deployed at:
 
 ```
-https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/
+https://internal.docs.sw.siemens.com/documentation/internal/PL20261124532499526/en-US/Mendix-Docs/public/
 ```
 
 ## The Problem: Pretty URLs Not Supported
@@ -39,7 +39,7 @@ Hugo --environment siemens-internal --cleanDestinationDir
 # canonifyURLs=true, which expands all internal links to full absolute URLs. Without the
 # baseURL argument, the script cannot tell internal links from external ones and skips them.
 bash _scripts/add-index-html-links.sh Built/Mendix-Docs/public \
-  https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/
+  https://internal.docs.sw.siemens.com/documentation/internal/PL20261124532499526/en-US/Mendix-Docs/public/
 ```
 
 The built site will be in `Built/Mendix-Docs/public/`, ready for deployment to the Siemens internal portal.

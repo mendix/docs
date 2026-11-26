@@ -54,7 +54,7 @@ jobs:
       - name: Add index.html to directory links
         run: |
           bash _scripts/add-index-html-links.sh Built/Mendix-Docs/public \
-            https://internal.docs.sw.siemens.com/documentation/internal/PL20260323299104942/en-US/Mendix-Docs/public/
+            https://internal.docs.sw.siemens.com/documentation/internal/PL20261124532499526/en-US/Mendix-Docs/public/
 
       - name: Run htmltest
         # htmltest errors are treated as warnings — build continues regardless (matches Travis behaviour)

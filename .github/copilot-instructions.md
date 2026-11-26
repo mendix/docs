@@ -60,6 +60,7 @@ Search the tree to understand where your topic belongs before creating a new fil
 * **Terminology** – Capitalize product names (Mendix Portal, Studio Pro, Team Server); use “microflow”, “nanoflow”, etc. consistently. Never use e.g. or i.e.
 * **Text formatting** – Reserve bold for UI labels, button names, menu items, or other interface text, or for introductions in list items. Don't use italics except to refer to titles and sections. Use wording or alert shortcodes for emphasis; don't use text formatting for emphasis. Use code font only to wrap literal code, filenames, paths, or command-line input. Use `<kbd>` for keyboard shortcuts.
 * **Headings** – H1 is generated from the front‑matter title. Subsequent headings increment by one level at a time. Don't use bold or italics as a replacement for headings. Use title case. Never start headings with numbers.
+* **Subsections** – A subsection is the content under a heading one level below its section, such as an H3 under an H2. Add one only for two or more parts that each need a paragraph or more. For a set of options or components that contain figures or tables, use one subsection per member instead of a list or table. Keep procedure steps in a numbered list, even with figures. A linked part can be shorter or stand alone if it has an anchor ID.
 * **Lists and tables** – Bullet lists use asterisks; ordered lists use numbers followed by a period. If there are more than three data points per item, use a table instead. Use the same syntax and structure for all list items in a given list. Use complete sentences to introduce lists and tables, not partial sentences completed with the list items. 
 * **Indentation** – Use four spaces to indent content—for example, to create a sub-list or nest an image or code block in a list. Alerts are an exception: don't indent alert lines but do omit preceding blank line.
 * **Links** – Use absolute paths starting with a leading slash (`/deployment/`). Use descriptive link text such as the page title, not “click here”. To link to a heading, add an anchor ID (`{#anchor-id}`) next to the heading and use that ID in the URL (for example, `[Section title](/path/to/page#anchor-id)` to link to a heading in another page or `[Section title](#anchor-id)` to link to a heading in the same page).
@@ -125,7 +126,7 @@ For comprehensive shortcode examples and edge cases, read `community-tools/contr
 
 If asked to create new content:
 
-1. Read the appropriate template from `templates/`: `how-to-template.md`, `reference-template.md`, `marketplace-component-page-template.md`, or `release-notes-template.md`
+1. Read `templates/README.md` to choose the appropriate template, then read that template from `templates/`
 2. Create the new file based on the template
 3. Remove comment lines (`#`) from the template
 4. Follow the editorial workflow above

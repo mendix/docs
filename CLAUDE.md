@@ -17,7 +17,7 @@ When instructions conflict, follow this order of precedence:
 
 ### Critical Constraints
 
-* Edit existing files in place using the Edit tool. Do not create new files unless explicitly requested.
+* Edit existing files in place using the Edit tool. Do not create new files unless explicitly requested. When a new file is requested, use the `docs-new-page` skill.
 * Preserve meaning and intent. Make the smallest set of edits that fully resolves the request.
 * Never add product claims, technical behavior, ticket numbers, or release facts unless explicitly requested and sourced from provided content.
 
@@ -62,6 +62,7 @@ Before creating a new file, use Glob to explore the directory structure and unde
 * **Terminology** – Capitalize product names (Mendix Portal, Studio Pro, Team Server); use "microflow", "nanoflow", etc. consistently. Never use e.g. or i.e.
 * **Text formatting** – Reserve bold for UI labels, button names, menu items, or other interface text, or for introductions in list items. Don't use italics except to refer to titles and sections. Use wording or alert shortcodes for emphasis; don't use text formatting for emphasis. Use code font only to wrap literal code, filenames, paths, or command-line input. Use `<kbd>` for keyboard shortcuts.
 * **Headings** – H1 is generated from the front‑matter title. Subsequent headings increment by one level at a time. Don't use bold or italics as a replacement for headings. Use title case. Never start headings with numerals.
+* **Subsections** – A subsection is the content under a heading one level below its section, such as an H3 under an H2. Add one only for two or more parts that each need a paragraph or more. For a set of options or components that contain figures or tables, use one subsection per member instead of a list or table. Keep procedure steps in a numbered list, even with figures. A linked part can be shorter or stand alone if it has an anchor ID.
 * **Lists and tables** – Bullet lists use asterisks; ordered lists use numbers followed by a period. If there are more than three data points per item, use a table instead. Use the same syntax and structure for all list items in a given list. Use complete sentences to introduce lists and tables, not partial sentences completed with the list items.
 * **Indentation** – Four spaces for sub-lists and nested content. Alerts in lists are an exception:  don't indent alert lines but do omit preceding blank line.
 * **Links** – Link using the target page's `url` front matter field, not its file system path (e.g., `/deployment/` from front matter, not `content/en/docs/deployment/_index.md`). Use descriptive link text such as the page title, not "click here". To link to a heading, add an anchor ID (`{#anchor-id}`) next to the heading and use that ID in the URL (for example, `[Prerequisites](/deployment/mendix-cloud/#prerequisites)` to link to a heading in another page or `[Prerequisites](#prerequisites)` to link to a heading in the same page).
@@ -140,7 +141,7 @@ Less common shortcodes (`button`, `expandable-table`, `youtube`, `vidyard`, `swa
 
 If asked to create new content:
 
-1. Read the appropriate template from `templates/`.
+1. Read `templates/README.md` to choose the template that matches the content type, then read that template.
 2. Use Write tool to create the new file based on the template.
 3. Remove the guidance comments from the template: `#` comments and inline comments in the front matter, and `[//]: #` comments in the body. Complete `title`, `url`, and `description`.
 4. Follow the editorial workflow above.

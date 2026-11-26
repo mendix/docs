@@ -19,7 +19,6 @@ exceptions:
   - Against
   - Between
   - During
-  - From
   - Through
   - Without
   # Exclude filenames with extensions (but consider if these should get code font instead)

@@ -220,4 +220,4 @@ filters:
   - '^XPaths?$'
 
   # Terms covered by other rules (listed here to prevent duplicate flags)
-  - '^(?i:airgapped|dropzones?|hashicorp|idp|ios|javascript|jquery|macos|maia|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|substeps?|subworkflows?|yaml)$'
+  - '^(?i:airgapped|dropzones?|hashicorp|idp|ios|javascript|jquery|macos|maia|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|subworkflows?|yaml)$'

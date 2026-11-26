@@ -2,7 +2,7 @@
 title: "Build a Pluggable Widget (Release Version)"
 linktitle: "Build a Pluggable Widget (Release Version)"
 url: /howto/extensibility/build-a-release-version-of-a-pluggable-widget/
-weight: 30
+weight: 45
 description: "Describes how to create a release build of a pluggable widget that you can bundle with a module or publish to the Marketplace."
 ---
 

@@ -31,48 +31,36 @@ To help you with your first Insights Hub apps, there is also an example app whic
 
 To deploy and register your app within Insights Hub you need the following prerequisites.
 
-* An Insights Hub user account on a **Developer** or a **Start for Free** tenant
-* An Insights Hub developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin`—these are already granted on Start for Free tenants.
+* An Insights Hub user account on a **Developer** tenant
+* An Insights Hub developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin`.
 * [Mendix Studio Pro](https://marketplace.mendix.com/)
-
-The following are also required if you want to deploy and run the Mendix app on Insights Hub Cloud Foundry:
-
-* [Cloud Foundry Command Line Interface (CF CLI)](https://github.com/cloudfoundry/cli)
-* A Cloud Foundry role which allows you to push apps, such as `SpaceDeveloper`
 
 ## Including Required Insights Hub Modules
 
 You must customize your app to allow it to be deployed, registered, and shown in the launchpad. This is done through Insights Hub customization modules. There are two ways to include the customization you need in your app.
 
-### Option A: Using the Insights Hub App Template
+### Option A: Using the Siemens Insights Hub Starter Application
 
-The **Siemens Insights Hub Starter Application** in the Mendix Marketplace contains all the modules and styling which you need to create an app you want to deploy to Insights Hub.
+The **Siemens Insights Hub Starter Application** in Mendix Marketplace contains all the modules you need to create an app you want to deploy to Insights Hub.
 
 {{% alert color="info" %}}
-This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
+This is the recommended approach if you are building a new app, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
-Open Studio Pro (version 7.22.2 or above) and follow these steps:
+Follow these steps:
 
-1. Start your browser and open the [Mendix Marketplace](https://marketplace.mendix.com/).
+1. Open [Mendix Marketplace](https://marketplace.mendix.com/).
 
-2. Enter *Insights Hub* in the search box, and press <kbd>Enter</kbd>.
+2. Enter *Insights Hub* in the search box, and press Enter.
 3. Select **Siemens Insights Hub Starter Application** in the search results.
-4. Click **Download** to create a new app using this app as the template.
-
-    {{< figure src="/attachments/deployment/deploying-to-mindsphere/app-store-download.png" class="no-border" >}}
-
-5. Open your Mendix Studio Pro and select the Import App Package on the **Open App** dialog.
-    {{< figure src="/attachments/deployment/deploying-to-mindsphere/import-app-package.png" class="no-border" >}}
-
-6. Select you just downloaded starter template package
-7. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
+4. Click **Start with Template** to create a new app using this app as the template.  
+5. To start the new app, confirm where to store the app, the app name, and the app directory, then click **OK**.
 
     {{< figure src="/attachments/deployment/deploying-to-mindsphere/app-store-download-project.png" class="no-border" >}}
 
 ### Option B: Customizing an Existing App{#existingapp}
 
-If you have an existing app which was not based on the Insights Hub app template, you must import the required customization. The three modules which must be imported are:
+If you have an existing app which was not based on the Siemens Insights Hub Starter Application, you must import the required customization. The modules which must be imported are:
 
 * **Siemens Insights Hub SSO** from the Mendix Marketplace here: [Siemens Insights Hub SSO](https://marketplace.mendix.com/link/component/108805/)
 
@@ -81,10 +69,6 @@ If you have an existing app which was not based on the Insights Hub app template
 * **Siemens Insights Hub OS Bar Connector** from the Mendix Marketplace here: [Siemens Insights Hub OS Bar Connector](https://marketplace.mendix.com/link/component/108804/)
 
     This integrates the mandatory Insights Hub OS Bar with your app. For more information, see the [Siemens Insights Hub OS Bar](/appstore/industry/mindsphere/mindsphere-module-details/#msosbar) section of *Insights Hub Module Details*.
-
-* **Siemens Insights Hub Web Content** from the Mendix Marketplace here: [Siemens Insights Hub Web Content](https://marketplace.mendix.com/link/component/108803/)
-
-    This applies Insights Hub styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens Insights Hub Web Content](/appstore/industry/mindsphere/mindsphere-module-details/#msthemepack) section of *Insights Hub Module Details*.
 
 ## Configuring the Modules{#configure-modules}
 
@@ -98,37 +82,7 @@ The following items in the SiemensInsightsHubSingleSignOn module need to be conf
 
 #### CockpitApplicationName
 
-Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*.
-
-These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/appstore/industry/mindsphere/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
-
-#### GatewayURL
-
-This is the URL of the Insights Hub gateway and is of the following format:
-
-```http
-https://gateway.{Region}.mindsphere.io
-```
-
-This needs to be changed depending on the `{Region}` your app is running. The default value is for Insights Hub running on **AWS**:
-
-```http
-https://gateway.eu1.mindsphere.io
-```
-
-#### PublicKeyURL
-
-The value of this constant is shown below:
-
-```http
-https://core.piam.{Region}.eu1.mindsphere.io/token_keys
-```
-
-This needs to be changed depending on the `{Region}` your app is running. The default value is for Insights Hub running on **AWS**:
-
-```http
-https://core.piam.eu1.mindsphere.io/token_keys
-```
+Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*. This must fit the constraints listed in the [App Name](/appstore/industry/mindsphere/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
 
 #### RegisterSingleSignOn
 
@@ -159,209 +113,33 @@ Change the JSON to contain appropriate values for the following information:
 * appCopyright – app owner’s name and year of publication
 * links – links to additional information about the app
 
-More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the Insights Hub developer site.
+More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://documentation.mindsphere.io/MindSphere/resources/osbar/getting-started.html), on the Insights Hub developer site.
 
 ## Deploying Your App{#deploying-your-app}
 
-A Mendix based application for Insights Hub can be deployed to Mendix or to Insights Hub. Deploying to Mendix is quite easy and is the preferred option as you than also can use the **Auto Registration** process.
+A Mendix-based app for Insights Hub can be deployed to Mendix. Deploying to Mendix is quite easy: click the **Publish** button in Studio Pro.
 
-{{% alert color="info" %}}
-**Auto Registration** process is only available on region Europe 1.
-{{% /alert %}}
+Once your app is deployed, you must register the app in your Insights Hub tenant for it to work and to appear on the Insights Hub Launchpad.
 
-### Option A: Deploy with Mendix Studio Pro to Mendix Cloud
+### Configuring the Mendix App in the Developer Cockpit{#launchpad}
 
-Just click the Publish Button in Mendix Studio Pro.
+#### Creating a New App
 
-{{< figure src="/attachments/deployment/deploying-to-mindsphere/runMendixApp.png" alt="Deploy to Mendix" class="no-border" >}}
-
-Once your app is deployed you can automatically register the app in your Insights Hub tenant.
-
-### Option B: Creating a Mendix Deployment Package and deploy it to Insights Hub Cloud Foundry
-
-{{% alert color="info" %}}
-There is a limit of 1.5 GB on the size of the Mendix deployment package (MDA file) which can be deployed to Insights Hub.
-{{% /alert %}}
-
-#### Pushing to Cloud Foundry
-
-Before you continue, ensure you have fulfilled the prerequisites described in the section [Prerequisites](#prerequisites) and configured the Insights Hub modules as described in the section [Configuring the Modules](#configure-modules), above.
-
-##### Creating a Mendix Deployment Package
-
-To create a Mendix deployment package from your app, do the following:
-
-1. Open your app in Studio Pro.
-2. Select **App** > **Create Deployment Package**.
-
-    {{< figure src="/attachments/deployment/deploying-to-mindsphere/image13.png" class="no-border" >}}
-
-3. Select the correct **Development line** and **Revision**.
-4. Set the **New version** number and add a **Description** if required.
-5. Change the path and **File name** if necessary.
-
-Your deployment package will be created, and its location displayed in an information message.
-
-{{% alert color="info" %}}
-By default, the deployment package will be created in the *releases* folder of your app.
-{{% /alert %}}
-
-##### Deploying the Application to Cloud Foundry using CF CLI
-
-To deploy your deployment package, do the following:
-
-1. Sign in to Insights Hub CF CLI using a one-time code:
-
-    * Enter `cf login -a https://api.cf.{Region}.{mindsphere-domain} --sso`
-    * Open the URL printed by the CLI and sign in using your WebKey credentials to get a One Time Code
-    * Enter the One Time Code in the CLI
-
-        {{% alert color="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
-
-2. Select your org and space using the command:
-
-    ```bash
-    cf target –o {org_name} -s {space_name}
-    ```
-
-    {{% alert color="info" %}}If you cannot target your org or space, you probably need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/howtos/index.html) in the Insights Hub documentation.{{% /alert %}}
-
-3. Create a PostgreSQL instance using the command:
-
-    ```bash
-    cf create-service postgresql10 {plan} {service_instance} [-c {parameters_as_JSON}] [-t {tags}]
-    ```
-
-    For example: `cf create-service postgresql10 postgresql-xs myapp-db`
-
-    For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the Insights Hub developers site.
-
-    {{% alert color="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
-
-4. Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
-
-    `cf services`
-    Your service should be listed, and the last operation should be ‘create succeeded’.
-
-5. Ensure you are in the same folder as the package you wish to deploy.
-6. Create a `manifest.yml` file with at least the following content:
-
-    ```yaml
-        applications:
-        - name: {app_name}
-          disk_quota: {disk_quota_size}
-          memory: {memory_size}
-        services:
-          - {service_instance}
-    ```
-
-    {{% alert color="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
-
-    {{% alert color="warning" %}}Each Mendix app needs its own database. Do not bind more than one app to a database as both apps will not work properly. Create a new database instance instead.{{% /alert %}}
-
-    For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the Insights Hub developers site.
-
-7. Push your app to Insights Hub using the command:
-
-    ```bash
-    cf push -p "{deployment_package_name}"
-    ```
-
-    For example: `cf push -p "myapp.mda"`
-
-##### Cloud Foundry Stack
-
-You should always use the latest available Cloud Foundry stack. The latest stack in Insights Hub is `cflinuxfs4`. Apps pushed to Insights Hub will use this stack.
-
-You can specify that your app uses a specific stack using the following command line option when you push your app:
-
-```bash
-cf push -p "{deployment_package_name}" -s {stack_name}
-```
-
-For example: `cf push -p "myapp.mda" -s cflinuxfs4`
-
-For more information about Cloud Foundry stacks on Insights Hub, see [How Can I Find the Stack my App is using?](https://developer.mindsphere.io/paas/howtos/howtos-stacks.html#find-out-which-stack-an-app-uses) in *Cloud Foundry How Tos* on the *Insights Hub Developer* site.
-
-#### Troubleshooting
-
-If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
-
-Ensure that you have configured your proxy settings if these are required.
-
-### Setting up Insights Hub Launchpad{#launchpad}
-
-You have to register your application for it to work and appear on the Insights Hub Launchpad. If you have deployed your application to Mendix you can use either of the following two options (where Option A is preferred). Deployed to Insights Hub, you have to register manually via the Developer Cockpit (Option B).
-
-#### Option A: Using the Auto Registration Process
-
-{{% alert color="info" %}}
-This method is recommended if your app is deployed to Mendix Cloud.
-
-However, the Auto Registration process is only available on region Europe 1.
-{{% /alert %}}
-
-To start the **Auto Registration** process click the **View** Button in Mendix Studio Pro once your app is deployed to Mendix Cloud. Your default browser will open and your app will start the process.
-
-{{< figure src="/attachments/deployment/deploying-to-mindsphere/AutoRegistrationExplanation.png" alt="AutoRegistrationExplanation" class="no-border" >}}
-
-Click **Start Auto Registration**. The process now tries to figure out on which tenant your app should be registered. Therefore you have to login:
-
-{{< figure src="/attachments/deployment/deploying-to-mindsphere/WebKeyLogin.png" alt="Login to Siemens Digital Industry Software" class="no-border" >}}
-
-{{% alert color="info" %}}
-If you have more then one tenant on Insights Hub you will get a list of tenants. Choose the tenant where you want to register your app.
-
-If you have only one tenant on Insights Hub, the process will automatically select this tenant for you.
-{{% /alert %}}
-
-Give a name, internal name, and, optionally, a description in order to register your app.
-
-{{< figure src="/attachments/deployment/deploying-to-mindsphere/AutoRegistrationNameAndDescription.png" alt="AutoRegistrationNameAndDescription" class="no-border" >}}
-
-If you are on a **Developer** tenant you also have to select at least one application role which will be assigned to your account automatically.
-
-On a **Start for Free** tenant the **admin** role will be assigned automatically to your account.
-
-Click **Register** to start the registration process on your tenant. After a few seconds, a summary page is shown and you are able to navigate directly to your app.
-
-{{< figure src="/attachments/deployment/deploying-to-mindsphere/AutoRegistrationSummary.png" alt="AutoRegistrationSummary" class="no-border" >}}
-
-{{% alert color="info" %}}
-The **Auto Registration** process creates application roles and scopes for your app automatically.
-
-If you are on a **Start for Free** tenant, additional Insights Hub API roles are assigned and your user is granted **admin** access to your app.
-
-If you are on a **Developer** tenant, no additional Insights Hub API roles are assigned. The granted access to your app is shown in the registration summary page.
-{{% /alert %}}
-
-Please note, for further configuration of your registration, for example, CSPs or additional roles, please use the Developer Cockpit.
-
-{{% alert color="info" %}}
-You can have multiple versions of your app within the Developer Cockpit, for example, versions with different configurations or roles and scopes. 
-
-The deployment registered via the **Auto Registration** process is *always mapped to the version created during the process*. If you want to create additional versions of your app, you can do this by manually creating a new version within the Developer Cockpit.
-{{% /alert %}}
-
-#### Option B: Configuring the Mendix App in the Developer Cockpit
-
-##### Creating a New Application
-
-To create a new app manually in the Insights Hub launchpad, do the following:
+To create a new app manually in the Insights Hub launchpad, follow these steps:
 
 1. Go to the **Developer Cockpit > Dashboard**.
 2. Click **Create new application**.
 3. Set the **Type** to *Standard*.
-4. Set the **Infrastructure** to *Cloud Foundry*.
+4. Set the **Infrastructure** to *Self Hosted*.
 5. Fill in the **Display Name** of your app, as you want it shown in the Launchpad.
 6. Fill in the **Internal Name** of your app. This must be identical to the value of *CockpitApplicationName* which you set in the SSO module of your app.
 7. Fill in a **Version** for your app.
 8. Fill in a **Description** of your app, if required.
 9. Click **Edit icon** to upload an **App Icon** for your app.
-10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
+10. Fill in the **Component > Name**.
 11. Click the **+** next to the component to add **Endpoints**.
 12. Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
-13. Fill in the **Cloud Foundry Direct URL**. This can be found using the Cloud Foundry command `cf app {app_name}`.
+13. Fill in the **URL**. If you have deployed your app to the Mendix free offering, just press the **View App** button to open the app in a browser. Take the URL from here.
 14. Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
     If your app is running on Insights Hub on **AWS** use Region `eu1`:
@@ -382,7 +160,7 @@ To create a new app manually in the Insights Hub launchpad, do the following:
 15. Click **Save** to save these details.
 16. Click **Register** to register your app with the Insights Hub launchpad.
 
-    {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
+    {{% alert color="info" %}}If the app has not been deployed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have deployed your app.{{% /alert %}}
 
 ##### Setting Application Scopes in Developer Cockpit{#scopes}
 
@@ -396,7 +174,7 @@ To set up the appropriate scopes in Insights Hub, do the following:
     {{< figure src="/attachments/deployment/deploying-to-mindsphere/image15.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-If you are using the app template, you should create two scopes, *user* and *admin*.
+If you are using the Siemens Insights Hub Starter Application, you should create two scopes: *user* and *admin*.
 {{% /alert %}}
 
 For an explanation of the relationship between Mendix roles and Insights Hub roles, see section [Roles and Scopes](/appstore/industry/mindsphere/mindsphere-module-details/#rolesscopes) in *Insights Hub Module Details*.
@@ -424,9 +202,7 @@ Once you have created the scopes for your app, you will need to assign them to t
 The user will have to sign out and sign in again for this assignment to take effect.
 {{% /alert %}}
 
-{{% alert color="success" %}}
 Your app is now set up and users can run it from within the Insights Hub Developer Cockpit.
-{{% /alert %}}
 
 ## Development Considerations
 

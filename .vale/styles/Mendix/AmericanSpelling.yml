@@ -44,4 +44,5 @@ swap:
   '\bupwards\b': 'upward'
   '\bdownwards\b': 'downward'
   '\bonwards\b': 'onward'
+  '\bexpiry\b': 'expiration'
   '\bprogramme([ds])?\b': 'program$1'

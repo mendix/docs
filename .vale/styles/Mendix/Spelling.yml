@@ -6,7 +6,7 @@
 #   - If you add a term to one of those rules and the word isn't in the dictionary, add it to "Terms covered by other rules" below. Otherwise it is flagged twice.
 #   - If you remove a term from one of those rules, remove it from "Terms covered by other rules" too. Otherwise it is silently exempt from spelling checks.
 extends: spelling
-message: "Did you really mean '%s'?"
+message: "'%s' is not in the dictionary. Check the spelling, or put code in backticks."
 level: warning
 # Skips bold and italic text
 scope: text & ~strong & ~emphasis
@@ -180,6 +180,7 @@ filters:
   - '^[Oo]ffboard(ed)?$'
   - '^outdent$'
   - '^[Oo]vercommit(ted|ment)?$'
+  - '^[Oo]verconsumption$'
   - '^pem$'
   - '^[Pp]eerings?$'
   - '^[Pp]ersistable$'
@@ -201,7 +202,7 @@ filters:
   - '^[Ss]ubexpressions?$'
   - '^[Ss]ubplans?$'
   - '^[Ss]tylings?$'
-  - '^swimlanes?$'
+  - '^[Ss]wimlanes?$'
   - '^tapjacking$'
   - '^ttf$'
   - '^[Tt]ypographies$'
@@ -212,7 +213,6 @@ filters:
   - '^[Uu]nsynchronized$'
   - '^upvoted$'
   - '^webp$'
-  - '^webpages$'
   - '^[Ww]ebservices?$'
   - '^wireframe$'
   - '^xcodebuild$'
@@ -220,4 +220,4 @@ filters:
   - '^XPaths?$'
 
   # Terms covered by other rules (listed here to prevent duplicate flags)
-  - '^(?i:airgapped|dropzones?|hashicorp|idp|ios|javascript|jquery|macos|maia|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|yaml)$'
+  - '^(?i:airgapped|dropzones?|hashicorp|idp|ios|javascript|jquery|macos|maia|oauth|onwards|openshift|postgres|postgresql|powershell|sql|submicroflows?|subworkflows?|yaml)$'

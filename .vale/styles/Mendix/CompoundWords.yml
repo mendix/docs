@@ -20,6 +20,7 @@ swap:
   '([Dd])ata[ -]set': '$1ataset'
   '([Dd])ouble click (any|in|it|on|the|to)\b': '$1ouble-click $2'  # Matches the next word to exclude UI label hits
   '([Dd])rop ?zone(s?)': '$1rop-zone$2'
+  '([Ee])-mail(s?)': '$1mail$2'
   '([Ee])nd point': '$1ndpoint'
   '([Ee])nd user': '$1nd-user'
   '([Hh])ome-?page': '$1ome page'
@@ -31,7 +32,8 @@ swap:
   '([Rr])ight click': '$1ight-click'
   '([Rr])un[ -]time': '$1untime'
   '([Ss])ingle sign on': '$1ingle sign-on'
-  '([Ss])ub ?microflow(s?)': '$1ub-microflow$2'
+  '([Ss])ub ?(microflow|process|workflow)(e?s)?': '$1ub-$2$3'
+  '([Tt])imezone(s?)': '$1ime zone$2'
   '([Tt])ool tip': '$1ooltip'
   '([Ww])ebservice(s?)': '$1eb service$2'
 

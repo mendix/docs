@@ -17,12 +17,16 @@ second: '\(([A-Z]{3,5})s?\)'
 exceptions+:
   - ATS
   - AWS
+  - BPMN
   - BTP
+  - CVV
   - DNS
   - GCP
   - GIF
   - HANA
   - IAM
+  - IBAN
+  - ISO
   - JDBC
   - JPEG
   - JPG
@@ -34,6 +38,7 @@ exceptions+:
   - NGINX
   - OIDC
   - OQL
+  - PIN
   - PNG
   - REST
   - SAML
@@ -42,6 +47,7 @@ exceptions+:
   - SMTP
   - SOAP
   - SSO
+  - SWIFT
   - TLS
   - UTC
   - UUID

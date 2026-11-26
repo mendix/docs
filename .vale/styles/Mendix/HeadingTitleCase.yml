@@ -14,12 +14,20 @@ exceptions:
   - iOS
   - IdP
   # Don't force lowercase for these words
+  - About
+  - Above
   - Across
   - After
   - Against
+  - Around
+  - Below
   - Between
   - During
   - Through
+  - Within
   - Without
   # Exclude filenames with extensions (but consider if these should get code font instead)
   - '[\w-]+\.(?:html|json|js|scss|gz)'
+  # Exclude lowerCamelCase and snake_case identifiers (but consider if these should get code font instead)
+  - '[a-z]+(?:[A-Z][a-z0-9]*)+'
+  - '[A-Za-z0-9]+(?:_[A-Za-z0-9]+)+'

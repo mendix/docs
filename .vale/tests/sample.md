@@ -143,12 +143,14 @@ This actually works.
 ## Mendix.EmDashes
 
 Flags spaces around an em dash.
-
 <!-- flagged -->
 The page closes — the data is saved.
 
 <!-- not flagged -->
 The page closes—the data is saved.
+
+<!-- known gap: list items aren't scoped (to avoid double alerts with Mendix.ListIntroductions) -->
+* This list item is long enough to pass the 40-character introduction limit — and then has a dash.
 
 ## Mendix.Emphasis
 
@@ -271,10 +273,16 @@ Click [here and there](/refguide/) for details.
 
 ## Mendix.ListIntroductions
 
-Flags a hyphen, double hyphen, em dash, or misspaced en dash after a list item introduction of up to 40 characters.
+Flags a hyphen, double hyphen, em dash, or mis-spaced en dash after a list item introduction of up to 40 characters.
 
-<!-- known false positive: a spaced em dash in the first 40 characters looks like an introduction, though this is a mid-sentence aside; Mendix.EmDashes already flags the spacing -->
+<!-- known false positive: a spaced em dash in the first 40 characters looks like an introduction, though this is a mid-sentence aside. The dash is still wrong, but the message is misleading -->
 * Use an entity — and its attributes — to store data in the database.
+
+<!-- known gap: a spaced hyphen followed by a digit is assumed to be a number range, not an introduction -->
+* Excel 97 - 2003 files are supported.
+
+<!-- flagged: a spaced hyphen followed by a letter reads as an introduction, even if the introduction ends in a digit -->
+* **Windows 10** - Supported.
 
 <!-- not flagged -->
 * Use an entity—and its attributes—to store data in the database.

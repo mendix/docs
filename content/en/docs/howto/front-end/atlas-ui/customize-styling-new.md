@@ -215,7 +215,7 @@ Modules that contain theme styling should be marked as UI resources modules. To 
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/green-module.png" alt="green module" class="no-border" >}}
 
-#### Ordering UI Resource Modules
+#### Ordering UI Resource Modules {#ordering-ui-resource-modules}
 
 When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should override styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
 

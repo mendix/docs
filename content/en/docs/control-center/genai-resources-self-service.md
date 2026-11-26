@@ -13,7 +13,7 @@ The **GenAI Resources** section provides a detailed overview of all Mendix GenAI
 
 Self-service provisioning of GenAI resources using Mendix Cloud Tokens is available only if you meet the following conditions:
 
-1. Sufficient token entitlements – You must have an adequate number of available Mendix Cloud Tokens to allocate for GenAI resource provisioning.
+1. Sufficient token entitlements – You must have enough available Mendix Cloud Tokens to allocate for GenAI resource provisioning.
 2. Valid subscription plan – Your Mendix subscription must be based on the FY21 price list or newer. Older subscription plans are not eligible for provisioning.
 3. Single account ownership – You must have a single account. Owning multiple accounts is not supported for self-service GenAI provisioning.
 4. Enterprise platform subscription – You must have a single active enterprise platform subscription. If no active subscription is found, the system displays the following warning: "We couldn't retrieve your correct platform account, which is required to access available tokens and create resources. Please contact Mendix Support for assistance."
@@ -60,7 +60,7 @@ If you turned on **Enable Guardrails Usage**, the guardrail is created after the
 
 ## Deprovisioning GenAI Resources
 
-To deprovision a resource, click the three-dot icon ({{% icon name="three-dots-menu-horizontal-filled" %}}) next to the selected resource and select **Deprovision Resource**. A confirmation dialog box appears, displaying a message and the details of the selected resource, as shown in the example below.
+To deprovision a resource, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the selected resource and select **Deprovision Resource**. A confirmation dialog box appears, displaying a message and the details of the selected resource, as shown in the example below.
 
 {{< figure src="/attachments/control-center/genai-resources/deprovisioning.png" alt="Confirmation dialog for deprovisioning a GenAI resource showing resource details and Deprovision button" >}}
 
@@ -77,7 +77,7 @@ After a resource is provisioned, you can edit it through the self-service capabi
 1. Sign in to the Control Center as a Company Admin.
 2. On the **GenAI Resources** page, click the three-dot ({{% icon name="three-dots-menu-horizontal-filled" %}}) icon next to the selected resource and select **Edit Resource**.
 3. Make your changes. You can change the following:
-    * **Name** and **Default Model** – Change the resource name or the model used when an API call doesn't specify one.
+    * **Name** and **Default Model** – Change the resource name or the model used when an API call does not specify one.
     * **Cloud Tokens** – For more information, see [Adjusting Resource GenAI Unit Capacity](#adjusting-resource-genai-unit-capacity).
     * **Enable Guardrails Usage** – Available for text generation resources only. For more information, see [Enabling or Disabling Guardrails](#enabling-or-disabling-guardrails).
 4. Review the updated **Cloud Tokens Consumption**.
@@ -107,7 +107,7 @@ The behavior depends on how much of the current month's allocation has already b
 To allow or stop guardrail use on a text generation resource, [edit the resource](#editing-genai-resources) and turn **Enable Guardrails Usage** on or off in the **Guardrails** section. You can also turn it on when you [provision the resource](#provisioning-genai-resources). After you enable guardrails, resource members configure the guardrail in the Mendix Cloud GenAI Portal. For more information, see [Guardrails for Mendix Cloud GenAI Resources](/agents/mx-cloud-genai/guardrails/).
 
 {{% alert color="warning" %}}
-When you save, disabling guardrails on a resource that has a guardrail permanently deletes the guardrail and its configuration, and the resource's prompts and responses are no longer filtered. Enabling guardrails again does not restore the deleted guardrail. Resource members must configure a new guardrail from the start. Check with the resource team before you disable guardrails.
+Disabling guardrails on a resource that has a guardrail permanently deletes the guardrail and its configuration when you save. The resource's prompts and responses are no longer filtered. Enabling guardrails again does not restore the deleted guardrail. Resource members must configure a new guardrail from the start. Check with the resource team before you disable guardrails.
 {{% /alert %}}
 
 {{< figure src="/attachments/control-center/genai-resources/guardrails-disable-warning.png" alt="Guardrails section with the Enable Guardrails Usage switch turned off and a warning that turning guardrails off removes the guardrail and its configuration when you save" max-width="70%" >}}

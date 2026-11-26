@@ -10,7 +10,7 @@ weight: 40
 
 A guardrail filters the prompts sent to a Mendix Cloud GenAI text generation resource and the responses that the model returns. You can use a guardrail to block prompt attacks and to block or mask personally identifiable information (PII).
 
-Each text generation resource can have one guardrail. While the guardrail is active, it applies to every request made to the resource. Saved changes take effect immediately. You don't need to change your app to use a guardrail. Knowledge base and embeddings resources don't support guardrails.
+Each text generation resource can have one guardrail. While the guardrail is active, it applies to every request made to the resource. You do not need to change your app to use a guardrail. Knowledge base and embeddings resources do not support guardrails.
 
 {{% alert color="info" %}}
 Guardrails consume additional GenAI Units. For more information, see [Guardrail GenAI Unit Rates](/agents/mx-cloud-genai/resource-packs/#guardrail-genai-unit-rates).
@@ -35,7 +35,7 @@ The **Guardrails** tab is available for text generation resources only. It shows
 
 ## What a Guardrail Evaluates {#what-a-guardrail-evaluates}
 
-A guardrail doesn't evaluate every part of a request. The following table shows which content the guardrail evaluates:
+A guardrail does not evaluate every part of a request. The following table shows which content the guardrail evaluates:
 
 | Content | Evaluated |
 | --- | --- |
@@ -76,25 +76,25 @@ A guardrail supports the following filters.
 
 The prompt attacks filter detects and blocks user prompts that try to override the system instructions, such as jailbreaks and prompt injections. To use it, turn on **Prompt attacks filter** and select a strength:
 
-* **None** – The filter is on but doesn't block any prompts.
+* **None** – The filter is on but does not block any prompts.
 * **Low** – Blocks only prompts that are clearly prompt attacks.
 * **Medium** – Blocks prompts that are likely to be prompt attacks.
 * **High** – Blocks any prompt that might be a prompt attack. This is the strictest setting, and it can also block some harmless prompts.
 
 ### Sensitive Information Filters {#sensitive-information-filters}
 
-Sensitive information filters detect personally identifiable information (PII) in prompts and responses. To use them, turn on **PII Type Filter**, click **Add PII type**, and select a PII type, for example, **Email** or **IP address**. You can add each PII type once. Then, select the **Guardrail Behaviour** for each PII type:
+Sensitive information filters detect personally identifiable information (PII) in prompts and responses. To use them, turn on **PII Type Filter**, click **Add PII type**, and select a PII type, for example, **Email** or **IP address**. You can add each PII type once. For each PII type, select one of the following **Guardrail Behaviour** options:
 
 * **Block** – The guardrail blocks the prompt or response and returns the configured blocked message.
 * **Anonymize** – The guardrail replaces the detected information with the name of the PII type, for example, `{EMAIL}`.
-* **None** – The guardrail detects the information but doesn't block or mask it.
+* **None** – The guardrail detects the information but does not block or mask it.
 
 The following PII types are supported:
 
 | Category | PII Types |
 | --- | --- |
 | General | Address, age, name, email, phone, username, password, driver ID, license plate, vehicle identification number |
-| Finance | Credit or debit card CVV, credit or debit card expiry, credit or debit card number, PIN, international bank account number (IBAN), SWIFT code |
+| Finance | Credit or debit card CVV, credit or debit card expiration, credit or debit card number, PIN, IBAN, SWIFT code |
 | IT | IP address, MAC address, URL, AWS access key, AWS secret key |
 | US-specific | US bank account number, US bank routing number, US individual taxpayer identification number, US passport number, US Social Security number |
 | Canada-specific | Canadian health number, Canadian social insurance number |

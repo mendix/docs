@@ -28,7 +28,7 @@ The **Consumption** tab provides an overview of GenAI Unit and Large Language Mo
 
 Note that periods represent bundle months. A bundle month is the period during which consumption is tracked, beginning on the date of your last GenAI Resource entitlement reset and ending on the next reset date. This creates a recurring monthly cycle based on your resource activation date, not the calendar month.
 
-{{< figure src="/attachments/genai/navigate_mxgenai/token-consumption-monitor.png" alt="Token Consumption Monitor with the GenAI Units consumption chart showing text generation and guardrail consumption stacked, and a hover box with both values and the total" >}}
+{{< figure src="/attachments/genai/navigate_mxgenai/token-consumption-monitor.png" alt="Token Consumption Monitor with the GenAI Units consumption chart showing text generation and guardrail consumption stacked, and a tooltip with both values and the total" >}}
 
 **Current Consumption** shows the total GenAI Units consumed against your monthly allocation, displayed as a percentage and a number (for example, 627 / 800). The bundle fill date and the number of days until the next refill are shown next to the **Current Consumption** heading. **Resource Pack** shows the model provider (for example, Anthropic Claude) and the total GenAI Unit allocation for the bundle month.
 
@@ -41,14 +41,14 @@ Below the summary, the page shows **Consumption Over Selected Time Range**. You 
 
 ### Guardrail Consumption {#guardrail-consumption}
 
-For text generation resources with a [guardrail](/agents/mx-cloud-genai/guardrails/), the charts show model consumption in a darker shade, with guardrail consumption stacked on top. The legend and the hover box use the following names:
+If a text generation resource has a [guardrail](/agents/mx-cloud-genai/guardrails/), each chart stacks guardrail consumption in a lighter shade on top of model consumption. The chart legends and tooltips use the following names:
 
 * Model consumption – **Text Generation GenAI Units**, **Text Generation Input Tokens**, **Text Generation Output Tokens**, and **Text Generation API Calls**
 * Guardrail consumption – **Guardrail GenAI Units**, **Guardrail Input Tokens**, **Guardrail Output Tokens**, and **Guardrail API Calls**
 
 Guardrail consumption is only shown when the selected period has guardrail usage. **Current Consumption** and the consumption limits always include both model and guardrail consumption.
 
-When you filter by **Model**, the charts hide guardrail consumption and show model consumption only, because guardrail consumption isn't tied to a model. The **Key** filter applies to both model and guardrail consumption.
+When you filter by **Model**, the charts hide guardrail consumption and show model consumption only, because guardrail consumption is not tied to a model. The **Key** filter applies to both model and guardrail consumption.
 
 ### Consumption Limit Notifications {#consumption-limit-notifications}
 
@@ -223,7 +223,7 @@ The **Settings** tab contains the details of a GenAI resource. It shows the foll
 * **Capacity** – The monthly [GenAI Unit](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) allocation for the resource, for example, 1,000 GenAI Units.
 * **Environment** – The environment, for example, Test, Acceptance, or Production.
 
-¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available under the CRI inferencing type by default.
+¹ Cross Region Inference (CRI) allows a model to redirect requests to another region, helping to distribute the load across multiple regions within the same area. EU requests always stay within EU regions. Connecting to a cross region inference profile does not change how the request is sent; the redirection happens on the server side, determining the region to handle the request to get the fastest response. For more information, see [Increase throughput with cross-region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html). If applicable, CRI profiles are selected during provisioning of a model resource. New models are available through the CRI type by default.
 
 ### Additional Details for Knowledge Base Resources
 

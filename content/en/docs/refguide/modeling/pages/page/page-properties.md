@@ -184,13 +184,69 @@ This property specifies whether the end-user can resize the pop-up or not.
 
 Default: *Yes*
 
-#### Close Action
+#### Close Action Type {#close-action-type}
 
-Configures the behavior of a button that closes the pop-up page. The default behavior of the pop-up close button is to rollback any changes and close the pop-up window. 
+This property determines how you configure the behavior that runs when an end-user closes the pop-up, for example by clicking the **Close** button in the title bar or by pressing <kbd>Esc</kbd>. The values are:
 
-If you want to customize the behavior of the pop-up close button, you can point to a button on the page. When the pop-up close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the pop-up close button will revert back to the default behavior.
+* **Action** *(default)* – You configure a client action on the page itself, in the same way as for a button.
+* **Button (deprecated)** – You point to a button on the page.
+
+Default: *Action*
+
+{{% alert color="info" %}}
+The **Close action type** property was introduced in Mendix 11.17.0. Pop-up pages that were configured with a close button in an earlier version are converted automatically when the referenced button uses the **Do nothing**, **Cancel changes**, **Close page**, **Save changes**, or **Sign out** action. All other pop-up pages keep the deprecated button reference until you switch them to **Action** yourself.
+{{% /alert %}}
+
+#### Close Action {#close-action}
+
+This property configures the behavior that runs when an end-user closes the pop-up. What you can select depends on the [close action type](#close-action-type).
+
+##### Action {#close-action-action}
+
+When **Close action type** is set to **Action**, you select the client action that runs when the pop-up is closed. Configuring the action works the same as configuring the [on click event](/refguide/on-click-event/) of a button, except that you cannot make a microflow call asynchronous or abort it on validation errors.
+
+The following actions are supported:
+
+* [Do nothing](/refguide/on-click-event/#do-nothing)
+* [Cancel changes](/refguide/on-click-event/#cancel-changes)
+* [Call a microflow](/refguide/on-click-event/#call-microflow)
+* [Call a nanoflow](/refguide/on-click-event/#call-nanoflow)
+* [Close page](/refguide/on-click-event/#close-page)
+* [Save changes](/refguide/on-click-event/#save-changes)
+* [Delete object(s)](/refguide/on-click-event/#delete-objects)
+* [Sign out](/refguide/on-click-event/#sign-out)
+
+The other client actions cannot be used, because they either need a context object that the page does not provide, or do not make sense while a pop-up is closing.
+
+Default: *Cancel changes*
+
+##### Button (Deprecated) {#close-action-button}
+
+When **Close action type** is set to **Button (deprecated)**, you point to a button on the page. When an end-user closes the pop-up, the app acts as if the selected button is clicked. If the selected button is not available, the pop-up rolls back any changes and closes the pop-up window.
 
 Default: *Default (cancel)*
+
+{{% alert color="warning" %}}
+Pointing to a button is deprecated and results in a deprecation warning. Configure an action instead.
+
+If you use the conditional visibility of the referenced button to run different close behaviors, that logic is not carried over when you switch to **Action**, because the close action is no longer a button reference. To keep conditional behavior, set the close action to call a nanoflow that contains the conditional logic.
+{{% /alert %}}
+
+#### Existing Pop-Ups
+
+Existing pop-ups that use the legacy button reference continue to work after you update the project. They are automatically converted to the new action model only when the referenced button uses one of the following client actions:
+
+* `DoNothingClientAction`
+* `CancelChangesClientAction`
+* `ClosePageClientAction`
+* `SaveChangesClientAction`
+* `SignOutClientAction`
+
+#### Manual Conversion
+
+If an existing pop-up cannot be converted automatically, switch its **Close action type** from the deprecated button reference to the new action configuration.
+
+If you used the conditional visibility of the referenced close button to run different close behaviors, that logic is not carried over when you switch to the new action-based behavior. The close action is now a direct client action, so visibility conditions on the old button no longer affect it. To preserve conditional close behavior, configure the close action to call a nanoflow that contains the conditional logic.
 
 ## Styling {#styling}
 

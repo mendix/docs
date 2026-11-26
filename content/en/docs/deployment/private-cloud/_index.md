@@ -8,6 +8,12 @@ weight: 48
 
 ## Introduction
 
+{{% alert color="warning" %}}
+Mendix on Kubernetes Standalone, where you use the Mendix Operator without connecting it to Mendix Portal or to Private Mendix Platform, is being deprecated and will not support Mendix 12 and future Runtime versions. Mendix on Kubernetes Connected and Private Mendix Platform are not affected.
+
+For more information, see [Mendix on Kubernetes Standalone Deprecation FAQ](/developerportal/deploy/private-cloud/standalone-deprecation-faq/).
+{{% /alert %}}
+
 Mendix on Kubernetes allows you to deploy and manage your Mendix apps in a Kubernetes private cluster. It automates operations, such as database provisioning, that you would have to perform manually if you used the Mendix Docker buildpack. It also provides options for monitoring and logging through third-party tools. 
 
 Your organization may have a requirement to use a private cloud, perhaps as part of a multi-cloud strategy. This could be because of legal requirements or a desire to have complete control over your data. Mendix on Kubernetes allows you to do this while keeping the familiar components of Docker and Kubernetes.

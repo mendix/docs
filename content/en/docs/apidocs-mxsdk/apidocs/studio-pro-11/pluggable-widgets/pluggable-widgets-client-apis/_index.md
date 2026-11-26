@@ -581,6 +581,14 @@ translate("mxui.common", "true") // mxui.common.true
 
 Parameters may be passed to external texts. Please note there is no type checking for the parameters of external texts.
 
+#### Overrides {#overrides}
+
+A user can [override system texts](/refguide/common-widget-properties/#override-system-texts) for individual widgets in Studio Pro. Overriding applies to both the widget's own texts and its external texts. When an override exists for the current language, `translate()` returns the override instead of the system text. The parameters passed to `translate()` are substituted in the override in the same way. The widget does not need any additional changes to support overrides.
+
+{{% alert color="info" %}}
+Overriding system texts was introduced in Mendix 11.17.
+{{% /alert %}}
+
 ## Exposed Modules
 
 ### Session {#session}

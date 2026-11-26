@@ -415,6 +415,10 @@ Spell as two words without a hyphen.
 
 Spelling of this doc type varies in the industry, but the decision to go with two words is based on usage from [Siemens](https://cache.industry.siemens.com/dl/files/923/109739923/att_890063/v1/A5E31805656-06_SIPROCESS_GA700_KBA_en_en-US.pdf), [AWS](https://aws.amazon.com/quickstart/?solutions-all.sort-by=item.additionalFields.sortDate&solutions-all.sort-order=desc&awsf.filter-content-type=content-type%23quick-start&awsf.filter-tech-category=*all&awsf.filter-industry=*all), and [Microsoft](https://support.microsoft.com/en-au/office/microsoft-365-quick-starts-25f909da-3e76-443d-94f4-6cdf7dedc51e).
 
+## read-only
+
+Hyphenate (following the *Microsoft Style Guide*).
+
 ## recommend
 
 Use "Mendix recommends" rather than "we recommend".
@@ -502,6 +506,10 @@ You may notice an **Enable dev mode** toggle on the app home page.
 Can use as a verb.
 
 > Click this to toggle the protection level for the content.
+
+## tooltip
+
+Write as one word (following the *Microsoft Style Guide*).
 
 ## upper left/upper right {#upperlowercase}
 

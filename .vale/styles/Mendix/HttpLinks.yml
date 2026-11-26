@@ -1,0 +1,8 @@
+# Mendix custom rule: Use https instead of http in links
+# Exempts localhost, www.example.com, and S3 website endpoints
+extends: existence
+message: "Use https instead of http in links, unless the site doesn't support it."
+level: error
+scope: raw
+raw:
+  - '\]\(http://(?!localhost|www\.example\.com|[^)/]*\.s3-website)'

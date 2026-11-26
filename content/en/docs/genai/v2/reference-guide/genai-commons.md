@@ -85,6 +85,18 @@ The `DeployedModel` entity replaces the capabilities that the `Connection` entit
 | `SupportsStreaming` | Enum to specify if the model supports calling the streaming API. |
 | `SupportsSystemPrompt` | Enum to specify if the model supports system prompts. |
 | `IsActive` | Boolean to specify if the model is active/usable with the current authentication settings and user preference. |
+| `ModelDocumentID` | The ID of the model document for models created in Studio Pro. This is empty if the model was created in the running app. |
+| `_QualifiedName` | The qualified name of the model document for models created in Studio Pro. |
+
+#### `ConsumedModelResource` {#consumed-model-resource}
+
+The `ConsumedModelResource` represents the connection details of a model provider, such as endpoints and credentials. Each connector module implements its own specialization, for example, the `Configuration` entity of the [OpenAI connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/). Admins configure these objects at runtime, or they are created from model documents defined in Studio Pro.
+
+| Attribute | Description |
+| --- | --- |
+| `ModelDocumentID` | The ID of the model document for resources created in Studio Pro. This is empty if the resource was created in the running app. |
+| `_QualifiedName` | The qualified name of the model document for resources created in Studio Pro. |
+| `GetCredentialsMicroflow` | The name of an optional microflow that returns the credentials for calling the provider's API as a list of `System.HttpHeader` objects. If the microflow has an input parameter, it accepts the specialization. Whether and when the microflow is run depends on the connector. For the OpenAI connector, see [Authenticating with a Microflow](/agents/agents-kit-2/reference-guide/external-connectors/openai/#get-credentials-microflow). |
 
 #### `ConsumedKnowledgeBase` {#consumed-knowledge-base}
 
@@ -102,9 +114,20 @@ The `ConsumedKnowledgeBase` entity was introduced in module version 6.0.0. To mi
 | `Architecture` | The architecture of the consumed knowledge base, for example, Mendix Cloud or Amazon Bedrock. |
 | `CollectionIdentifierLabel` | The name of a deployed knowledge base (collection) in the language of the provider (for example, **Index** for Azure Search Resources). This is used in the front end when building agents. |
 | `RetrievalMicroflow` | The microflow to retrieve information for the specified knowledge base resource. |
-| `GetCollectionsMicroflow` | The microflow to run to retrieve selectable options for collections present in the specified consumed knowledge base. |
-| `GetDeployedKnowledgeBaseMicroflow` | The microflow to retrieve selectable options for collections present in the specified consumed knowledge base. |
+| `GetCollectionsMicroflow` | The microflow to run to retrieve selectable options for collections present in the specified consumed knowledge base. The microflow returns a list of [CollectionOption](#collection-option) objects. |
+| `GetDeployedKnowledgeBaseMicroflow` | The microflow to retrieve the connector-specific specialization of `DeployedKnowledgeBase` based on the chosen collection identifier. |
 | `IsSelectable` | Boolean to specify if the knowledge base resource is active or usable when defining agents. |
+| `ModelDocumentID` | The ID of the model document for knowledge bases created in Studio Pro. This is empty if the knowledge base was created in the running app. |
+| `_QualifiedName` | The qualified name of the model document for knowledge bases created in Studio Pro. |
+
+#### `CollectionOption` {#collection-option}
+
+A `CollectionOption` represents a selectable collection of data (for example, an index) inside a [ConsumedKnowledgeBase](#consumed-knowledge-base). The microflow stored in the `GetCollectionsMicroflow` attribute of the consumed knowledge base returns a list of these objects, which are shown as options in the front end, for example, when building agents.
+
+| Attribute | Description |
+| --- | --- |
+| `Identifier` | The technical identifier of the collection. |
+| `DisplayName` | The display name of the collection. |
 
 #### `DeployedKnowledgeBase` {#deployed-knowledge-base}
 
@@ -120,7 +143,7 @@ The `DeployedKnowledgeBase` entity replaces the capabilities covered by the `Con
 | `Microflow` |  The microflow to run to retrieve information for the specified knowledge base. |
 | `IsActive` | Boolean to specify if the knowledge base is active and usable with the current authentication settings and user preference. |
 
-#### `InputModality` {#Usage}
+#### `InputModality` {#input-modality}
 
 Accepted input modality of the associated deployed model.
 
@@ -165,6 +188,8 @@ The data stored in this entity is to be used later on for traceability use cases
 | `HasError` | Indicates if any span call has failed. |
 | `_AgentVersionId` | The ID of the agent version (if applicable) as sent via the request. |
 | `_ConversationId` | The ID of the conversation (if applicable) as sent via the request. Usually created by the model provider. |
+| `_AgentName` | The name of the agent (if applicable) as sent via the request. |
+| `_AgentVersionNumber` | The version number of the agent (if applicable) as sent via the request. |
 
 #### `Span` {#span}
 
@@ -199,7 +224,9 @@ A tool span is created for each tool call requested by the LLM. The tool call is
 | `ToolName` | The name of the tool that was called. |
 | `ToolDescription` | The description of the tool. |
 | `_ToolCallId` | The ID of the tool call used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
-| `ToolCallStatus` | The current status of the tool call. |
+| `ToolCallStatus` | The current status of the tool call. For more information, see the [ENUM_ToolCallStatus](#enum-toolcallstatus) section. |
+| `DisplayName` | The name of the tool as shown to users. This is the `DisplayTitle` of the [Tool](#tool), or its `Name` if no display title is set. |
+| `DisplayDescription` | The description of the tool as shown to users. This is the `DisplayDescription` of the [Tool](#tool), or its `Description` if no display description is set. |
 
 #### `KnowledgeBaseSpan` {#knowledge-base-span}
 
@@ -226,13 +253,16 @@ The `Request` is an input object for the chat completions operations defined in 
 
 | Attribute | Description |
 | --- | --- |
-| `_Id` | The unique identifier of the session. Reuse the same value to continue the same session. |
+| `_ID` | The unique identifier of the session. Reuse the same value to continue the same session. |
 | `SystemPrompt` | Provides the model with context, instructions, or guidelines. |
 | `MaxTokens` | Maximum number of tokens per request. |
 | `Temperature` | Controls the randomness of the model response. Low values generate a more predictable output, while higher values allow creativity and diversity. Mendix recommends steering either the temperature or `TopP`, but not both. |
 | `TopP` | An alternative to temperature for controlling the randomness of the model response. `TopP` defines a probability threshold so that only words with probabilities greater than or equal to the threshold will be included in the response. Mendix recommends steering either the temperature or `TopP`, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
 | `_AgentVersionId` | The `AgentVersionId`, set if the execution of the request was called from an Agent. |
+| `_AgentName` | The name of the agent, set if the execution of the request was called from an Agent. |
+| `_AgentVersionNumber` | The version number of the agent, set if the execution of the request was called from an Agent. |
+| `_IsStudioProPlaygroundCall` | Set to *true* for requests created from the Agent Editor playground in Studio Pro to bypass certain features, such as human-in-the-loop settings. Do not set this manually. |
 | `SaveToolCallHistory` | Indicates if the tool calls are stored for later continuation (must be implemented). |
 | `UseStreamingAPI` | Indicates whether the LLM call uses streaming. |
 | `StreamingResponseWriterId` | Indicates whether streaming data is pushed to the UI. Do not set this manually. It is set in the backend only when a Conversational UI chat interface is used with an agent that has streaming enabled. |
@@ -302,6 +332,10 @@ A tool of the type *function*. This is a specialization of [Tool](#tool) and rep
 | `MinimumSimilarity` | The minimum similarity score (usually 0-1) of the passed chunk and the knowledge chunks in the knowledge base. |
 | `MaxNumberOfResults` | The maximum number of results to retrieve from the knowledge base. |
 
+#### `Computer` {#computer}
+
+A tool of the type *computer*. This is a specialization of [Tool](#tool) and represents a microflow that can communicate with a virtual machine to enable computer use. Computer use is a beta capability that is not supported by all providers and models.
+
 #### `StopSequence` {#stopsequence}
 
 For many models, `StopSequence` can pass a list of character sequences (for example, a word) along with the request. The model stops generating content when a word from that list occurs next.
@@ -316,7 +350,7 @@ The response returned by the model contains usage metrics and a response message
 
 | Attribute | Description |
 | --- | --- |
-| `_ID_` | The unique identifier of the session. Reuse the same value to continue the same session. If no ID was set by the LLM connector, an internal ID is created. | 
+| `_ID` | The unique identifier of the session. Reuse the same value to continue the same session. If no ID was set by the LLM connector, an internal ID is created. | 
 | `RequestTokens` | Number of tokens in the request. | 
 | `ResponseTokens` | Number of tokens in the generated response. |
 | `TotalTokens` | Total number of tokens (request + response). |
@@ -334,9 +368,10 @@ A tool call object may be generated by the model in certain scenarios, such as a
 | `ToolType` | The type of the tool. View AI provider documentation for supported types. |
 | `ToolCallId` | A model-generated ID of the proposed tool call. It is used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
 | `Input` | The raw tool JSON input generated by the model, usually passed for external tools where no mapping to a microflow is required. |
-| `Status` | The current status of the ToolCall to determine next steps and UI display. |
+| `Status` | The current status of the ToolCall to determine next steps and UI display. For more information, see the [ENUM_ToolCallStatus](#enum-toolcallstatus) section. |
 | `ToolResult` | The result of the tool call. |
 | `IsError` | Indicates if the tool call failed. |
+| `InternalToolType` | Internal attribute that helps to determine the type of tool. Do not use. |
 
 #### `Reference` {#reference}
 
@@ -348,7 +383,7 @@ An optional reference for a response message.
 | `Content` | The content of the reference. |
 | `Source` | The source of the reference (for example, a URL). | 
 | `SourceType` | The type of the source. For more information, see [ENUM_SourceType](#enum-sourcetype). |
-| `Index` | Used to make references identifiable and sortable.| 
+| `_Index` | Used to make references identifiable and sortable.| 
 
 #### `Citation` {#citation}
 
@@ -587,7 +622,7 @@ Use this microflow to add a file to an existing [FileCollection](#filecollection
 | `URL` | String | Either URL or FileDocument is required. | The URL of the file. |
 | `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
 | `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | mandatory | The type of the file. |
-| `TextContent` | String | mandatory | An optional text content describing the file content or giving it a specific name. |
+| `TextContent` | String | optional | An optional text content describing the file content or giving it a specific name. |
 
 ###### Return Value
 
@@ -934,7 +969,7 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| `URL` | **Url** | The content of the file can be found on a (publicly available) URL which is provided in the `FileContent` attribute. |
+| `Url` | **Url** | The content of the file can be found on a (publicly available) URL which is provided in the `FileContent` attribute. |
 | `Base64` | **Base64** | The content of the file can be found as a base64-encoded string in the `FileContent` attribute. |
 
 #### `ENUM_FileType` {#enum-filetype}
@@ -963,9 +998,23 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| `HiddenForUser` | **HiddenForUser** | Automatic tool approval; tools are not shown to users. (default value) |
-| `VisibleForUser` | **VisibleForUser** | Automatic tool approval; tools are visible to users. |
-| `UserConfirmationRequired` | **UserConfirmationRequired** | User decides if tools are called or not. |
+| `HiddenForUser` | **Hidden for User** | Automatic tool approval; tools are not shown to users. (default value) |
+| `VisibleForUser` | **Visible for User** | Automatic tool approval; tools are visible to users. |
+| `UserConfirmationRequired` | **User Confirmation Required** | User decides if tools are called or not. |
+
+#### `ENUM_ToolCallStatus` {#enum-toolcallstatus}
+
+`ENUM_ToolCallStatus` provides a list of statuses of a [ToolCall](#toolcall). The status determines whether a tool is executed and how the tool call is shown to users. The final status after execution depends on the `UserAccessApproval` of the [Tool](#tool). For more information, see the [ENUM_UserAccessApproval](#enum-useraccessapproval) section.
+
+| Name | Caption | Description |
+| --- | --- | --- |
+| `Pending` | **Pending** | The tool call has not been approved or declined yet. Tool calls that require user confirmation keep this status until the user decides. (default value) |
+| `Approved` | **Approved** | The tool call was approved, either automatically or by the user, and the tool can be executed. |
+| `Declined` | **Declined** | The user declined the tool call. The tool is not executed. |
+| `ExecutedHidden` | **ExecutedHidden** | The tool was executed automatically and is not shown to users. |
+| `ExecutedVisible` | **ExecutedVisible** | The tool was executed automatically and is shown to users. |
+| `ExecutedApproved` | **ExecutedApproved** | The tool was executed after the user approved the tool call. |
+| `ExecutedDeclined` | **ExecutedDeclined** | The user declined the tool call, and the model was informed that the tool call was declined. |
 
 #### `ENUM_SourceType` {#enum-sourcetype}
 

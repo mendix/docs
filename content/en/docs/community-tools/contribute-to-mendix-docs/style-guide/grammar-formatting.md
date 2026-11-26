@@ -133,11 +133,11 @@ Only link to URLs that use HTTPS. If you are working with a URL that uses HTTP, 
 
 #### APIs
 
-When cross-referencing an API (like Client or Mendix Runtime) that is hosted on `http://apidocs.rnd.mendix.com` but you are only cross-referencing the index (meaning, the general API or the API in its entirety), use a relative link to the Mendix docs page for that API:
+When cross-referencing an API (like Client or Mendix Runtime) that is hosted on `https://apidocs.rnd.mendix.com` but you are only cross-referencing the index (meaning, the general API or the API in its entirety), use a relative link to the Mendix docs page for that API:
 
 > [App Repository API](/apidocs-mxsdk/apidocs/)
 
-When cross-referencing a specific API method or element, use a link to `http://apidocs.rnd.mendix.com`. These links are updated per Studio Pro major version (and thus API version).
+When cross-referencing a specific API method or element, use a link to `https://apidocs.rnd.mendix.com`. These links are updated per Studio Pro major version (and thus API version).
 
 #### Learning Path
 
@@ -161,7 +161,7 @@ When cross-referencing a section of another document, add the link to the sectio
 
 For static links to external websites, use the site or page name as the link text instead of the full URL, unless emphasizing the URL format matters.
 
-> You can download it for free at [Tortoise SVN](http://tortoisesvn.tigris.org/) (choose version 1.6).
+> You can download it for free at [Tortoise SVN](https://tortoisesvn.net/).
 
 ## Dashes
 
@@ -500,7 +500,7 @@ You can replace an OpenID with a random UUID that you generate using a [UUID gen
 
 ## Placeholders {#placeholders}
 
-### Placeholders In Sample Code
+### Placeholders in Sample Code
 
 Placeholders in sample code represent values that the user must replace when they use the sample code. For inline code placeholders, use code formatting, italics, and all caps. For code blocks, use all caps and add text instructions explaining what to replace.
 

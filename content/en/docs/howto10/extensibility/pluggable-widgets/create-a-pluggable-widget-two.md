@@ -623,6 +623,7 @@ Your code alterations will produce the following result:
 ## Read More
 
 * [Build a Pluggable Web Widget: Part 1](/howto10/extensibility/create-a-pluggable-widget-one/)
+* [Build a Pluggable Widget (Release Version)](/howto10/extensibility/build-a-release-version-of-a-pluggable-widget/)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)

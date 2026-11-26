@@ -19,6 +19,10 @@ Once you have created your namespace, you can invite additional team members who
 You can also create clusters and namespaces using the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Install the Mendix Operator in connected mode. Mendix on Kubernetes Standalone, where you use the Mendix Operator without connecting it to Mendix Portal or to Private Mendix Platform, is being deprecated and will not support Mendix 12 and future Runtime versions. For more information, see [Mendix on Kubernetes Standalone Deprecation FAQ](/developerportal/deploy/private-cloud/standalone-deprecation-faq/).
+{{% /alert %}}
+
 ## Prerequisites for Creating a Cluster {#prerequisites}
 
 To create a cluster in your OpenShift context, you need the following:

@@ -14,11 +14,9 @@ scope:
 action:
   name: replace
 swap:
-  # Main product deprecated names
   'Mendix for Private Cloud': 'Mendix on Kubernetes'
   'Business Engine': 'Mendix Runtime'
   'Mendix Business Server': 'Mendix Runtime'
-  'Mendix Server': 'Mendix Runtime'
   'Sprintr': 'Projects'
   'Developer Portal': 'Projects'
   'Platform Portal': 'Projects'

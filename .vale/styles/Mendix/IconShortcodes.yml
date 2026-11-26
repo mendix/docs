@@ -18,6 +18,7 @@ swap:
   'the three dots icon': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
   'three dot icon': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
   'the three-dot icon': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
+  'the three-dot menu': '**More Options** ({{% icon name="three-dots-menu-horizontal" %}})'
   'the edit icon': '**Edit** ({{% icon name="pencil" %}})'
   'the pencil icon': '**Edit** ({{% icon name="pencil" %}})'
   'the trash can icon': '**Delete** ({{% icon name="trash-can" %}})'
@@ -27,5 +28,3 @@ swap:
   'the alert icon': '**Alert** ({{% icon name="alert-circle" %}})'
   'the error icon': '**Error** ({{% icon name="remove-circle-filled" %}})'
   'the paperclip icon': '**Attach** ({{% icon name="paperclip" %}})'
-  'the checkmark icon': '**Save** ({{% icon name="checkmark-circle" %}})'
-  'the check mark icon': '**Save** ({{% icon name="checkmark-circle" %}})'

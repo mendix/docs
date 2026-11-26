@@ -2,9 +2,9 @@
 # Reference: content/en/docs/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting.md (Conditional Adverbs)
 # "These words add uncertainty and cloud the meaning of sentences."
 extends: existence
-message: "Avoid '%s'. Instead, directly state what happens, what to do, or what Mendix recommends."
+message: "Avoid '%s' if possible. Instead, directly state what happens, what to do, or what Mendix recommends."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#conditional-adverbs
-level: warning
+level: suggestion
 ignorecase: true
 tokens:
   - '\bwould\b'

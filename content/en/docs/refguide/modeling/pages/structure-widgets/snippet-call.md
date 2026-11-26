@@ -35,11 +35,43 @@ The **Snippet** property shows the name of the snippet that the snippet call wil
 
 #### Snippet Settings {#snippet-settings}
 
-The **Snippet settings** property opens a dialog box that shows a list of parameters of the selected snippet and the objects that will be passed to each of them.
+The **Snippet settings** property opens a dialog box that shows a list of parameters of the selected snippet and the arguments that will be passed to each of them. For more information, see [Passing Arguments](#passing-arguments).
 
 ### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## Passing Arguments {#passing-arguments}
+
+An argument must be passed to every [snippet parameter](/refguide/snippet/#parameters) of the snippet that is called. The **Snippet settings** dialog box lists the parameters of the snippet with their **Name**, **Type**, and **Argument**. 
+
+To configure the argument of a parameter, select the parameter and click **Edit parameter value**. In the subsequent dialog box, set **Type** to either **Variable** or **Expression**. This works the same for object and primitive parameters.
+
+In the example below, the snippet has an object parameter **Order** and a primitive parameter **Amount** of type `Integer/Long`. Both parameters have an argument:
+
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-arguments-mapping.png" alt="example of the snippet settings dialog box" width="500px" >}}
+
+### Variable Arguments {#variable-arguments}
+
+Variable arguments are used to pass a value from the context of the snippet call to the snippet. Do this by selecting from the available variables in the **Variable** dropdown. 
+
+Only variables that match the data type of the snippet parameter are shown, for example a page parameter, a [variable](/refguide/page-properties/#variables) of the page, or an object from a surrounding data container. Variables that come from a data source, a selection, or the return value of an action cannot be passed.
+
+In the example below, the argument for the parameter **Amount** is the variable **Amount**:
+
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-argument-variable.png" alt="example of a variable argument" width="500px" >}}
+
+### Expression-Based Arguments {#expression-based-arguments}
+
+Expression-based arguments allow you to use functions and follow associations within the expression to set the argument value. The expression must return a value that matches the data type of the snippet parameter.
+
+In the example below, the argument for the parameter **Amount** is the expression `$Amount * 2`, which multiplies the variable **Amount** that is available at the snippet call by 2:
+
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call/snippet-argument-expression.png" alt="example of an expression-based argument" width="500px" >}}
+
+{{% alert color="info" %}}
+Snippet parameters are always required. Unlike [page parameters](/refguide/page-parameter/#argument), they cannot be omitted and do not have a default value.
+{{% /alert %}}
 
 ## Styling
 
@@ -63,7 +95,8 @@ To perform actions on a snippet call, select it on a page and right-click it. Th
 When you select **Inline snippet**, Studio Pro will analyze the snippet call to determine if it is safe to inline. If it is safe, the following will occur: 
 
 * The snippet call will be replaced by the contents of the snippet
-* All references to the snippet parameters will be rewritten to refer to the objects to which they are mapped in the **Snippet settings** of the snippet call 
+* All references to the snippet parameters will be rewritten to refer to the objects, variables, or expressions to which they are mapped in the **Snippet settings** of the snippet call 
+* If the snippet has variables, they will be created on the page or snippet that contains the snippet call
 
 This is basically the inverse operation of [Extract Snippet](/refguide/snippet/#extract-snippet). 
 
@@ -79,9 +112,8 @@ Not every snippet call can be inlined, because certain configurations cannot be 
 
 The following are examples of configurations which cannot be correctly inlined:
 
-* A Data view with a *Context* data source using an association of a snippet parameter (if that parameter has been mapped to an object which is not the directly surrounding object of the snippet call)
-* An attribute widget (such as Text box) using an attribute of a snippet parameter (if that parameter has been mapped to a page parameter in the snippet call)
-* A snippet with variables
+* A Data view with a *Context* data source using an association of a snippet parameter (if that parameter has been mapped using an expression)
+* An attribute widget (such as Text box) using an attribute of a snippet parameter (if that parameter has been mapped using an expression)
 
 In such cases, the inlined content needs to be fixed manually by adding or removing a Data view (depending on the configuration) and reconfiguring the affected widgets to refer to the correct object again.
 

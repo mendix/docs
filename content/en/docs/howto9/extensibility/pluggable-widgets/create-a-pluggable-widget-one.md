@@ -391,6 +391,7 @@ Continue with the next tutorial to learn how to add validation feedback, custom 
 ## Read More
 
 * [Build a Pluggable Web Widget: Part 2 (Advanced)](/howto9/extensibility/create-a-pluggable-widget-two/)
+* [Build a Pluggable Widget (Release Version)](/howto9/extensibility/build-a-release-version-of-a-pluggable-widget/)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)
 * [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/)
 * [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/)

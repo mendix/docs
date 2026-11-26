@@ -155,7 +155,7 @@ The **Toolbox** has a tile view showing larger icons and a list view showing a l
 This feature is currently in beta. For more information, refer to [Release Status](/releasenotes/release-status/).
 {{% /alert %}}
 
-The **Update Assistant** pane scans the Java code in your app for deprecated APIs. For more information, see [Update Assistant](/refguide/update-assistant/).
+The **Update Assistant** pane scans the Java and JavaScript code in your app for deprecated Mendix APIs. For more information, see [Update Assistant](/refguide/update-assistant/).
 
 ### Widget Developer Console
 

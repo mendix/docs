@@ -2,12 +2,12 @@
 title: "Customize Styling"
 url: /howto/front-end/customize-styling-new/
 weight: 20
-description: "This describes how developers can change apps styling and create re-usable styling."
+description: "This describes how developers can change apps styling and create reusable styling."
 ---
 
 ## Introduction
 
-This page describes how developers can change the styling of apps and create re-usable styling. For progressive and web apps, theme settings are CSS variables (custom properties) and styling is written in SASS (SCSS). For native mobile apps, JavaScript is used. Even though the technologies differ, the approach for customizing styling is the same.
+This page describes how developers can change the styling of apps and create reusable styling. For progressive and web apps, theme settings are CSS variables (custom properties) and styling is written in SASS (SCSS). For native mobile apps, JavaScript is used. Even though the technologies differ, the approach for customizing styling is the same.
 
 {{% alert color="info" %}}
 This page describes styling for Atlas UI 4, where the web theme settings are CSS variables. If your app still uses Atlas UI 3, see [Customize Styling](/howto10/front-end/customize-styling-new/) in the Studio Pro 10 documentation. To move your app to Atlas UI 4, see [Migrating to Atlas UI 4](/refguide/frontend/atlas4-migration/).
@@ -95,7 +95,7 @@ For (progressive) web apps, custom styling should be placed in `theme/web` and l
 
 While custom styling can be added directly in the *main.scss* or *main.js* it is a best practice to separate styling in files and include these files in *main.scss* or *main.js*.
 
-Within custom styling, the theme settings (colors, spacings, etc.) as configured in *custom-variables.scss* or *custom-variables.js*, can be re-used. This is also recommended to provide a consistent user experience. For web apps, use the `var()` function to read a theme setting, for example `color: var(--brand-primary);`.
+Within custom styling, the theme settings (colors, spacings, etc.) as configured in *custom-variables.scss* or *custom-variables.js*, can be reused. This is also recommended to provide a consistent user experience. For web apps, use the `var()` function to read a theme setting, for example `color: var(--brand-primary);`.
 
 #### Web Environment Example
 
@@ -193,9 +193,9 @@ See the following fragment as an example of how additional CSS can be added to y
 }
 ```
 
-## Creating Re-Usable Styling
+## Creating Reusable Styling
 
-The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](#create-theme-mod) or a [company design system](/howto/front-end/create-a-company-design-system/).
+The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be reused in other apps. This can be used to [create a theme module](#create-theme-mod) or a [company design system](/howto/front-end/create-a-company-design-system/).
 
 Adding styling to a module is similar to adding styling to an app, except that styling resources are placed in the **themesource** folder as explained in the [File and Folder Structure](#file-and-folder) section below.
 
@@ -203,11 +203,11 @@ For classes that are generic or that should be easily discovered, a developer ca
 
 ## Creating a Theme Module {#create-theme-mod}
 
-A theme module is useful for styling which can be easily re-used through modules across apps. By default, the theme settings like color, font, spacing, and more are in the **theme** folder, which is specific per app. However, often these settings should be re-used to create a consistent look and feel across apps.
+A theme module is useful for styling which can be easily reused through modules across apps. By default, the theme settings like color, font, spacing, and more are in the **theme** folder, which is specific per app. However, often these settings should be reused to create a consistent look and feel across apps.
 
 This can be done by creating a theme module and making the *custom-variables* file in the **theme** folder point to the custom variables file in your theme module. For creating a full design system see [How to Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
-See the examples below for more information on creating a re-usable theme module.
+See the examples below for more information on creating a reusable theme module.
 
 ### Marking as a UI Resources Module
 
@@ -215,7 +215,7 @@ Modules that contain theme styling should be marked as UI resources modules. To 
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/green-module.png" alt="green module" class="no-border" >}}
 
-#### Ordering UI Resource Modules
+#### Ordering UI Resource Modules {#ordering-ui-resource-modules}
 
 When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should override styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
 
@@ -227,7 +227,7 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 #### Web
 
-As an example, the following variables in *theme/web/custom-variables.scss* will be made into a re-usable theme module:
+As an example, the following variables in *theme/web/custom-variables.scss* will be made into a reusable theme module:
 
 ```scss
 :root {
@@ -239,7 +239,7 @@ As an example, the following variables in *theme/web/custom-variables.scss* will
 }
 ```
 
-To create a re-usable theme module, do the following:
+To create a reusable theme module, do the following:
 
 1. Create a new module in Studio Pro. Right-click **App {name}** in the App Explorer, then click **Add module…**. Give it a name. For this example the module’s name is "mytheme".
 2. In your Mendix app directory, create a new file *themesource/mytheme/web/custom-variables.scss*.
@@ -273,13 +273,13 @@ Any variables declared in a `:root` block in *theme/web/custom-variables.scss* a
 }
 ```
 
-You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, Mendix recommends creating a company starter app containing this change.
+You can now export the **mytheme** module from Studio Pro to reuse in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, Mendix recommends creating a company starter app containing this change.
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
 #### Native Mobile
 
-As an example, the following variables in *theme/native/custom-variables.js* will be made into a re-usable theme module:
+As an example, the following variables in *theme/native/custom-variables.js* will be made into a reusable theme module:
 
 ```javascript
 export const brand = {
@@ -359,9 +359,9 @@ For more information, see the Getting the [Make It Native App Reference Guide](/
 
 ## File and Folder Structure {#file-and-folder}
 
-Mendix offers a modular and flexible approach for styling apps. Styling can be done on an app level for app-specific styling, and styling can be put in modules for re-use.
+Mendix offers a modular and flexible approach for styling apps. Styling can be done on an app level for app-specific styling, and styling can be put in modules for reuse.
 
-To facilitate app- and module-level styling, the following file and folder structure is used; the **theme** folder is used for app-specific styling and the **themesource** folder is used for re-usable module styling and resources.
+To facilitate app- and module-level styling, the following file and folder structure is used; the **theme** folder is used for app-specific styling and the **themesource** folder is used for reusable module styling and resources.
 
 The bullets below describe the file structure for the theme folder and for modules:
 
@@ -383,13 +383,13 @@ The bullets below describe the file structure for the theme folder and for modul
         * **native** – This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
         * **public** – This folder contains the font files of the default font.
     * **{MODULE_NAME}** – Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
-        * **web** – This folder contains re-usable web resources
+        * **web** – This folder contains reusable web resources
             * *main.scss* – This file is the starting point for the module web based styling.
             * *design-properties.json* – This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
-        * **native** – This folder contains re-usable native mobile resources.
+        * **native** – This folder contains reusable native mobile resources.
             * *main.js* – This file is the starting point for the module native mobile based styling.
             * *design-properties.json* – This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
-        * **public** – This folder can contain other re-usable resources like a custom *login.html* page or images and fonts used from your web styling.
+        * **public** – This folder can contain other reusable resources like a custom *login.html* page or images and fonts used from your web styling.
 
 ## Styling output {#styling-output}
 

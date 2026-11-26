@@ -16,6 +16,21 @@ For information on the current status of deployment to Mendix Cloud and any plan
   
 ## November 2026
 
+### November 25, 2026
+
+#### New Features
+
+* Maia Operate Status Summary and Root Cause Analysis is now available in Public Beta on the **Environments** page. It extends AI Log Summary with additional data sources, such as metrics, alerts, and platform events. You can ask the Maia Operate assistant for a plain-language summary of an environment's health, or run a root cause analysis on your environment. For more information, refer to [Status Summary and Root Cause Analysis](/developerportal/maia-operate/status-summary-root-cause-analysis/).
+
+### November 19, 2026
+
+#### Fixes
+
+* We have fixed an issue that caused build packages to fail when triggered via the API using PAT authentication.
+
+    {{% alert color="info" %}} You need to regenerate your PATs with the additional scope specified in the [Build API](/apidocs-mxsdk/apidocs/build-api/#authenticating-with-pat) documentation.
+    {{% /alert %}}
+
 ### November 1, 2026
 
 #### New Features

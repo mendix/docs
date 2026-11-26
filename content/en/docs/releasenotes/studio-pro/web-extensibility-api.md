@@ -8,6 +8,12 @@ numberless_headings: true
 
 These release notes cover changes to the [Extensibility API for Web Developers](/apidocs-mxsdk/apidocs/extensibility-api/).
 
+## Version 11.17.0
+
+### Fixes
+
+* We fixed an issue where the dispose listener was not returned correctly by the `addEventListener` method, causing an error to be thrown when attempting to call it.
+
 ## Version 11.16.0
 
 ### New Features

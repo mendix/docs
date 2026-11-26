@@ -173,7 +173,7 @@ Maia supports these scenarios in the following ways:
 
 * [Studio Pro MCP Server](/refguide/studio-pro-mcp-server/) – The Studio Pro MCP Server exposes Maia capabilities to external AI agents through the Model Context Protocol (MCP). Changes appear in Studio Pro in real time. 
 * [Maia Plan as MCP Server](/developerportal/maia-plan-mcp/) – Maia Plan as MCP Server gives external AI agents read-only access to the scope and solution of a Maia Plan project. 
-* **Custom AI provider** – The Custom AI provider feature lets Maia use your own LLM provider. This feature is available in Studio Pro 11.12 and above as a beta feature. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
+* **Custom AI provider** – The Custom AI provider feature lets Maia use your own LLM provider. This feature is available in Studio Pro 11.12 and above. For more information, see the [Configuring a Custom AI Provider](/refguide/maia-make/#custom-provider) section of *Maia Make Capabilities*.
 
 For an overview of how these options work together, see [Using Maia with External AI Agents](/refguide/maia-external-agents/).
 
@@ -183,7 +183,7 @@ After you deploy your app, you monitor it, collect feedback, and plan the next i
 
 Maia helps in the following ways:
 
-* [AI Log Summary](/developerportal/maia-operate/ai-log-summary/) – This feature is in Public Beta. For apps that run on Mendix Cloud, it gives an AI-generated overview of the log activity of an environment over the previous 24 hours. It groups errors by pattern and shows lifecycle events and security signals. It is not available in Mendix Cloud Africa (Cape Town). 
+* [Status Summary and Root Cause Analysis](/developerportal/maia-operate/status-summary-root-cause-analysis/) – This feature is in Public Beta. For apps that run on Mendix Cloud, it gives a plain-language summary of the health of an environment. When the environment needs attention, it runs a root cause analysis and recommends a next step.
 * Maia for Feedback – This feature organizes end-user feedback into groups. You can create stories from feedback with Maia. For more information, see [Feedback](/developerportal/app-insights/feedback/).
 * Maia Make – Maia Make changes existing documents for new requirements. Use Maia Explain first to understand the current behavior, then ask Maia to make the change.
 

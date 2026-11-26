@@ -42,7 +42,7 @@ When you right-click the **Setup** node, the context menu shows the option **Add
 
 When you right-click a folder in **Setup**, the context menu shows three options:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules//setup/folder-context-options.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/setup/folder-context-options.png" class="no-border" >}}
 
 * **Add folder** – adds a subfolder to the selected folder
 * **Rename** – renames the selected folder

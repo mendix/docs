@@ -35,20 +35,24 @@ A webservice call is simply a HTTP call that the runtime receives and recognizes
 
 #### Authentication
 
-Every webservice call requires authentication. Specifically, the SOAP envelope header should contain an element called "authentication", which contains a username and password:
+The authentication method depends on the **Authentication** setting of the [published web service](/refguide9/published-web-service/#authentication):
 
-```xml
-<soap:Header>
-  <tns:authentication>
-    <username>john</username>
-    <password>john'ssecretpassword</password>
-  </tns:authentication>
-</soap:Header>
-```
+* **No authentication** – the call does not need credentials.
+* **Username and password** – the SOAP envelope header should contain an **Authentication** element, which contains a user name and password:
 
-These details *must* match an existing webservice user in the runtime. These users can be created by signing in as an Administrator and clicking on "create webservice user" in the Users datagrid in the system module. Normal (non-webservice) users cannot be used to call webservices and webservice users cannot sign in via the standard login page.
+    ```xml
+    <soap:Header>
+      <tns:authentication>
+        <username>john</username>
+        <password>john'ssecretpassword</password>
+      </tns:authentication>
+    </soap:Header>
+    ```
 
-Other than that, there is no difference between how normal users and web service users call microflows.
+    These details must match an existing web service user in the Runtime. These users can be created by signing in as an Administrator and clicking **Create web service user** in the **Users** data grid in the system module. Normal (non-web service) users cannot be used to call web services and web service users cannot sign in via the standard login page.
+
+    Otherwise, there is no difference between how normal users and web service users call microflows.
+* **Custom authentication** – an import mapping converts the first element of the SOAP envelope header into an object. This object is passed to a microflow you define, which returns the user. For more information, see [Custom Authentication](/refguide9/published-web-service/#authentication-custom).
 
 #### Parameter Handling
 

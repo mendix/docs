@@ -2,7 +2,7 @@
 title: "Build a Pluggable Native Widget"
 url: /howto9/extensibility/build-native-widget/
 description: "Describes how to build a native widget, configure it, and style it in a Mendix app."
-weight: 10
+weight: 25
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -1369,6 +1369,7 @@ The developer needs to have the class names memorized to apply a certain group b
 
 ## Read More
 
+* [Build a Pluggable Widget (Release Version)](/howto9/extensibility/build-a-release-version-of-a-pluggable-widget/)
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)
 * [Designing Mobile User Interfaces](/refguide9/mobile/designing-mobile-user-interfaces/)
 * [Native Mobile Styling Reference Guide](/refguide9/native-styling-refguide/)

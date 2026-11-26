@@ -31,11 +31,13 @@ General Availability means that a feature is available for all users. This type 
 | Mendix Cloud GenAI Resource Packs Guardrails | General Availability: H2 2026 |
 | Agent Editor in Studio Pro<sup>1</sup> | General Availability: Mx 11.9 |
 | Agent Observability | General Availability: Mx 11.5 + Mx 10.24 |
-| Dynamic Case Management | Private Beta: Mx 11.3 <br/>Limited Availability: Q3 2026 |
-| Global Inbox Other Tasks | General Availability: Q4 2026 |
-| Workflow Interrupting Event Subprocesses (Timer trigger) | General Availability: Mx 11.13 |
-| Workflow Event Subprocesses Recurrence (Timer trigger) | General Availability: Mx 11.15 |
-| Workflow Easily Call and Wait for external Workflows | General Availability: Q4 2026 |
+| Dynamic Case Management | Limited Availability: Q3 2026 |
+| Workflow Event Sub-processes | General Availability: Q3 2026 |
+| Workflow Easily Call and Wait for External Workflows | General Availability: Q4 2026 |
+| Workflow Ad-hoc Sub-processes | General Availability: Q1 2027 |
+| Work with a current workflow definition as default (Versioning) | General Availability: Q2 2027 |
+| Workflows: Automatically retry Call Microflows on failure | General Availability: Q2 2027 |
+| Global Inbox Other Tasks | General Availability: Q3 2027 |
 
 {{% alert color="info" %}}
 ¹Limitations: Initially only Mendix Cloud GenAI Resources as provider, and only design-time modification of prompts and other agent settings. Incrementally, we will remove these limitations.
@@ -53,6 +55,8 @@ General Availability means that a feature is available for all users. This type 
 | Maia for Pipeline Logs | General Availability: Mx 11.9 |
 | Maia Learn | General Availability: Mx 11.12 |
 | Maia Make (see separate table for capabilities) | General Availability: Mx 11.8 |
+| Maia Operate <ul><li>Status summary</li><li>Root cause analysis</li><li>Fix recommendations</li></ul> | Public Beta: Mx 11.17 <br/>General Availability: Mx 11.21 |
+| BYO Agent (use your own coding agent in the Studio Pro terminal) | Private Beta: Mx 11.16 <br/>General Availability: Mx 11.18 |
 
 ### Maia Make
 
@@ -70,7 +74,18 @@ General Availability means that a feature is available for all users. This type 
 | Maia Make: MCP Client | General Availability: Mx 11.8 |
 | Maia Make: MCP Server | General Availability: Mx 11.12 |
 | Maia Make: Modules | General Availability: Mx 11.9 |
-| Maia Make: editing/work with existing Microflows and Workflows | General Availability: Mx 11.9 |
+| Maia Make: Editing/working with existing Microflows and Workflows | General Availability: Mx 11.9 |
+| Maia Make: Custom AI provider (BYO LLM) | Public Beta: Mx 11.12 <br/>General Availability: Mx 11.16 |
+| Maia Make: Translations | General Availability: Mx 11.15 |
+| Maia Make: Task Queues, App Settings, and Security | General Availability: Mx 11.15 |
+| Maia Make: Run the app and read its logs | General Availability: Mx 11.15 |
+| Maia Make: Plan Mode | General Availability: Mx 11.16 |
+| Maia Make: UI testing with Playwright | General Availability: Mx 11.16 |
+| Maia Make: Java actions | General Availability: Mx 11.16 |
+| Maia Make: Import and Export Mappings | General Availability: Mx 11.16 |
+| Maia Make: Claude Sonnet 5.5 | General Availability: Mx 11.17 |
+| Maia Make: Sign in with Microsoft Entra ID to a custom AI provider | General Availability: Mx 11.17 |
+| Maia Make: XML Schemas | General Availability: Mx 11.17 |
 | Maia Make: Integrations | General Availability: Mx 11.24 |
 | Maia Make: Rules | General Availability: Q4 2026 |
 

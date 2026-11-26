@@ -65,7 +65,9 @@ The following inputs are required for the Gemini configuration:
 | ----------- | ------------------------------------------------------------ |
 | Display name | This is the name identifier of a configuration (for example, *MyConfiguration*). |
 | Endpoint | This is the API endpoint (for example, `https://generativelanguage.googleapis.com/v1beta/openai/`) |
-| Token | This is the access token to authorize your API call. <br />To get an API key, follow the steps mentioned in the [Gemini API quickstart](https://ai.google.dev/gemini-api/docs/quickstart). |
+| Authentication type | This is the way your API calls are authorized. Select **API Key** to use a stored API key, or **Microflow** to get the credentials from a microflow before each request. |
+| Token | This is the access token to authorize your API call. It is only used for the **API Key** authentication type. <br />To get an API key, follow the steps mentioned in the [Gemini API quickstart](https://ai.google.dev/gemini-api/docs/quickstart). |
+| Get credentials microflow | This is the microflow that returns the HTTP headers to authorize your API call. It is only used for the **Microflow** authentication type. The microflow must return a list of `System.HttpHeader` objects and can have either no input parameters or a single input parameter of type `GoogleGeminiConnector.GeminiConfiguration` or `OpenAIConnector.Configuration`. For more information, see [Authenticating with a Microflow](/agents/agents-kit-2/reference-guide/external-connectors/openai/#get-credentials-microflow) in the OpenAI connector documentation. |
 
 #### Configuring the Gemini Deployed Models
 

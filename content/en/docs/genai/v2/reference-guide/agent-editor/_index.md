@@ -145,8 +145,17 @@ Model configuration is document-based and can be managed directly in Studio Pro:
 
 #### For Azure AI Foundry {#define-model-azure}
 
-* Configure the **Project endpoint** and **API key**, each with a String constant. Obtain the **Project endpoint** and **API key** from the [Azure AI Foundry Portal](https://ai.azure.com/home). For more information, refer to [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/#azure-resource-name).
-* Click **List Deployments** to validate the connectivity. A table shows all the available model deployments in the Azure AI resource. Note that only deployments that support chat completions are currently usable by Agents in a Mendix app.
+Select the **Authentication** type and configure the fields for that type:
+
+* **API key** – Authenticate with an Azure API key.
+    * Configure the **Project endpoint** and **API key**, each with a String constant. Obtain the **Project endpoint** and **API key** from the [Azure AI Foundry Portal](https://ai.azure.com/home). For more information, refer to [OpenAI Connector](/agents/agents-kit-2/reference-guide/external-connectors/openai/#azure-resource-name).
+    * Click **List deployments** to validate the connectivity. A table shows all the available model deployments in the Azure AI resource. Note that only deployments that support chat completions are currently usable by Agents in a Mendix app.
+* **Microflow** – Get the credentials from a microflow at runtime. Use this type when your organization requires other credentials than an API key, such as Microsoft Entra ID tokens, or when requests go through an API gateway, such as Azure API Management.
+    * Configure the **Endpoint** with a String constant. The endpoint is the base URL in front of `/openai`, for example, `https://your-resource-name.openai.azure.com` or the URL of your API gateway. Do not use a project endpoint.
+    * Select a **Credentials microflow** that returns the HTTP headers to authenticate requests. The microflow must return a list of `System.HttpHeader` objects and have either no input parameters or a single `OpenAIConnector.Configuration` parameter. For more information, see [Authenticating with a Microflow](/agents/agents-kit-2/reference-guide/external-connectors/openai/#get-credentials-microflow).
+    * In the **Deployments** section, click **Add deployment** to add each deployment name that agents and evaluators can select. Enter each deployment name exactly as it appears in Azure. You can copy and paste the names directly from Azure. With this authentication type, deployments cannot be listed automatically.
+
+    The playground in Studio Pro calls the credentials microflow without a signed-in user. If the microflow relies on credentials of the signed-in user, such as the user's Microsoft Entra token, testing the agent in the playground fails. To test in the playground, make the microflow return other credentials when no user is signed in, for example, an app token. Alternatively, test the agent in the running app as a signed-in user.
 
 {{% alert color="info" %}}
 The value you use for a constant in Studio Pro can be different from the value used in cloud environments. Constant values can be overridden per environment during deployment. For example, you can locally connect to a text generation resource using a different key than the one used for production.
@@ -327,6 +336,8 @@ To add tools, click **New** in the **Tools** section and configure the following
 ### Testing the Agent From Studio Pro Results in an Error
 
 This error is typically due to incorrect model configuration or an exception originating from the API call of the large language model. Check the **Console** pane in Studio Pro for detailed logs. Additionally, verify that the `ASU_AgentEditor` microflow is added to your after-startup logic as described in the [First-Time Setup](#setup) section, and that the app startup has completed fully.
+
+If the agent uses an Azure AI Foundry model with the **Microflow** authentication type, check that the credentials microflow returns valid headers when no user is signed in. For more information, see the [For Azure AI Foundry](#define-model-azure) section.
 
 ### Testing the Agent From Studio Pro Is Disabled
 

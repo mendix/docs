@@ -19,6 +19,10 @@ If you want a managed experience with features such as app management, governanc
 For information about the scope of support, see [Support for Different Deployment Strategies](/support/deployment-strategy-support/).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+If you currently use Mendix on Kubernetes Standalone, Mendix Portable Runtime is one of the supported alternatives for Mendix 12 and later. For more information, see [Mendix on Kubernetes Standalone Deprecation FAQ](/developerportal/deploy/private-cloud/standalone-deprecation-faq/).
+{{% /alert %}}
+
 ## Benefits of Mendix Portable Runtime
 
 Mendix Portable Runtime revolutionizes the way in which Mendix applications are packaged and delivered. This innovative approach bundles your application code with all its necessary dependencies into a single, self-contained, and runnable artifact. This greatly simplifies the deployment of Mendix applications, whether you are targeting on-premise infrastructure or modern containerized environments like Docker, making the entire process more efficient and seamless.

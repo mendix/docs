@@ -2,7 +2,7 @@
 extends: existence
 message: "Don't use bold or italics for emphasis. To add emphasis, rephrase or use an alert instead."
 link: https://docs.mendix.com/community-tools/contribute-to-mendix-docs/style-guide/grammar-formatting/#emphasis
-level: warning
+level: error
 scope: raw
 nonword: true
 tokens:

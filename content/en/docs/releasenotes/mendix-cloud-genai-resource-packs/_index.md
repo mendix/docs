@@ -12,6 +12,19 @@ These release notes cover changes made to the [Mendix Cloud GenAI Resource Packs
 
 ## 2026
 
+### November 26, 2026
+
+#### New Features
+
+* We introduced support for guardrails for text generation resources. For more information, see [Guardrails for Mendix Cloud GenAI Resources](/agents/mx-cloud-genai/guardrails/).
+* Resource members can now turn on notifications to receive important emails about their resources. For more information, see [Consumption Limit Notifications](/agents/mx-cloud-genai/Navigate-MxGenAI/#consumption-limit-notifications).
+
+### November 19, 2026
+
+#### Improvements
+
+* We improved file uploads for knowledge bases. You can now upload files up to 20 MB, which makes it easier to add larger documents and more content.
+
 ### November 5, 2026
 
 #### New Features

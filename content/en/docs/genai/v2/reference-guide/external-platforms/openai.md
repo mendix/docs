@@ -73,7 +73,9 @@ OpenAI configuration requires the following inputs:
 | Display name | The name identifier of a configuration (for example, *MyConfiguration*). | 
 | API type | Select `OpenAI`. |
 | Endpoint | The API endpoint (for example, `https://api.openai.com/v1`). |
-| Token | The access token to authorize your API call. <br />To get an API key, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
+| Authentication type | The way your API calls are authorized. Select **API Key** to use a stored API key, or **Microflow** to get the credentials from a microflow before each request. For more information, see the [Authenticating with a Microflow](#get-credentials-microflow) section below. |
+| Token | Only for the **API Key** authentication type. The access token to authorize your API call. <br />To get an API key, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
+| Get credentials microflow | Only for the **Microflow** authentication type. The microflow that returns the HTTP headers to authorize your API call. For more information, see the [Authenticating with a Microflow](#get-credentials-microflow) section below. |
 
 #### Microsoft Foundry Configuration {#azure-openai-configuration}
 
@@ -84,8 +86,9 @@ Microsoft Foundry configuration requires the following inputs:
 | Display name | The name identifier of a configuration (for example, *MyConfiguration*). |
 | API type | Select `AzureOpenAI` for Microsoft Foundry deployments. |
 | Endpoint | The API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For details on how to obtain `your-resource-name`, see the [Obtaining Resource Name](#azure-resource-name) section below. |
-| Azure key type | The type of token entered in the API key field. For Azure OpenAI, two types of keys are currently supported: Microsoft Entra token and API key. <br />For details on generating a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you can use the Azure `api-key` authentication mechanism. For details on obtaining an API key, see the [Obtaining API Keys](#azure-api-keys) section below. For more information, see the [Technical Reference](#technical-reference) section. |
-| Token / API key | The access token to authorize your API call. |
+| Authentication type | The way your API calls are authorized. The following authentication types are supported:<ul><li>**Microsoft Entra token** – A Microsoft Entra access token entered in the **Token / API key** field. For details on generating a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Because the token is short-lived and is not refreshed automatically, this authentication type is mostly useful for testing.</li><li>**API key** – The Azure `api-key` authentication mechanism, if your organization allows it. For details on obtaining an API key, see the [Obtaining API Keys](#azure-api-keys) section below.</li><li>**Microflow** – A microflow that returns the credentials before each request, for example, a Microsoft Entra token that your app requests from Microsoft Entra ID. For more information, see the [Authenticating with a Microflow](#get-credentials-microflow) section below.</li></ul>For more information, see the [Technical Reference](#technical-reference) section. |
+| Token / API key | Only for the **Microsoft Entra token** and **API key** authentication types. The access token to authorize your API call. |
+| Get credentials microflow | Only for the **Microflow** authentication type. The microflow that returns the HTTP headers to authorize your API call. |
 
 ##### Obtaining the Project Endpoint and Resource Name {#azure-resource-name}
 
@@ -109,12 +112,29 @@ The steps below are intended for the Microsoft Foundry portal (released in 2026)
 | Display name | The name identifier of an Azure AI Search Resource (for example, *MySearchResource*). |
 | Endpoint URL | The API endpoint (for example, `https://your-resource-name.search.windows.net`).<br />For details on how to obtain `your-resource-name`, see [Azure AI Search service in the Azure portal](https://learn.microsoft.com/en-us/azure/search/search-create-service-portal). |
 | API version | The version of the REST API. |
-| API key | The access token to authorize your API call. |
+| Authentication type | The way your API calls are authorized. Select **API Key** to use a stored API key, or **Microflow** to get the credentials from a microflow before each request. For more information, see the [Authenticating with a Microflow](#get-credentials-microflow) section below. |
+| API key | Only for the **API Key** authentication type. The access token to authorize your API call. |
+| Get credentials microflow | Only for the **Microflow** authentication type. The microflow that returns the HTTP headers to authorize your API call. |
 
 After saving, the indexes in this resource are automatically synced and displayed in the configuration page. All indexes can be added to the request when using Chat completions.
 
-{{% alert color="warning" %}}
-Currently, the only supported authorization method for Azure AI Search resources is the API key.
+#### Authenticating with a Microflow {#get-credentials-microflow}
+
+API keys work well for testing, but production apps often need other credentials, such as short-lived tokens from Microsoft Entra ID or another identity provider, tokens that are specific to the current user, or additional headers for an API gateway. These credentials change more often than an administrator can update a configuration. To provide them at runtime, set **Authentication type** to **Microflow** and select a microflow in the **Get credentials microflow** field.
+
+You can use a get credentials microflow for OpenAI configurations, Microsoft Foundry configurations, and Azure AI Search resources. Connectors that build on the OpenAI connector, such as the [Google Gemini connector](/agents/agents-kit-2/reference-guide/external-connectors/gemini/) and the [Mistral connector](/agents/agents-kit-2/reference-guide/external-connectors/mistral/), support it as well.
+
+The connector runs the microflow before every request to the API, for example, for chat completions, embeddings, image generation, and Azure AI Search calls. It adds the HTTP headers that the microflow returns to the request, instead of using a stored API key. This way, the credentials are valid at the moment the request is sent.
+
+The microflow must meet the following requirements:
+
+* It returns a list of `System.HttpHeader` objects. Each object contains the header name in the `Key` attribute and the header value in the `Value` attribute, for example, `Authorization` with the value `Bearer <your-token>`.
+* It has either no input parameters or a single input parameter that accepts the corresponding configuration object. For model resources, use `OpenAIConnector.Configuration` or a specialization, such as `GoogleGeminiConnector.GeminiConfiguration`. For Azure AI Search resources, use `OpenAIConnector.AzureAISearchResource`.
+
+The **Get credentials microflow** field only lists microflows that meet these requirements. If the microflow fails or returns no headers, the operation fails and the error is logged.
+
+{{% alert color="info" %}}
+Because the microflow runs before every request, keep its logic fast. If you request tokens from an identity provider, consider reusing a token until it expires instead of requesting a new one for every call. Do not hard-code secrets in the microflow. Store them, for example, in constants or encrypted using the [Encryption module](/appstore/modules/encryption/).
 {{% /alert %}}
 
 #### Configuring the OpenAI Deployed Models

@@ -24,174 +24,201 @@ The following diagram shows how Private Mendix Platform (PMP) uses Grafana:
 
 To configure Grafana integration for your environment, make sure that you fulfill the following prerequisites:
 
-* Grafana 12.2.1 must be installed and accessible. For more information, see [Installing Grafana](#install-grafana).
-* Prometheus 3.7.3 must be configured as a metrics data source in Grafana.
-* Loki 2.6.1 must be configured as a logs data source in Grafana.
+* Grafana 12.4.x must be installed and accessible. For more information, see [Installing Grafana](#install-grafana).
+* Prometheus 3.13.x must be configured as a metrics data source in Grafana.
+* The logs data source in Grafana is either Loki (available for all cluster types) or Azure Monitor (available only for AKS-type clusters). If you use Loki, Private Mendix Platform supports Loki 3.7.x.
+* If you use Loki, Kube event exporter must be deployed in the cluster and configured to push events to Loki. The event exporter is not needed if Azure Monitor is configured as the data source.
 * You must have admin access to Private Mendix Platform settings.
 * Private Mendix Platform must be able to reach the Grafana host URL.
 
-## Installing Grafana {#install-grafana}
+## Installing Grafana and Other Components {#install-grafana}
 
-For information about installing Grafana with Prometheus and Loki, refer to
-[Install Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) in Grafana documentation.
+Install the monitoring components with Helm, using the official charts. The following components and versions have been tested with Private Mendix Platform:
 
-The following section shows an example of a Helm-based installation.
+| Component | Helm Chart | App version |
+| --- | --- | --- |
+| Grafana Alloy | `alloy-1.15.0` | `v1.21.3` |
+| Grafana | `grafana-11.6.1` and `grafana-14.4.0` | `12.4.3` and `13.3.0` |
+| Loki | `loki-21.0.0` | `3.7.9` |
+| Prometheus | `kube-prometheus-stack-92.18.0` | `v0.94.2` |
 
-### Example Helm-Based Installation
+### Prometheus – Scraping Mendix App Pods
 
-{{% alert color="info" %}}
-The code samples are intended to show the range of available options. No rights can be derived from them, as they are presented as examples only, and may require significant adaptation to work in your own environment. It is your responsibility to interpret and adjust them to fit real-world scenarios.
-{{% /alert %}}
+To collect Mendix app environment metrics for a specific environment, Prometheus needs to discover and scrape pods with the following annotations:
 
-```bash
-export monitorNs=grafana
-export grafanaAdminPass="xxxxx"
-helm repo add grafana https://grafana.github.io/helm-charts
-helm repo update
-kubectl create namespace ${monitorNs} --dry-run=client -o yaml | kubectl apply -f -
-kubectl --namespace ${monitorNs} create secret generic grafana-admin --from-literal=admin-user=Admin --from-literal=admin-password=${grafanaAdminPass}
-helm upgrade --install loki grafana/loki-stack --version='^2.10.2' --namespace=${monitorNs} \
-  --set grafana.enabled=true \
-  --set grafana.persistence.enabled=true \
-  --set grafana.persistence.size=1Gi \
-  --set grafana.initChownData.enabled=false \
-  --set grafana.admin.existingSecret=grafana-admin \
-  --set prometheus.enabled=true \
-  --set prometheus.server.persistentVolume.enabled=true \
-  --set prometheus.server.persistentVolume.size=50Gi \
-  --set prometheus.server.retention=7d \
-  --set loki.persistence.enabled=true \
-  --set loki.persistence.size=10Gi \
-  --set loki.config.chunk_store_config.max_look_back_period=168h \
-  --set loki.config.table_manager.retention_deletes_enabled=true \
-  --set loki.config.table_manager.retention_period=168h \
-  --set promtail.enabled=true \
-  --set promtail.containerSecurityContext.privileged=true \
-  --set promtail.containerSecurityContext.allowPrivilegeEscalation=true \
-  --set prometheus.kubeStateMetrics.enabled=true \
-  --set prometheus.kubeStateMetrics.resources.limits.memory=512Mi \
-  --set prometheus.cadvisor.enabled=true \
-  --set prometheus.nodeExporter.enabled=true \
-  --set prometheus.alertmanager.enabled=false \
-  --set prometheus.pushgateway.enabled=false
-```
+* `privatecloud.mendix.com/component`: `mendix-app`
+* `privatecloud.mendix.com/app`: *Environment internal name*
 
-The following script automates the deployment of the Grafana Loki-Stack (Loki, Promtail, Prometheus, Grafana) into a Kubernetes cluster using Helm. It also configures persistent storage and basic security settings.
+Each Mendix app pod listens on port `8900` and provides a `/metrics` path that can be called by Prometheus to get metrics from a specific app Pod.
 
-Before running the script:
+Prometheus supports [multiple ways](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config) to set up metrics scraping. The easiest way is to use pod annotations. It is possible to specify annotations for all Mendix app environments in the namespace, or set annotations only for specific environments.
 
-* Ensure you have kubectl and Helm installed and configured to access your Kubernetes cluster.
-* Make sure you have a default StorageClass available in your cluster, or adjust the `kubectl patch storageclass` command if you need to specify a different one.
-* Replace 'xxxxx' with a strong password for the Grafana admin user.
+To enable scraping annotations, perform the following steps:
+
+1. If you want to enable scraping for all environments in a namespace, add the following `runtimeDeploymentPodAnnotations` in the [Mendix App Deployment settings](/developerportal/deploy/private-cloud-cluster/#advanced-deployment-settings):
+
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: OperatorConfiguration
+    spec:
+      # Existing configuration
+      # ...
+      runtimeDeploymentPodAnnotations:
+        # Existing annotations
+        # ...
+        # Add these new annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: '8900'
+        prometheus.io/scrape: 'true'
+    ```
+
+2. If you want to enable scraping only for a specific environment, open the environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and add the following pod annotations:
+    
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: example-mendixapp
+    spec:
+      # Existing configuration
+      # ...
+      runtimeDeploymentPodAnnotations:
+        # Existing annotations
+        # ...
+        # Add these new annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: '8900'
+        prometheus.io/scrape: 'true'
+    ```
+
+3. Save and apply the changes.
+4. Restart or redeploy the apps for the pod annotations to take effect.
+5. In the `kube-prometheus-stack` values, under `prometheus.prometheusSpec.additionalScrapeConfigs`, add a pod scrape job to Prometheus that keeps annotated pods and sets the namespace and pod labels:
+
+    ```text
+    - job_name: kubernetes-pods
+      honor_labels: true
+      kubernetes_sd_configs:
+        - role: pod
+      relabel_configs:
+        - action: keep
+          regex: "true"
+          source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+        - action: replace
+          regex: (.+)
+          source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+          target_label: __metrics_path__
+        - action: replace
+          regex: (\d+);((([0-9]+?)(\.|$)){4})
+          replacement: $2:$1
+          source_labels:
+            - __meta_kubernetes_pod_annotation_prometheus_io_port
+            - __meta_kubernetes_pod_ip
+          target_label: __address__
+        - action: labelmap
+          regex: __meta_kubernetes_pod_label_(.+)
+        - action: replace
+          source_labels: [__meta_kubernetes_namespace]
+          target_label: namespace
+        - action: replace
+          source_labels: [__meta_kubernetes_pod_name]
+          target_label: pod
+    ```
+
+Private Mendix Platform queries Prometheus by the labels namespace, pod, and container. `Alertmanager` and `NodeExporter` can remain disabled in the Prometheus chart without affecting Private Mendix Platform's ability to retrieve the correct data.
+
+### Alloy – Labeling Pod Logs
+
+Private Mendix Platform queries Loki by the labels namespace, pod, container, and app. Use the following Alloy configuration to set them:
 
 ```text
-# --- Configuration Variables ---
-# Define the Kubernetes namespace where all monitoring components will be deployed.
-# Using a dedicated namespace helps organize resources and manage access control.
-# Define the password for the Grafana 'Admin' user.
-# IMPORTANT: Replace 'xxxxx' with a strong, secure password.
-# --- Helm Repository Management ---
-# Add the official Grafana Helm repository. This repository contains the charts for Loki-Stack, Grafana, etc.
-# This command makes the Grafana charts available for Helm to use.
-# Update your local Helm chart repositories.
-# This fetches the latest information about charts from all added repositories, ensuring you can install
-# the most recent versions and bug fixes.
-# --- Kubernetes Namespace Creation ---
-# Create the Kubernetes namespace defined by the 'monitorNs' variable (e.g., 'grafana').
-# '--dry-run=client -o yaml': Generates the YAML output for the namespace without actually creating it.
-# '| kubectl apply -f -': Pipes the generated YAML to 'kubectl apply', which then creates the namespace.
-# This approach is idempotent, meaning it won't fail if the namespace already exists.
-# --- Grafana Admin Secret Creation ---
-# Create a Kubernetes secret to store the Grafana administrator username and password.
-# This secret is later referenced by the Grafana Helm chart to configure the admin user.
-# '--namespace ${monitorNs}': Specifies that the secret should be created in the designated monitoring namespace.
-# 'create secret generic grafana-admin': Creates a generic secret named 'grafana-admin'.
-# '--from-literal=admin-user=Admin': Sets the username for Grafana to 'Admin'.
-# '--from-literal=admin-password=${grafanaAdminPass}': Sets the password for Grafana using the value from 'grafanaAdminPass'.
-# --- Set Default StorageClass (Important for Persistent Volumes) ---
-# This command identifies the first available StorageClass in your Kubernetes cluster and
-# patches it to be the default StorageClass.
-# This is crucial because many Helm charts (including Loki-Stack) request Persistent Volumes
-# without explicitly specifying a StorageClass. If no default is set, PVCs might remain pending.
-#
-# 'kubectl get storageclass -o json': Retrieves all StorageClasses in JSON format.
-# '| jq -r '.items[0].metadata.name'': Uses 'jq' (a JSON processor) to extract the name
-#                                     of the first StorageClass found.
-# '-p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'':
-#   Patches the identified StorageClass to add the annotation that marks it as the default.
-#
-# NOTE: If you have multiple StorageClasses and want a specific one to be default,
-#       you might need to adjust the 'jq' filter or manually specify the StorageClass name.
-# --- Install/Upgrade Grafana Loki-Stack with Helm ---
-# This is the main command to deploy the entire monitoring stack.
-# 'helm upgrade --install loki grafana/loki-stack':
-#   - 'upgrade': Attempts to upgrade an existing release named 'loki'.
-#   - '--install': If no release named 'loki' exists, it will install a new one.
-#   - 'loki': The name of the Helm release.
-#   - 'grafana/loki-stack': Specifies the chart to use from the 'grafana' repository.
-#
-# '--version='^2.10.2'': Specifies the version range for the loki-stack chart.
-#                     '^2.10.2' means any version starting with 2.10.2 but less than 2.11.0.
-#                     
-# '--namespace=${monitorNs}': Deploys all resources within the specified Kubernetes namespace.
-#
-# --- Grafana Configuration ---
-# '--set grafana.enabled=true': Enables the Grafana dashboard component within the stack.
-# '--set grafana.persistence.enabled=true': Enables persistent storage for Grafana.
-#                                         This ensures dashboards, users, and settings are saved across restarts.
-# '--set grafana.persistence.size=1Gi': Sets the size of the Persistent Volume Claim (PVC) for Grafana to 1 Gigabyte.
-# '--set grafana.initChownData.enabled=false': Disables the init container that changes ownership of persistent data.
-#                                            This can sometimes cause issues with certain StorageClasses or security contexts.
-# '--set grafana.admin.existingSecret=grafana-admin': Tells Grafana to use the Kubernetes secret named 'grafana-admin'
-#                                                   (created earlier) for its admin user credentials.
-#
-# --- Prometheus Configuration ---
-# '--set prometheus.enabled=true': Enables the Prometheus monitoring system within the stack.
-# '--set prometheus.server.persistentVolume.enabled=true': Enables persistent storage for Prometheus server data.
-#                                                        This saves your metrics data.
-# '--set prometheus.server.persistentVolume.size=50Gi': Sets the size of the PVC for Prometheus server to 50 Gigabytes.
-# '--set prometheus.server.retention=7d': Configures Prometheus to retain metrics data for 7 days.
-#
-# --- Loki Configuration ---
-# '--set loki.persistence.enabled=true': Enables persistent storage for Loki's logs and index data.
-#                                      This is crucial for retaining your log data.
-# '--set loki.persistence.size=10Gi': Sets the size of the PVC for Loki to 10 Gigabytes.
-# '--set loki.config.chunk_store_config.max_look_back_period=168h':
-#   Configures Loki's chunk store to allow querying logs up to 168 hours (7 days) back.
-# '--set loki.config.table_manager.retention_deletes_enabled=true':
-#   Enables Loki's table manager to delete old data based on retention policies.
-# '--set loki.config.table_manager.retention_period=168h':
-#   Sets Loki's retention period for log data to 168 hours (7 days). Data older than this will be deleted.
-#
-# --- Promtail Configuration ---
-# Promtail is an agent that ships logs from your Kubernetes nodes to Loki.
-# '--set promtail.enabled=true': Enables the Promtail agent within the stack.
-# '--set promtail.containerSecurityContext.privileged=true':
-#   Grants the Promtail container privileged access. This is often required for Promtail
-#   to read logs from all directories on the host, including those usually protected.
-#   WARNING: Granting privileged access should be done with caution and understanding of security implications.
-# '--set promtail.containerSecurityContext.allowPrivilegeEscalation=true':
-#   Allows the Promtail process to gain more privileges than its parent process.
-#   This is often needed in conjunction with 'privileged=true'.
-#
-# --- Prometheus Exporters Configuration ---
-# Exporters are agents that expose metrics from various services for Prometheus to scrape.
-# '--set prometheus.kubeStateMetrics.enabled=true':
-#   Enables kube-state-metrics, which provides metrics about the state of Kubernetes objects
-#   (e.g., deployments, pods, nodes).
-# '--set prometheus.kubeStateMetrics.resources.limits.memory=512Mi':
-#   Sets a memory limit of 512 MiB for the kube-state-metrics pod to prevent it from consuming excessive resources.
-# '--set prometheus.cadvisor.enabled=true':
-#   Enables cAdvisor, which collects resource usage and performance metrics from containers.
-#   This is typically run as part of the Kubelet on each node.
-# '--set prometheus.nodeExporter.enabled=true':
-#   Enables the Prometheus Node Exporter, which exposes host-level metrics (CPU, memory, disk, network)
-#   from the Kubernetes nodes.
-# '--set prometheus.alertmanager.enabled=false': Disables the Prometheus Alertmanager component.
-#                                              Enable this if you need alerting functionality.
-# '--set prometheus.pushgateway.enabled=false': Disables the Prometheus Pushgateway component.
-#                                             Enable this if you have ephemeral jobs that push metrics.
+discovery.kubernetes "pods" {
+  role = "pod"
+}
+discovery.relabel "pods" {
+  targets = discovery.kubernetes.pods.targets
+  rule {
+    source_labels = ["__meta_kubernetes_namespace"]
+    target_label  = "namespace"
+  }
+  rule {
+    source_labels = ["__meta_kubernetes_pod_name"]
+    target_label  = "pod"
+  }
+  rule {
+    source_labels = ["__meta_kubernetes_pod_container_name"]
+    target_label  = "container"
+  }
+  rule {
+    source_labels = ["__meta_kubernetes_pod_controller_name"]
+    regex         = "([0-9a-z-.]+?)(-[0-9a-f]{8,10})?"
+    target_label  = "__tmp_controller_name"
+  }
+  rule {
+    source_labels = [
+      "__meta_kubernetes_pod_label_app_kubernetes_io_name",
+      "__meta_kubernetes_pod_label_app",
+      "__tmp_controller_name",
+      "__meta_kubernetes_pod_name",
+    ]
+    regex         = "^;*([^;]+)(;.*)?$"
+    target_label  = "app"
+  }
+}
+loki.source.kubernetes "pods" {
+  targets    = discovery.relabel.pods.output
+  forward_to = [loki.write.default.receiver]
+}
+loki.write "default" {
+  endpoint {
+    url = "http://<loki-gateway-host>/loki/api/v1/push"
+  }
+}
 ```
+
+### Kubernetes Event Exporter
+
+Private Mendix Platform reads app events from Loki using the stream label `k8sEventExporter="mxAppEvent"`. The event lines must be compact JSON containing the fields namespace and name of the involved object. Configure the exporter as follows:
+
+```text
+logFormat: json
+omitLookup: true
+route:
+  routes:
+    - match:
+        - receiver: loki
+receivers:
+  - name: loki
+    loki:
+      url: http://<loki-gateway-host>/loki/api/v1/push
+      streamLabels:
+        k8sEventExporter: mxAppEvent
+```
+
+#### Additional Considerations
+
+When configuring the Kubernetes Event Exporter, keep in mind the following considerations:
+
+* Run a single replica of the exporter. Multiple replicas push every event more than once.
+* If you use another event exporter, make sure it sets the same stream label and JSON fields.
+
+## Grafana Data Sources
+
+This section describes the required configuration for Loki and Azure Monitor to use them as data sources for Grafana.
+
+### Loki
+
+If you use Loki for logs and events, add it as a data source in Grafana.
+
+### Azure Monitor
+
+For AKS clusters, you can use Azure Monitor instead of Loki for logs and events. Metrics still come from Prometheus. In this case, you do not need Alloy and the Kubernetes Event Exporter, because Container Insights stores logs and events in Log Analytics with its own columns (`PodName`, `PodNamespace`, `ContainerName` in `ContainerLogV2`, and `Name`, `Namespace` in `KubeEvents`).
+
+You must configure the following prerequisites:
+
+* Container Insights must be enabled on the AKS cluster and configured to send pod logs (`ContainerLogV2`) and events (`KubeEvents`) to a **Log Analytics** workspace.
+* The Azure Monitor data source must be added in Grafana, with the type `grafana-azure-monitor-datasource` and the AKS cluster subscription.
+* Authentication of the data source must be configured correctly, using any authentication method that Grafana supports for Azure Monitor. The identity which Grafana uses to authenticate must be able to read the Log Analytics workspace and the AKS cluster resource. You are responsible for selecting and configuring the authentication method. For more information, refer to the [Grafana documentation](https://grafana.com/docs/grafana/latest/datasources/azure-monitor/configure/).
 
 ## Generating a Grafana API Key {#grafana-api-key}
 
@@ -205,8 +232,8 @@ Private Mendix Platform requires an Admin-level API key to authenticate with Gra
     2. Go to **Administration > Service Accounts**.
     3. Click **Add service account**, and add an account like the following:
 
-        * **Name** - *PMP-integration*
-        * **Role** - Admin
+        * **Name** – *PMP-integration*
+        * **Role** – Admin
     
     4. Click **Create**.
 
@@ -217,8 +244,8 @@ Private Mendix Platform requires an Admin-level API key to authenticate with Gra
     1. Click the **PMP-integration** service account.
     2. Click **Add service account token**, and add a token like the following:
 
-        * **Token name** - *PMP-key*
-        * **Expiration** - Leave blank (no expiration), or set as needed
+        * **Token name** – *PMP-key*
+        * **Expiration** – Leave blank (no expiration), or set as needed
 
     3. Click **Generate token**.
 
@@ -254,60 +281,60 @@ If you installed using the Grafana Loki Stack Helm chart, the default data sourc
 
 ## Configuring Private Mendix Platform
 
-To configure Private Mendix Platform for Grafana, perform the following steps:
+To configure a Private Mendix Platform cluster for Grafana, perform the following steps:
 
 1. Access the Private Mendix Platform admin settings.
 
     1. Log into Private Mendix Platform as an administrator.
-    2. Go to `https://<pmp_base_url>>/link/manage/cluster-manager`.
+    2. In the **Manage** section of the admin menu, go to **Deployment > Cluster Manager**.
 
 2. Provide the Grafana configuration.
 
-    1. Click **Register new cluster**.
-    2. Fill in the following information:
+    1. Either edit an existing cluster, or click **Register new cluster** and specify the **Cluster Type**.
+    2. In the **Logging and Monitoring** section, set **Use Grafana and Loki** and **Use Prometheus** to **Yes**.
+    3. Fill in the following information:
 
-        * **Grafana Host** - Full URL to Grafana, for example, `https://grafana.yourcompany.com`
-        * **Grafana API Key** - The admin API key generated in [Generating a Grafana API Key](#grafana-api-key), for example, `glsa_abc123...`
-        * **Prometheus Name** - Data source name in Grafana, for example, `prometheus`
-        * **Loki Name** - Data source name in Grafana, for example, `loki`
+        * **Grafana Host** – Full URL to Grafana, for example, `https://grafana.yourcompany.com`.
+        * **Grafana API Key** – The admin API key generated in [Generating a Grafana API Key](#grafana-api-key), for example, `glsa_abc123...`.
+        * **Data Source Type** – Select **Loki** or **Azure Monitor**.
+        * **Prometheus Name** – Data source name in Grafana, for example, `prometheus`.
+        * **Loki Name** – Data source name in Grafana, for example, `loki`; required when the data source type is set to Loki.
+        * **Azure Monitor Name** – The name of the Azure Monitor data source in Grafana; required when the data source type is set to Azure Monitor.
+        * **AKS Name** – The AKS cluster from which to collect logs; required when the data source type is set to Azure Monitor.
+        * **Resource ID** – The Azure resource ID of the AKS cluster. It is filled in automatically when you select the AKS cluster. Required when the data source type is set to Azure Monitor.
 
     {{< figure src="/attachments/private-platform/pmp-grafana4.png" class="no-border" >}}
 
-3. Click **Save**.
+3. Configure any other required settings and click **Save**.
 
 ## Verification
 
 After configuring Private Mendix Platform, verify that it can retrieve data by navigating to any Private Mendix Platform dashboard that displays metrics or logs.
 
-{{< figure src="/attachments/private-platform/pmp-grafana5.png" class="no-border" >}}
-
 You can filter the results by the following properties:
 
-* **Container** - The container instance.
-* **Retrieve last** - The number of results to retrieve.
-* **Timespan** - The date and time range to display.
-* **Filter by Log Level** - The highest log level to display. The following log levels are available:
+* **Container** – The container instance.
+* **Timespan** – The date and time range to display.
+* **Filter by Log Level** – The highest log level to display. The following log levels are available:
 
-    * **Trace** - Provides highly detailed information. Trace level messages are written only to logs.
-    * **Debug** - Provides detailed information, typically of interest only when diagnosing problems.
-    * **Info** - Confirms that things are working as expected.
-    * **Warning** - Indicates that something unexpected happened or warns about an upcoming problem (for example, *disk space low*). The application is still working as expected.
-    * **Error** - Indicates a serious problem that prevented the application from performing some function.
-    * **Critical** - Indicates that a serious error has occurred; the application may be unable to continue running.
-
-* **Keyword** - A keyword to use for filtering.
+    * **Trace** – Provides highly detailed information. Trace level messages are written only to logs.
+    * **Debug** – Provides detailed information, typically of interest only when diagnosing problems.
+    * **Info** – Confirms that things are working as expected.
+    * **Warning** – Indicates that something unexpected happened or warns about an upcoming problem (for example, *disk space low*). The application is still working as expected.
+    * **Error** – Indicates a serious problem that prevented the application from performing some function.
+    * **Critical** – Indicates that a serious error has occurred; the application may be unable to continue running.
 
 ## Grafana APIs Details
 
 Private Mendix Platform uses the following Grafana endpoints:
 
-* `GET /api/health` - This endpoint is used to check the health and status of the Grafana instance itself. It allows Private Mendix Platform to get the Grafana version and verify that Grafana is running before saving the logging and monitoring configuration.
-* `GET /api/datasources` - This endpoint is used to fetch the unique identifiers (IDs) of datasources, like Loki (logs) and Prometheus (metrics). These IDs are required for subsequent queries.
-* `GET /api/datasources/proxy/uid/:uid/*`  - This endpoint acts as a proxy for calls to the data source identified by the specified UID. Private Mendix Platform uses this to call Loki and Prometheus APIs to query logs and labels.
-* `GET /loki/api/v1/query_range` - This is the primary endpoint for fetching log data. Private Mendix Platform uses this Loki API to query application logs over a specific time range. The results of this query are used for real-time monitoring, and displayed within the Private Mendix Platform interface.
-* `GET /api/v1/labels` (Prometheus API through Grafana) - This endpoint queries the available labels from Prometheus. Private Mendix Platform uses this to check if a specific label (for example, `namespace`) exists in Prometheus.
-* `GET /api/v1/label/pod/values` (Prometheus API through Grafana) - This endpoint retrieves the list of all unique pod names for a target environment. This is used to populate the filter dropdown in the Private Mendix Platform interface.
-* `POST /api/ds/query?ds_type=prometheus` - This is a universal Grafana API endpoint for executing queries on a specific data source. Private Mendix Platform uses it to send PromQL queries to the Prometheus data source to fetch metric data for the Metrics dashboard.
+* `GET /api/health` – This endpoint is used to check the health and status of the Grafana instance itself. It allows Private Mendix Platform to get the Grafana version and verify that Grafana is running before saving the logging and monitoring configuration.
+* `GET /api/datasources` – This endpoint is used to fetch the unique identifiers (IDs) of datasources, like Loki (logs) and Prometheus (metrics). These IDs are required for subsequent queries.
+* `GET /api/datasources/proxy/uid/:uid/*`  – This endpoint acts as a proxy for calls to the data source identified by the specified UID. Private Mendix Platform uses this to call Loki and Prometheus APIs to query logs and labels.
+* `GET /loki/api/v1/query_range` – This is the primary endpoint for fetching log data. Private Mendix Platform uses this Loki API to query application logs over a specific time range. The results of this query are used for real-time monitoring, and displayed within the Private Mendix Platform interface.
+* `GET /api/v1/labels` (Prometheus API through Grafana) – This endpoint queries the available labels from Prometheus. Private Mendix Platform uses this to check if a specific label (for example, `namespace`) exists in Prometheus.
+* `GET /api/v1/label/pod/values` (Prometheus API through Grafana) – This endpoint retrieves the list of all unique pod names for a target environment. This is used to populate the filter dropdown in the Private Mendix Platform interface.
+* `POST /api/ds/query?ds_type=prometheus` – This is a universal Grafana API endpoint for executing queries on a specific data source. Private Mendix Platform uses it to send PromQL queries to the Prometheus data source to fetch metric data for the Metrics dashboard.
 
 ## Metrics and Labels
 

@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## Differences Between a Development Build and a Release Build
 
-| Development build | Release build |
+| | Development build | Release build |
 | --- | --- | --- |
 | Source maps | Included | Not included |
 | Code | Not minified | Minified and transpiled |

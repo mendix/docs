@@ -44,23 +44,100 @@ Install the monitoring components with Helm, using the official charts. The foll
 
 ### Prometheus – Scraping Mendix App Pods
 
-Mendix app pods expose runtime metrics on port `8900` at `/metrics`. To enable Prometheus to scrape them, perform the following steps:
+To collect Mendix app environment metrics for a specific environment, Prometheus needs to discover and scrape pods with the following annotations:
 
-1. In the `OperatorConfiguration`, enable native runtime metrics and add the scrape annotations to the app pods:
+* `privatecloud.mendix.com/component`: `mendix-app`
+* `privatecloud.mendix.com/app`: *Environment internal name*
 
-    ```text
+Each Mendix app pod listens on port `8900` and provides a `/metrics` path that can be called by Prometheus to get metrics from a specific app Pod.
+
+Prometheus supports [multiple ways](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config) to set up metrics scraping. The easiest way is to use pod annotations. It is possible to specify annotations for all Mendix app environments in the namespace, or set annotations only for specific environments.
+
+#### Enable Scraping for Entire Namespace
+
+To enable scraping annotations for all environments in a namespace, perform the following steps:
+
+1. Add the following `runtimeDeploymentPodAnnotations` in the [Mendix App Deployment settings](/developerportal/deploy/private-cloud-cluster/#advanced-deployment-settings):
+
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: OperatorConfiguration
     spec:
-      runtimeMetricsConfiguration:
-        mode: native
-        interval: PT1M
+      # Existing configuration
+      # ...
       runtimeDeploymentPodAnnotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: "/metrics"
-        prometheus.io/port: "8900"
+        # Existing annotations
+        # ...
+        # Add these new annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: '8900'
+        prometheus.io/scrape: 'true'
     ```
 
-2. Restart or redeploy the apps for the pod annotations to take effect.
-3. In the `kube-prometheus-stack` values, under `prometheus.prometheusSpec.additionalScrapeConfigs`, add a pod scrape job to Prometheus that keeps annotated pods and sets the namespace and pod labels:
+2. Save and apply the changes.
+3. Restart or redeploy the apps for the pod annotations to take effect.
+4. In the `kube-prometheus-stack` values, under `prometheus.prometheusSpec.additionalScrapeConfigs`, add a pod scrape job to Prometheus that keeps annotated pods and sets the namespace and pod labels:
+
+    ```text
+    - job_name: kubernetes-pods
+      honor_labels: true
+      kubernetes_sd_configs:
+        - role: pod
+      relabel_configs:
+        - action: keep
+          regex: "true"
+          source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+        - action: replace
+          regex: (.+)
+          source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+          target_label: __metrics_path__
+        - action: replace
+          regex: (\d+);((([0-9]+?)(\.|$)){4})
+          replacement: $2:$1
+          source_labels:
+            - __meta_kubernetes_pod_annotation_prometheus_io_port
+            - __meta_kubernetes_pod_ip
+          target_label: __address__
+        - action: labelmap
+          regex: __meta_kubernetes_pod_label_(.+)
+        - action: replace
+          source_labels: [__meta_kubernetes_namespace]
+          target_label: namespace
+        - action: replace
+          source_labels: [__meta_kubernetes_pod_name]
+          target_label: pod
+    ```
+
+Private Mendix Platform queries Prometheus by the labels namespace, pod, and container. `Alertmanager` and `NodeExporter` can remain disabled in the Prometheus chart without affecting Private Mendix Platform's ability to retrieve the correct data.
+
+#### Enable Scraping for a Specific Environment
+
+If you would like to enable Prometheus scraping only for a specific environment, you can add the Prometheus scraping annotations just for that environment.
+
+{{% alert color="warning" %}}Annotations set via the `MendixApp` CR will be overridden by annotations set in the Mendix on Kubernetes section of the Mendix Portal if you are using Connected mode.{{% /alert %}}
+
+1. Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and add the following pod annotations:
+    
+    ```yaml
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: example-mendixapp
+    spec:
+      # Existing configuration
+      # ...
+      runtimeDeploymentPodAnnotations:
+        # Existing annotations
+        # ...
+        # Add these new annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: '8900'
+        prometheus.io/scrape: 'true'
+    ```
+
+2. Save and apply the changes.
+3. Restart or redeploy the apps for the pod annotations to take effect.
+4. In the `kube-prometheus-stack` values, under `prometheus.prometheusSpec.additionalScrapeConfigs`, add a pod scrape job to Prometheus that keeps annotated pods and sets the namespace and pod labels:
 
     ```text
     - job_name: kubernetes-pods

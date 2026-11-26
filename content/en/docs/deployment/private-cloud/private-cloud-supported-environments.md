@@ -10,6 +10,10 @@ weight: 100
 Mendix on Kubernetes depends on external services to deploy and run Mendix apps.
 This document covers which providers and services are officially supported by the Mendix Operator.
 
+{{% alert color="warning" %}}
+Mendix on Kubernetes Standalone, where you use the Mendix Operator without connecting it to Mendix Portal or to Private Mendix Platform, does not support Mendix 12 and future Runtime versions. For more information, see [Mendix on Kubernetes Standalone Deprecation FAQ](/developerportal/deploy/private-cloud/standalone-deprecation-faq/).
+{{% /alert %}}
+
 ## Kubernetes Cluster Types
 
 ### Supported Cluster Types{#supported-clusters}

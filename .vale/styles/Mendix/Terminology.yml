@@ -30,6 +30,9 @@ swap:
   'mouse over': 'hover over'
   'Mouse over': 'Hover over'
 
+  # tooltip (not "hover box")
+  'hover box': 'tooltip'
+
   # left, right (not "left-hand", "right-hand")
   '\b([Ll]eft)-hand\b': '$1'
   '\b([Rr]ight)-hand\b': '$1'

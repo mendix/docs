@@ -19,11 +19,13 @@ exceptions+:
   - AWS
   - BPMN
   - BTP
+  - CVV
   - DNS
   - GCP
   - GIF
   - HANA
   - IAM
+  - IBAN
   - ISO
   - JDBC
   - JPEG
@@ -36,6 +38,7 @@ exceptions+:
   - NGINX
   - OIDC
   - OQL
+  - PIN
   - PNG
   - REST
   - SAML
@@ -44,6 +47,7 @@ exceptions+:
   - SMTP
   - SOAP
   - SSO
+  - SWIFT
   - TLS
   - UTC
   - UUID

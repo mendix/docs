@@ -8,7 +8,7 @@ weight: 10
 
 This section explains Atlas and how developers can get started with the Atlas UI framework.
 
-The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored re-usable design across all your apps.
+The Atlas UI framework enables all types of developers to build consistent and beautiful apps. Developers can use the default look and feel, they can slightly customize it, and use Atlas to create a fully tailored reusable design across all your apps.
 
 This document will clarify the basics of using Atlas UI for you, as well as point you in the right direction for more advanced styling tasks and documentation. Before you read on, it can be helpful to have a basic idea of the expected styling architecture for a Mendix app. Here is a basic overview, which has links you can follow when the time is right in your development to learn more about that topic:
 

@@ -1,7 +1,7 @@
 ---
 title: "Defining the Scope"
 url: /developerportal/maia-plan/define-scope/
-description: "Describes the scope definition step of creating an app with Maia Plan."
+description: "Describes the scope definition step of creating an app with Maia Spec."
 weight: 20
 ---
 
@@ -39,4 +39,5 @@ Work with Maia to refine and detail the project scope, including the goal, succe
     You can use the pane on the right to chat with Maia about your requirements for the new app.
 
 2. After you review the project scope and make any necessary changes, click **Approve & Generate**.    
+    {{% todo %}}Confirm the final button label and whether the flow becomes a two-step wizard (Define Scope, then Prioritise Specs).{{% /todo %}}
     You can also click **Save and Exit** to save all the changes and leave the flow.

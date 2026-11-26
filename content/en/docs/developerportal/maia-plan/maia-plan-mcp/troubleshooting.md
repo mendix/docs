@@ -1,14 +1,14 @@
 ---
-title: "Troubleshooting Maia Plan as MCP Server"
+title: "Troubleshooting Maia Spec as MCP Server"
 linktitle: "Troubleshooting"
 url: /developerportal/maia-plan-mcp-troubleshooting/
-description: "Describes how to fix potential Maia Plan as an MCP server issues."
+description: "Describes how to fix potential Maia Spec as an MCP server issues."
 weight: 10
 ---
 
 ## Introduction
 
-If you encounter issues with Maia Plan as MCP Server, use the following troubleshooting tips to solve them.
+If you encounter issues with Maia Spec as MCP Server, use the following troubleshooting tips to solve them.
 
 ## 401 or 403 Errors
 

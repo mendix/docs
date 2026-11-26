@@ -1,7 +1,7 @@
 ---
 title: "Creating an App from a Starter App"
 url: /developerportal/maia-plan/using-starter-app/
-description: "Describes how to use a starter app to create an app in Maia Plan."
+description: "Describes how to use a starter app to create an app in Maia Spec."
 weight: 50
 beta: true
 ---
@@ -12,7 +12,7 @@ This feature is currently in beta. For more information, refer to [Release Statu
 
 ## Introduction
 
-You can use a starter app as the basis for Maia Plan to build a project plan. This allows you to use the right branding elements, pre-installed Marketplace modules, and pre-installed integrations.
+You can use a starter app as the basis for Maia Spec to build a project scope and specifications. This allows you to use the right branding elements, pre-installed Marketplace modules, and pre-installed integrations.
 
 ## Creating an App
 
@@ -35,6 +35,6 @@ Follow these steps to have Maia create a project plan based on a starter app:
 
 7. Define the project scope as described in [Defining the Scope](/developerportal/maia-plan/define-scope/). With starter apps, Maia brings in all existing information to the **Define Scope** window.
 
-8. Turn the project scope into a concrete plan, as described in [Generating the Plan](/developerportal/maia-plan/generate-plan/). The side panel displays the resources which are being used from the starter app.
+8. Turn the project scope into specifications, as described in [Generating the Specifications](/developerportal/maia-plan/generate-plan/). The side panel displays the resources which are being used from the starter app.
 
-9. Select your project management tool and send your project plan to Maia Make, as described in [Starting the Development](/developerportal/maia-plan/start-development/).
+9. Select your project management tool and send your specifications to Maia Make, as described in [Starting the Development](/developerportal/maia-plan/start-development/).

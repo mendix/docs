@@ -47,7 +47,8 @@ Agent Editor provides the following features:
 * Microflow integration through the **Call Agent** toolbox action under the **Agent Editor** category.
 * Agent definitions as app-model documents under version control, making changes traceable and allowing rollback to previously committed states when needed.
 * Deployment together with the app model, with environment-specific flexibility through constant overrides.
-* Agentic development with Maia. Through conversation, you can set up all the building blocks your agent depends on (Models, Knowledge Bases, Consumed MCP Services, and microflow tools), create Published MCP Services to expose your app logic, and refine your agent's prompts and tool configuration. Maia can also install or update missing or incompatible Agents Kit modules to compatible Marketplace versions. This feature is available in Agent Editor version 2.5.1 and above.
+* Agentic development with Maia – Through conversation, you can set up all the building blocks your agent depends on (Models, Knowledge Bases, Consumed MCP Services, and microflow tools), create Published MCP Services to expose your app logic, and refine your agent's prompts and tool configuration. Maia can also install or update missing or incompatible Agents Kit modules to compatible Marketplace versions. This feature is available in Agent Editor version 2.5.1 and above.
+* Agent evaluation (experimental) – You can test your agent systematically with test cases, review pass and fail results, and refine the system prompt based on suggestions. This feature is available in Agent Editor version 2.8.0 and above. For more information, see [Agent Evaluation](/agents/agents-kit-2/reference-guide/agent-editor/experimental-features/#evaluation).
 
 ### Dependencies {#dependencies}
 

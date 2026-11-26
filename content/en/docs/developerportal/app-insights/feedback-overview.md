@@ -3,7 +3,6 @@ title: "Feedback Overview"
 url: /developerportal/app-insights/feedback-overview/
 weight: 7
 description: "Describes the Feedback Overview page, which shows the feedback submitted across all your projects in one table."
-draft: true
 ---
 
 ## Introduction

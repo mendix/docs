@@ -18,8 +18,8 @@ Mendix on Kubernetes Standalone means that you use the Mendix Operator in your c
 
 The following deployment options are not affected by this deprecation:
 
-* **Mendix on Kubernetes Connected** – the Mendix Operator and the Mendix Gateway Agent are connected to Mendix Portal
-* **Private Mendix Platform** – this includes Private Mendix Platform installations that run in Standalone mode
+* **Mendix on Kubernetes Connected** – The Mendix Operator and the Mendix Gateway Agent are connected to Mendix Portal
+* **Private Mendix Platform** – Including Private Mendix Platform installations that run in Standalone mode
 * **Mendix on Azure**
 
 ## What Is Changing? {#what-is-changing}
@@ -56,20 +56,20 @@ The table below summarizes the supported alternatives to Mendix on Kubernetes St
 
 Your pipeline keeps working for apps built with Mendix 9, 10, or 11. For Mendix 12 and later, adapt the pipeline to one of the alternatives:
 
-* **Mendix on Kubernetes Connected** – use the [Mendix on Kubernetes Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) and the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/) to build and deploy apps from your pipeline.
-* **Private Mendix Platform** – use the [Private Mendix Platform Build API](/apidocs-mxsdk/apidocs/private-platform-build-api/) and the [Private Mendix Platform Deploy API](/apidocs-mxsdk/apidocs/private-platform-deploy-api/).
-* **Mendix Portable Runtime** – build a container image that contains your Portable Runtime package, and deploy it with your own Kubernetes resources or with the reference Helm chart. For more information, see [Best Practices for Kubernetes](/developerportal/deploy/docker-deploy-k8s/) and [Deploying Mendix Portable Runtime Using Helm Charts](/developerportal/deploy/deploy-helm-portable/).
+* **Mendix on Kubernetes Connected** – Use the [Mendix on Kubernetes Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/) and the [Mendix on Kubernetes Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/) to build and deploy apps from your pipeline.
+* **Private Mendix Platform** – Use the [Private Mendix Platform Build API](/apidocs-mxsdk/apidocs/private-platform-build-api/) and the [Private Mendix Platform Deploy API](/apidocs-mxsdk/apidocs/private-platform-deploy-api/).
+* **Mendix Portable Runtime** – Build a container image that contains your Portable Runtime package, and deploy it with your own Kubernetes resources or with the reference Helm chart. For more information, see [Best Practices for Kubernetes](/developerportal/deploy/docker-deploy-k8s/) and [Deploying Mendix Portable Runtime Using Helm Charts](/developerportal/deploy/deploy-helm-portable/).
 
 ## My Cluster Has No Internet Access. What Are My Options? {#air-gapped}
 
 Mendix on Kubernetes Connected requires an outbound connection from your cluster to Mendix Portal. If your cluster cannot connect to the internet, you can choose one of these options:
 
-* **Private Mendix Platform** – runs entirely within your own infrastructure. For more information, see [Private Mendix Platform](/private-mendix-platform/).
-* **Mendix Portable Runtime** – runs without the Mendix Operator and without a connection to Mendix services. For more information, see [Best Practices for Kubernetes](/developerportal/deploy/docker-deploy-k8s/).
+* **Private Mendix Platform** – Runs entirely within your own infrastructure. For more information, see [Private Mendix Platform](/private-mendix-platform/).
+* **Mendix Portable Runtime** – Runs without the Mendix Operator and without a connection to Mendix services. For more information, see [Best Practices for Kubernetes](/developerportal/deploy/docker-deploy-k8s/).
 
 ## How Do I Move from Standalone to Mendix on Kubernetes Connected? {#move-to-connected}
 
-At a high level, the steps are as follows:
+You must perform the following steps:
 
 1. Make sure your cluster meets the [Connected Environment Prerequisites](/developerportal/deploy/private-cloud-cluster/#prerequisites-connected).
 2. Register your cluster and add a namespace in Mendix Portal, as described in [Creating a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-cluster/).
@@ -77,7 +77,7 @@ At a high level, the steps are as follows:
 4. Create environments for your apps in Mendix Portal and deploy your apps to them, as described in [Deploying a Mendix App to a Mendix on Kubernetes Cluster](/developerportal/deploy/private-cloud-deploy/).
 5. Move your app data to the new environments. For more information, see [Migrating Data in Mendix on Kubernetes Environments](/developerportal/deploy/private-cloud-data-transfer/).
 
-## Does This Affect Mendix on Azure? {#mendix-on-azure}
+## Does This Deprecation Affect Mendix on Azure? {#mendix-on-azure}
 
 No. Mendix on Azure environments are managed through Mendix Portal and are not affected by this deprecation.
 

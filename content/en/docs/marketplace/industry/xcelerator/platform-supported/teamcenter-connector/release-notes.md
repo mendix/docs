@@ -649,6 +649,21 @@ Following is the list of improvements/bug fixes in Teamcenter Connector version 
 
 ## 3.7
 
+### 3.7.1
+
+**Release Date:** November 26, 2026
+
+{{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
+
+**Requirements:** Studio Pro 9.24.41 or higher
+
+**Security Issues Fixed:** [CVE-2026-49844](https://www.cve.org/CVERecord?id=CVE-2026-49844), [CVE-2026-110879](https://www.cve.org/CVERecord?id=CVE-2026-110879), [CVE-2026-91777](https://www.cve.org/CVERecord?id=CVE-2026-91777), [CVE-2026-91776](https://www.cve.org/CVERecord?id=CVE-2026-91776), [CVE-2026-54513](https://www.cve.org/CVERecord?id=CVE-2026-54513), [CVE-2026-54512](https://www.cve.org/CVERecord?id=CVE-2026-54512), [CVE-2022-42003](https://www.cve.org/CVERecord?id=CVE-2022-42003), [CVE-2026-83557](https://www.cve.org/CVERecord?id=CVE-2026-83557), [CVE-2026-77310](https://www.cve.org/CVERecord?id=CVE-2026-77310), [CVE-2026-59889](https://www.cve.org/CVERecord?id=CVE-2026-59889), [CVE-2026-54515](https://www.cve.org/CVERecord?id=CVE-2026-54515), [CVE-2026-54514](https://www.cve.org/CVERecord?id=CVE-2026-54514), [CVE-2026-50193](https://www.cve.org/CVERecord?id=CVE-2026-50193), [CVE-2026-19032](https://www.cve.org/CVERecord?id=CVE-2026-19032)
+
+#### Fixes
+
+* Upgraded `jackson-annotations`, `jackson-core`, and `jackson-databind` from version 2.13.4 to 2.18.12.
+* Upgraded `log4j-api` from 2.17.1 to 2.25.5.
+
 ### 3.7.0
 
 **Release Date:** April 28, 2026

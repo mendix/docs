@@ -15,6 +15,22 @@ For the Teamcenter, Teamcenter X, and Mendix versions that each release supports
 
 ## 2606
 
+### 2606.1.1
+
+**Release Date:** November 26, 2026
+
+{{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
+
+**Requirements:** Studio Pro 11.12.4 or higher
+
+**Security Issues Fixed:** [CVE-2026-110879](https://www.cve.org/CVERecord?id=CVE-2026-110879)
+
+#### Fixes
+
+##### Connector
+
+* We updated `jackson-core` and `jackson-databind` from 2.22.3 to 2.22.4 to resolve a vulnerability.
+
 ### 2606.1.0
 
 **Release Date:** November 19, 2026

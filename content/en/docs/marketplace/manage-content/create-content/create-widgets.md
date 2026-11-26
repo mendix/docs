@@ -18,3 +18,4 @@ Follow these guidelines when developing widgets and submitting them to the Marke
 * A function should only do one thing, and do it properly.
 * Use hooks and functional components over class components.
 * Create test pages for mobile when content is made for mobile platforms.
+* Submit a release build of the widget. For more information, see [Build a Pluggable Widget (Release Version)](/howto/extensibility/build-a-release-version-of-a-pluggable-widget/).

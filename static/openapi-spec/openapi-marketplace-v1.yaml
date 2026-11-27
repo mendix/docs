@@ -185,6 +185,7 @@ paths:
         Note:
         - This operation will create a new Version of the existing package.
         - The Status of the Version will be Draft.
+        - A successful request returns 201 Created, a `Location` header with the URL of the new version, and the created version in the response body (an array).
       operationId: CreateVersion
       parameters:
         - name: packageId
@@ -223,8 +224,8 @@ paths:
                   #   - name: Visualization
 
       responses:
-        '200':
-          $ref: '#/components/responses/version'
+        '201':
+          $ref: '#/components/responses/version-created'
         '400':
           $ref: '#/components/responses/error-400'
         '401':
@@ -233,6 +234,8 @@ paths:
           $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
+        '409':
+          $ref: '#/components/responses/error-409'
 
 
   '/packages/{packageId}':
@@ -349,7 +352,10 @@ paths:
       tags:
         - packages
       summary: Get share groups of package
-      description: Get share groups of package.
+      description: |-
+        Get share groups of package.
+
+        Note: when the package has no share groups the service responds with 404 Not Found, not with 200 and an empty array.
       operationId: GetshareGroups
       parameters:
         - name: packageId
@@ -359,11 +365,13 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/objects'
+          $ref: '#/components/responses/share-groups'
         '400':
           $ref: '#/components/responses/error-400'
         '401':
           $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
         '404':
           $ref: '#/components/responses/error-404'
 
@@ -1020,6 +1028,18 @@ components:
                 status: 404
                 title: Not Found
                 detail: Package share group not found
+    error-409:
+      description: Conflict with the current state of the resource
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            409 - Draft version exists:
+              value:
+                status: 409
+                title: Conflict
+                detail: Can not create new version as package has a draft version already
     package:
       description: Package response
       content:
@@ -1610,6 +1630,115 @@ components:
                 license: Apache V2
                 supportLevel: Community
                 organisationName: Mendix
+    version-created:
+      description: Version created. The response body is an array containing the created version.
+      headers:
+        Location:
+          description: URL of the created version
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                description:
+                  type: string
+                supportedStudioPro:
+                  type: string
+                versionNum:
+                  type: string
+                versionMajor:
+                  type: integer
+                versionMinor:
+                  type: integer
+                versionPatch:
+                  type: integer
+                versionStatus:
+                  type: string
+                isDefaultVersion:
+                  type: boolean
+                publishDate:
+                  type: string
+                  format: date-time
+                license:
+                  type: string
+                releaseNotes:
+                  type: string
+                documentation:
+                  type: string
+                logoUrl:
+                  type: string
+                appDownloadUrl:
+                  type: string
+                appViewUrl:
+                  type: string
+                demoUrl:
+                  type: string
+                fileName:
+                  type: string
+                organisationName:
+                  type: string
+                supportLevel:
+                  type: string
+          examples:
+            Draft version:
+              value:
+                - id: c1dbfca8-9891-43c2-97c1-baf25a313e5a
+                  name: Video Player
+                  description: Play your video, those things on youtube
+                  supportedStudioPro: 9.24.3
+                  versionNum: 1.0.2
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 2
+                  versionStatus: Draft
+                  isDefaultVersion: false
+                  license: Apache V2
+                  releaseNotes: Video Player v1.0.2 release
+                  logoUrl: https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/packages/617/logo
+                  appDownloadUrl: https://pmp-demo.privateplatform.mendix.com/rest/packagesapi/v2/version/c1dbfca8-9891-43c2-97c1-baf25a313e5a/download
+                  appViewUrl: https://pmp-demo.privateplatform.mendix.com/link/component/617
+                  fileName: VideoPlayer_1.0.2.mpk
+                  organisationName: Mendix
+                  supportLevel: Community
+    share-groups:
+      description: Package with its share groups
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+                description: Package id
+              name:
+                type: string
+              groups:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    name:
+                      type: string
+          examples:
+            Share groups of package:
+              value:
+                id: 617
+                name: Video Player
+                groups:
+                  - id: 24feba3c-8c41-41cc-82c9-6092767c9125
+                    name: E2ETest
+                  - id: 27d01bee-6053-4006-b409-be1f30761d2f
+                    name: Group B
     versions:
       description: Package version list response
       content:

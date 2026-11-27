@@ -408,7 +408,10 @@ paths:
       tags:
         - projects
       summary: Get the sharing groups of the project
-      description: Get the sharing groups of the project
+      description: |-
+        Get the sharing groups of the project.
+
+        Note: when the project has no sharing groups the service responds with 404 Not Found, not with 200 and an empty array.
       operationId: getProjectShareGroups
       parameters:
         - name: projectId
@@ -498,7 +501,10 @@ paths:
       tags:
         - projects
       summary: Get sharing users of project
-      description: Get the sharing groups of the project
+      description: |-
+        Get the sharing users of the project.
+
+        Note: when the project has no sharing users the service responds with 404 Not Found, not with 200 and an empty array.
       operationId: getProjectSharingUsers
       parameters:
         - name: projectId
@@ -509,7 +515,7 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/sharing-users'
+          $ref: '#/components/responses/sharing-users-list'
         '400':
           $ref: '#/components/responses/Error-400'
         '401':
@@ -518,6 +524,8 @@ paths:
           $ref: '#/components/responses/Error-403'
         '404':
           $ref: '#/components/responses/Error-404'
+        '409':
+          $ref: '#/components/responses/Error-409'
 
     delete:
       tags:
@@ -1099,6 +1107,48 @@ components:
                 - id: 10d0a84a-0c13-4efa-a09f-948e49462be9
                   name: Group-QA
 
+    Error-409:
+      description: Conflict with the current state of the resource
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            409 - Project archived:
+              value:
+                status: 409
+                title: Conflict
+                detail: Cannot change share group of archived App
+    sharing-users-list:
+      description: Project sharing users
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                userId:
+                  type: string
+                  description: Project sharing user id
+                  example: 05ab1238-407c-478b-9dd3-05f4256702b1
+                userName:
+                  type: string
+                  description: Project sharing user name
+                  example: Peter
+                email:
+                  type: string
+                  description: Project sharing user email
+                  example: peter@example.com
+          examples:
+            Project sharing users list:
+              value:
+                - userId: 05ab1238-407c-478b-9dd3-05f4256702b1
+                  userName: John
+                  email: john@example.com
+                - userId: cf77fc69-d303-446d-b045-d2aa6fb54937
+                  userName: Peter
+                  email: peter@example.com
     sharing-users:
       description: Project sharing users
       content:

@@ -653,7 +653,12 @@ When configuring secret management, keep in mind the following key points:
     roleArn: "arn:aws:iam::123456789012:role/component-role"
   # Step 2: Configure Secret Provider Class
   secretProviderclass:
-    enable: true
+    enable: false
+    # Set to false to bring your own SecretProviderClass. The chart then skips rendering it and all provider parameters below are ignored. Your SecretProviderClass must be named after the MendixApp (<name>, or <name>-test when testApp is true), live in the same namespace and carry the annotation privatecloud.mendix.com/environment-class: "true"
+    create: true
+    database:
+        # When true, the chart doesn't request database-password from the secret store. The database is reached through the pod's identity (Azure Workload Identity or AWS IRSA)
+        passwordless: false
     provider: "azure"  # azure | aws | vault
     # For Azure Key Vault
     azureparameters:

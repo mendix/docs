@@ -46,7 +46,7 @@ Every permission in a resource role is expressed as an action on an app, which i
 
 #### Per-Environment Scoping
 
-Deployment permissions can be restricted by combining an environment's deployment purpose, and the target namespace's permitted deployment purpose. For example, to create a new environment in namespace A with purpose TEST and deploy an app to it, or to deploy a new package to an environment in A with purpose TEST, a user must be a member of *Group X* with the *Namespace (resource) A* associated with the *TEST* deployment purpose.
+Deployment permissions can be restricted by combining an environment's deployment purpose, and the target namespace's permitted deployment purpose. For example, to create a new environment in namespace A with the purpose TEST and deploy an app to it, or to deploy a new package to an environment in A with the purpose TEST, a user must be a member of *Group X* with the *Namespace (resource) A* associated with the *TEST* deployment purpose.
 
 ### Platform Roles
 
@@ -158,7 +158,7 @@ Settings permissions involve the capabilities available in the **Settings** sect
 
 #### Managing API User Accounts
 
-There is only one type  of account. Accounts used by services rather than people are not a separate account type. A service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's platform role, in the same way as for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a platform role defined for that purpose.
+There is only one type  of account. Accounts used by services rather than people are not a separate account type. A service that calls the platform API authenticates as an ordinary account, and what it can do is determined by that account's platform role, in the same way as for a person. A role such as **API User**, holding only the permissions a particular integration needs, is an example of a platform role which you can define for that purpose.
 
 ### Editing Roles and Creating Custom Roles
 
@@ -226,9 +226,9 @@ Because of that, you should transfer ownership to the group that should hold it 
 
 #### Deployment Namespaces
 
-A deployment namespace is a resource associated with a group. The *namespace purpose* is a scoping tied to that resource, describing what the namespace is for.
+A deployment namespace is a resource associated with a group. The *deployment purpose* is a scoping tied to that resource, describing what the namespace is for.
 
-Because purpose is configured on the namespace level, it applies to every group associated with the namespace. For how purpose relates to environments, see [Deployment Purpose and DTAP Mode](/private-mendix-platform/user-guide/#deployment-purpose-and-dtap-mode).
+Because deployment purpose is configured on the namespace level, it applies to every group associated with the namespace. For how deployment purpose relates to environments, see [Deployment Purpose and DTAP Mode](/private-mendix-platform/user-guide/#deployment-purpose-and-dtap-mode).
 
 Unlike group membership, a namespace association is not inherited by grops lower in the hierarchy. For a group to deploy to a namespace, the group must be directly associated with the namespace. Because of that, an app project and the namespace to which it deploys should be associated at the same level of the hierarchy.
 

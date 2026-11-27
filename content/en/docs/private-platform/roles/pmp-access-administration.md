@@ -85,31 +85,42 @@ Editing a role immediately changes the effective access of everyone who holds it
 
 Select the role and adjust its permissions. These cover generic platform access such as signing in and creating an app, capabilities in the **Manage** area such as app, user, group, and Marketplace administration, and capabilities in the **Settings** area such as identity configuration, licensing, and webhooks.
 
-Because CompanyAdmin and SystemAdmin are parallel rather than nested, a custom role that needs capabilities from both areas must be given permissions from both.
+Default roles like Company Admin and System Admin can exist in parallel. If a single custom role with capabilities from both is required, assign permissions from both accordingly.
+
+{{% alert color="info" %}}
+Assigning the permissions listed in the **Manage** and **Settings** sections will automatically provide the user with access to the Private Mendix Platform administrator menu.
+{{% /alert %}}
 
 ### Editing a Resource Role
 
+{{< figure src="/attachments/private-platform/pmp-roles8.png" class="no-border" >}}
+
 Select the role and adjust its permissions, which are grouped into the following categories:
 
-* **Project** - App lifecycle, its team, version control, and viewing environments
+* **Project** - App lifecycle, its team, version control, and access to project pages
 * **Build** - Packaging, the build pipeline, and the software bill of materials
 * **Deployment** - Deploying to and managing environments
-* **Monitoring** - Logs and metrics
+* **Monitoring** - Logs, events, and metrics
 * **Marketplace** - Editing rights to Marketplace components owned by a group to which the user belongs
+
+    * **Content** - Editing the details, sharing, visibility, and ownership of Marketplace components owned by the group
+    * **Version** - Editing the versions of the group's Marketplace components
+
+    The Content and Version permissions are dependent on each other and must be selected together.
 
 **Owner** is a special case. It is assigned automatically to whoever creates an app and cannot be granted to anyone manually. To change who holds it, transfer ownership of the app.
 
-### Scoping Deployment Permissions per Environment
+#### Scoping Deployment Permissions per Environment
 
-Permissions in the **Deployment** category can be limited to specific environments. For each such permission, select the combination of Development, Test, Acceptance, and Production it should apply to.
+Permissions in the **Deployment** category can be limited to specific environments, based on their deployment purpose. For each such permission, select the combination of Development, Test, Acceptance, and Production it should apply to.
 
 Use this rather than maintaining several near-identical roles. A single role in which deployment is permitted for Development and Test and withheld for Production expresses a common compliance requirement in one place, and stays correct as teams change.
 
 ### Creating a Custom Role
 
-Click **New** in the relevant tab, name the role, and select its permissions. Choose which system you are creating in deliberately: a role that should let someone administer part of the platform belongs in Platform Roles, and a role that should let someone act on apps and namespaces belongs in Resource Roles.
+To create a custom role, click **New** in the **Platform Roles** or **Resource Roles** tab, name the role, and select its permissions. 
 
-Name custom roles for the responsibility they represent rather than for the seniority of the people who will hold them, and avoid names that echo the default roles of the other system.
+As a best practice, name custom roles for the responsibility they represent rather than for the seniority of the people who will hold them, and avoid names that echo the default roles of the other system.
 
 ## Managing Groups
 
@@ -147,12 +158,12 @@ An app is owned by exactly one group. Assign or move ownership from the App Mana
 
 #### Deployment Namespaces
 
-A namespace can be associated with several groups at once, so operational responsibility can be shared. The namespace's purpose is configured on the namespace itself, in Cluster Manager, rather than on the association. See [Cluster Manager](/private-mendix-platform/reference-guide/admin/company/#cluster-manager).
+A namespace can be associated with several groups at once, so operational responsibility can be shared. The namespace's deployment purpose is configured on the namespace itself, in Cluster Manager, rather than on the association. See [Cluster Manager](/private-mendix-platform/reference-guide/admin/company/#cluster-manager).
 
 {{% alert color="warning" %}}
-Unlike membership, namespace associations are not inherited. That is, a namespace association does not extend to a parent group, or to child groups. A group that owns an app and needs to deploy it must be associated with the target namespace itself.
+Unlike membership, namespace associations are not inherited. A group that owns an app and needs to deploy it must be associated with the target namespace itself.
 
-If a team reports that they can build an app but not deploy it, verify that the group owning the app is directly associated with the namespace, not merely descended from a group that is.
+If a team reports that they can build an app but not deploy it, verify that the group owning the app is directly associated with the namespace, not merely descended from a group that is. In addition to that, verify that the assigned deployment purpose matches that of the environment.
 {{% /alert %}}
 
 #### Marketplace Contents

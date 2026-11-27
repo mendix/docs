@@ -228,9 +228,19 @@ Because of that, you should transfer ownership to the group that should hold it 
 
 A deployment namespace is a resource associated with a group. The *deployment purpose* is a scoping tied to that resource, describing what the namespace is for.
 
-Because deployment purpose is configured on the namespace level, it applies to every group associated with the namespace. For how deployment purpose relates to environments, see [Deployment Purpose and DTAP Mode](/private-mendix-platform/user-guide/#deployment-purpose-and-dtap-mode).
+Different groups can have different deployment purposes assigned to the same namespace. For example, consider the following situation:
 
-Unlike group membership, a namespace association is not inherited by grops lower in the hierarchy. For a group to deploy to a namespace, the group must be directly associated with the namespace. Because of that, an app project and the namespace to which it deploys should be associated at the same level of the hierarchy.
+* In Group A, user 1 and namespace X are given the Development and Test purposes.
+* In Group B, user 2 and namespace X are given the Production purpose.
+* As a result, user A can deploy to namespace X for Development and Test purposes, but not for Production. User B can deploy to namespace X for the Production purpose, but not for Development or Test.
+
+For more information on how deployment purpose relates to environments, see [Deployment Purpose and DTAP Mode](/private-mendix-platform/user-guide/#deployment-purpose-and-dtap-mode).
+
+Unlike group membership, a namespace association is not inherited from higher groups. For a group to deploy to a namespace, the group must be directly associated with the namespace. Because of that, an app project and the namespace to which it deploys should be associated at the same level of the hierarchy. For example, consider the following situation:
+
+* Group A has user 1 and no namespaces.
+* Group A1 is a subgroup of Group 1, has user 2 and namespace X.
+* In this situation, user 2 can deploy to namespace X, but user A cannot.
 
 This rule is specific to deployment namespaces. App projects are already exclusive to a single group, and Marketplace components follow their own ownership model.
 
@@ -240,7 +250,7 @@ Marketplace component ownership does not follow the group hierarchy. A component
 
 Access to the Marketplace administration area, where content is approved, categorized, and imported, is a platform role permission and not a resource role. Administering Marketplace content does not require any resource roles.
 
-Marketplace content can additionally be shared with groups by its publisher. For more information, see [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).
+Marketplace content can additionally be shared with groups by its publisher. A component visible to groups can be accessed by members of its parent group. For more information, see [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups).
 
 ## Granting Users Access to an App
 

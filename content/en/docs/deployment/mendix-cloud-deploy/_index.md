@@ -43,6 +43,10 @@ Free Apps make it possible to start creating and deploying apps with Mendix for 
 | Backups | Performed daily and cannot be triggered manually; stored for up to two weeks | Performed daily and can also be created manually; kept for up to one year, depending on your plan |
 | Support | No support | Depends on your license option |
 
+{{% alert color="warning" %}}
+When a Free App database reaches 1 GiB, write access is revoked. To restore it, delete data or [upgrade to a licensed app](/developerportal/deploy/licensing-apps/).
+{{% /alert %}}
+
 #### Sleep Mode
 
 Due to the limitations of a Free App, it enters sleep mode after about an hour of inactivity. If you access the app during this time, it displays the following message: 

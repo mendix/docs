@@ -91,4 +91,4 @@ The [account identifier](https://docs.snowflake.com/en/user-guide/admin-account-
 
 If you want to enable streaming for the Snowflake LLM or use OpenAI Connector version 9.5.0 or newer, replace any underscores (`_`) in the account identifier with hyphens (`-`). 
 
-If you do not want to use streaming and your OpenAI Connector version is 9.4.0 or older, replace any hyphens (`-`) in the account identifier with underscores (`_`). 
+If you do not want to use streaming and your OpenAI Connector version is 9.4.0 or older, disable the setting and replace any hyphens (`-`) in the account identifier with underscores (`_`). 

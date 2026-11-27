@@ -17,6 +17,7 @@ The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget disp
 * Set the timeouts between each slide
 * Use the infinite loop to scroll through slides endlessly
 * Add animation when slides are switched
+* Show several slides at the same time and slide them in groups
 
 ## Usage
 
@@ -34,6 +35,7 @@ The following sections will describe the different available widget properties a
 ### General tab
 
 * **Data source** – see [Data source](/refguide/data-sources/) documentation for more details
+* **Content** – the widgets displayed in each slide, one slide per item in the data source
 
 ### Display
 
@@ -41,14 +43,20 @@ The following sections will describe the different available widget properties a
     * Default: **Yes**
 * **Navigation controls** – shows arrows on the left and right side
     * Default: **Yes**
-* **Autoplay** – allows images to start sliding automatically when the widget is ready
-    * Default: **Yes**
-* **Delay** – creates a time interval between one item cycling to the next
-    * Default: **1000ms**
+* **Auto play** – allows images to start sliding automatically when the widget is ready
+    * Default: **No**
+* **Delay** – creates a time interval between one item cycling to the next, in milliseconds
+    * Default: **1000**
+    * Configurable when **Auto play** is set to **Yes**
 * **Infinite loop** – cycles between images endlessly
     * Default: **Yes**
+* **Slides per view** – the number of slides visible at the same time in the carousel
+    * Default: **1**
+* **Slides per group** – the number of slides that move together when the end-user navigates to the next or previous slide; useful when **Slides per view** is greater than 1
+    * Default: **1**
 * **Animation** – adds a fade animation on each cycle
     * Default: **Yes**
+    * Configurable only when **Slides per view** and **Slides per group** are both set to **1**; when more than one slide is shown or grouped, slides align to the start of the carousel and the fade animation is turned off
 
 ### Events
 

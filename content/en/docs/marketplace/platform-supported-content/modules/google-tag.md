@@ -29,7 +29,7 @@ In **Basic** mode, the Google Tag widget sends a pre-configured `page_view` even
 
 ### Compatibility {#compatibility}
 
-The module is compatible with Studio Pro 9.18 and above.
+The module is compatible with Studio Pro 10.21 and above.
 
 {{% alert color="info" %}}
 This module might not function correctly for users employing ad-blocking extensions in their browsers, as such extensions often block tracking activities.
@@ -40,6 +40,17 @@ This module might not function correctly for users employing ad-blocking extensi
 ### Basic Mode {#widget-basic-mode}
 
 When the **Widget mode** is set to **Basic**, the widget only sends page-tracking events, which covers the majority of use cases. In this mode, only the **Tag ID** property needs to be filled in. Additionally, you can fill in the **Parameters** if you want to include specific information along with the page view events. For more information, see the [Parameters](#widget-advanced-parameters) section below.
+
+The page view event includes the following parameters, in addition to the ones you configure in **Parameters**:
+
+* `page_location` – The page URL
+* `client_id` – The session ID
+* `language` – The user locale
+* `page_title` – The page title
+* `mx_page_name` – The page name
+* `mx_module_name` – The module name
+
+If **Share user ID** is set to **Yes**, the widget sends the ID of the authenticated user as `user_id` with the `config` command, so that individual users can be identified in Google Analytics. The default value is **No**.
 
 Typically, the Google Tag widget in **Basic** mode is placed in the layout of your app. The widget automatically tracks when the end-user switches pages and sends page view events accordingly. 
 
@@ -67,7 +78,7 @@ Typically, the Google Tag widget in **Advanced** mode with the **Command** setti
 
 #### Event Command {#widget-advanced-event}
 
-When **Command** is set to **Event**, the widget issues an `event` command to `gtag.js`. This requires **Event name** and accepts additional parameters configured via the **Parameters** property. Additionally, if the **Track Page Changes** property is set to **Yes**, the widget re-issues the `event` command when a page change happens.
+When **Command** is set to **Event**, the widget issues an `event` command to `gtag.js`. This requires **Event name** and accepts additional parameters configured via the **Parameters** property. Additionally, if the **Track page changes** property is set to **Yes**, the widget re-issues the `event` command when a page change happens. The default value is **No**.
 
 For this scenario, a widget in the **Advanced** mode must be combined with either a widget in **Basic** mode or with a widget in **Advanced** mode with the **Config** command.
 
@@ -77,6 +88,18 @@ One typical use case of the widget in this scenario is custom page view tracking
 
 The **Parameters** property allows for sending additional data along with the commands issued to `gtag.js`. Examples of parameters are **Page Name** and **Session ID** sent together with the page view event. The value of a parameter might be set as a custom value via an expression or chosen from a predefined set. 
 
+The predefined set (**Standard value**) contains the following values:
+
+* **Page Title**
+* **Page URL**
+* **Page Name** (default)
+* **Module Name**
+* **Page and Module Name**
+* **Session ID**
+* **User Locale**
+
+For the **Config** command, only custom values are available. In a custom value, the `{{__ModuleAndPageName__}}` token is replaced with the module and page name. The custom values `true` and `false` are sent as Boolean values.
+
 {{< figure src="/attachments/appstore/platform-supported-content/modules/google-tag/parameter-value-type.png" class="no-border" >}}
 
 ## Google Tag Command {#jsaction}
@@ -85,4 +108,6 @@ Google Tag Command is a JavaScript action that allows for making direct calls to
 
 The **Command** input can be set to **Config** or **Event**. When set to **Config**, only **Tag ID** and **Parameters** have to be passed. When set to **Event**, only **Event Name** and **Parameters** have to be passed.
 
-The **Parameters** input accepts a list of **GoogleTagParameter** entities to represent arbitrary parameters to send along with a command to `gtag.js`. The entity includes two fields, `Name` and `Value`.
+The **Parameters** input accepts a list of **GoogleTagParameter** entities to represent arbitrary parameters to send along with a command to `gtag.js`. The entity includes two fields, `Name` and `Value`. Values of `true` and `false` are sent as Boolean values.
+
+When **Command** is set to **Config**, the action also loads `gtag.js` with the given **Tag ID** if it is not loaded yet.

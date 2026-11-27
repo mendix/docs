@@ -120,7 +120,7 @@ This specifies the method of selection. This property is only shown when **Selec
 
 ##### Auto Select First Row
 
-When set to **Yes**, the first row is selected automatically. This property is only shown when **Selection** is set to **Single** or **Multi**. The default value is **No**.
+When set to **Yes**, the first row is selected automatically when the data is first loaded. This is useful for master-detail views. This property is only shown when **Selection** is set to **Single** or **Multi**. The default value is **No**.
 
 ##### Toggle on Click
 
@@ -179,7 +179,7 @@ When set to **Yes**, the grid shows a refresh indicator while the data is being 
 
 ##### Page Size
 
-This sests the number of rows to display per page. When **Pagination** is set to **Virtual scrolling** or **Load more**, this number defines how many rows are added each time more data is loaded. The default value is 20.
+This sets the number of rows to display per page. When **Pagination** is set to **Virtual scrolling** or **Load more**, this number defines how many rows are added each time more data is loaded. The default value is 20.
 
 ##### Pagination
 
@@ -226,11 +226,11 @@ This sets the caption of the button that loads more rows. The default value is *
 
 ##### Page Size Attribute
 
-This is an **Integer** attribute used to set the page size dynamically. When this attribute is set, it is used as the page size instead of **Page size**.
+This is an **Integer** attribute used to set the page size dynamically. When this attribute has a value greater than 0, it is used as the page size instead of **Page size**.
 
 ##### Page Attribute
 
-This is an **Integer** attribute used to set the current page dynamically. The data grid also writes the current page back to this attribute when the user navigates between pages.
+This is an **Integer** attribute used to set the current page dynamically. The data grid also writes the current page back to this attribute when the user navigates between pages. When **Pagination** is set to **Paging buttons**, the value is the page number, starting at 1. When **Pagination** is set to **Virtual scrolling** or **Load more**, the value is the number of loaded pages.
 
 ##### Total Count
 
@@ -384,7 +384,7 @@ Controls the type of the data displayed in the column. The following options are
 
 #### Attribute
 
-This sets the attribute used for the column. This property is required when **Show** is set to **Attribute**, and when the column can be sorted or filtered.
+This sets the attribute used for the column. The attribute can be of type String, Autonumber, Boolean, Date and time, Decimal, Enumeration, Integer, or Long. This property is required when **Show** is set to **Attribute**, and when the column can be sorted or filtered.
 
 This property is hidden when **Show** is not set to **Attribute**, **Can sort** is set to **No**, and **Show column filters** is set to **No**.
 
@@ -404,16 +404,18 @@ This is a text template that sets the value exported for this column when data i
 
 This sets the cell type used for the column's values when data is exported to Excel. The following options are available:
 
-* **Default** (default)
-* **Number**
-* **Date**
-* **Boolean**
+* **Default** (default): for attribute columns, the value is exported with the type and formatting of the attribute. Numbers are exported as numeric cells with the same decimals and digit grouping as in the grid, dates use the attribute's custom date pattern (or the date format of the app's language, without the time, when no custom pattern is set), and Boolean values are exported as Boolean cells. For custom content columns, the **Export value** is exported as text.
+* **Number**: the value is exported as a numeric cell, using **Export number format** if set. For custom content columns, the **Export value** is converted to a number; if it is not a valid number, it is exported as text.
+* **Date**: the value is exported as a date cell, using **Export date format** if set. If the format has no time part, the time is removed. For custom content columns, the **Export value** is converted to a date; if it is not a valid date, it is exported as text.
+* **Boolean**: the value is exported as a Boolean cell. For custom content columns, an **Export value** of `true`, `yes`, or `1` is exported as TRUE, and `false`, `no`, or `0` as FALSE; other values are exported as text.
+
+Numbers with more than 15 significant digits are exported as text, so that no digits are lost.
 
 This property is hidden when **Show** is set to **Dynamic text**.
 
 #### Export Number Format
 
-THis is an optional expression that returns the Excel number format for exported numeric values, for example `"#,##0.00"`, `"$0.00"`, or `"0.00%"`. For the available formats, see [Number Formats](https://docs.sheetjs.com/docs/csf/features/nf/) in the SheetJS documentation.
+This is an optional expression that returns the Excel number format for exported numeric values, for example `"#,##0.00"`, `"$0.00"`, or `"0.00%"`. For the available formats, see [Number Formats](https://docs.sheetjs.com/docs/csf/features/nf/) in the SheetJS documentation.
 
 This property is only shown when **Export type** is set to **Number**, and is hidden when **Show** is set to **Dynamic text**.
 
@@ -509,4 +511,4 @@ This is an expression that returns the CSS class for each cell of the column. Th
 
 #### Wrap Text
 
-If set to **Yes**, then the column tries to wrap long text. The default value is **No**.
+If set to **Yes**, then the column tries to wrap long text. When set to **No**, long text stays on one line and is cut off with an ellipsis. The default value is **No**.

@@ -29,18 +29,14 @@ To configure this widget, follow these steps:
 
 ### Data source Tab
 
-**Data source** (required) – a String attribute containing a valid color in hex, RGB or RGBA color formats
+**Color attribute** (required) – a String attribute containing a valid color in hex, RGB, or RGBA color formats; non-color formats such as `red` are not supported
 
 ### General Tab
 
 * **Enable advanced options**
     
     * **Yes** – if selected, the following advanced options become available:
-        * **Display mode** – determines how Color Picker is displayed in your app
-            * **Button** (default) – a button is displayed
-            * **Input** – a button is displayed with a text box that shows the color in the selected format
-            * **Inline** – a spectrum color picker is displayed      
-        * **Picker type** – select one of the following available pickers from the [React Color](https://casesandberg.github.io/react-color/) library: 
+        * **Picker type** (default: **Sketch**) – select one of the following available pickers from the [React Color](https://casesandberg.github.io/react-color/) library: 
             * **Block**
             * **Chrome**
             * **Circle**
@@ -52,11 +48,11 @@ To configure this widget, follow these steps:
             * **Slider**
             * **Swatches**
             * **Twitter**
-        * **Color format** – defines which color format to use
-            * **HEX**
+        * **Color format** – defines which color format the selected color is saved in
+            * **HEX** (default)
             * **RGB**
             * **RGBA**
-        * **Default colors** – defines a list of pre-defined colours used with the color picker
+        * **Default colors** – defines a list of pre-defined colors used with the color picker
     
             {{% alert color="info" %}}The **Default colors** property is only available if the **Picker type** property is set to **Block**, **Sketch**, **Circle**, **Compact**, or **Twitter**.{{% /alert %}}
     
@@ -68,7 +64,14 @@ To configure this widget, follow these steps:
             * **Move down** – moves down the selected default color
             * **Color** – the list of the existing default colors
     * **No** (default) – if selected, the advanced options are disabled.
-* **Invalid format message** – defines the message that is shown when the user provides a wrong input
+* **Display mode** – determines how Color Picker is displayed in your app
+    * **Button** (default) – a button is displayed
+    * **Input box** – a button is displayed with a text box that shows the color in the selected format
+    * **Inline** – a spectrum color picker is displayed
+* **Invalid format message** – defines the message that is shown when the user provides a wrong input; `:colors:` in the message is replaced by a sample format (default: "Invalid format, color value should be of format like :colors:")
+
+    {{% alert color="info" %}}The **Invalid format message** property is not available if **Display mode** is set to **Inline**.{{% /alert %}}
+
 * **Show label** 
     * **Yes** – if selected, you can define the label caption
         * **Label caption** – defines the label caption of the widget that is displayed on the page
@@ -78,7 +81,7 @@ To configure this widget, follow these steps:
 
 **On change** – executes an action when the attribute value changes
 
-### Edibility Tab {#editability-tab}
+### Editability Tab {#editability-tab}
 
 For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 

@@ -21,8 +21,8 @@ For more examples of what Charts widgets can do, see the following documents:
 * [Use the Charts Theme](/appstore/widgets/charts-theme/)
 * [Create a Multiple Series Chart](/appstore/widgets/charts-dynamic-series/)
 * [Use a Chart with a REST Data Source](/appstore/widgets/charts-basic-rest/)
-* [Chart Playground](/appstore/widgets/chart-specific-settings/)
-* [Chart-Specific Settings](/appstore/widgets/chart-playground/)
+* [Chart Playground](/appstore/widgets/chart-playground/)
+* [Chart-Specific Settings](/appstore/widgets/chart-specific-settings/)
 
 {{% alert color="info" %}}
 This document assumes that you are using Charts widget v3.0.0 or above. To read documentation for older versions, see the [Legacy Chart Widget Documentation](#legacy-widget-docs) section below.

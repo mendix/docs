@@ -38,9 +38,13 @@ Some common usage examples:
 Property configurations:
 
 * **Action** – Specifies the selected action that will be executed.
-* **Delay** – Puts a timer delay on the first executed action. The value is in milliseconds. Setting it to **0** will execute the action immediately.
-* **Repeat** – Selecting **Yes** will repeat the event execution based on the repeat delay timer.
-    * **Delay** – Time interval between repeated action executions. The value is in milliseconds.
+* **Parameter type** – Determines whether **Delay** is set as a fixed **Value** (default) or as an **Expression** that returns an Integer.
+* **Delay** – Puts a timer delay on the first executed action. The value is in milliseconds. Setting it to **0** (default) will execute the action immediately.
+* **Repeat** – Selecting **Yes** will repeat the event execution based on the repeat interval timer. The default is **No**.
+    * **Parameter type** – Determines whether **Interval** is set as a fixed **Value** (default) or as an **Expression** that returns an Integer.
+    * **Interval** – Time interval between repeated action executions. The value is in milliseconds. The default is **30000**.
+
+When **Repeat** is enabled, the next execution does not start if the previous execution has not finished yet.
 
 #### On Change
 
@@ -50,4 +54,5 @@ Property configurations:
 
 * **Attribute** - Specifies the attribute that will be listened into. The **action** will be executed when this attribute value changed.
 * **Action** - Specifies the **action** that will be executed.
-* **Delay** - Adds a timer delay to the first executed event. The value is in milliseconds. Setting it to **0** will execute the action immediately.
+* **Parameter type** - Determines whether **Delay** is set as a fixed **Value** (default) or as an **Expression** that returns an Integer.
+* **Delay** - Adds a timer delay to the first executed event. The value is in milliseconds. Setting it to **0** (default) will execute the action immediately.

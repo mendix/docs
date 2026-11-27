@@ -38,6 +38,34 @@ Configure the following properties:
 
 {{< figure src="/attachments/appstore/platform-supported-content/widgets/video-player/dimensions.jpg" class="no-border" >}}
 
+### General Tab
+
+* **Type** – determines how the URLs are provided: **Dynamic** (default) uses text templates, and **Expression** uses String expressions
+* **Video URL** (required) – the web address of the video: YouTube, Vimeo, Dailymotion, or MP4
+* **Poster URL** – the web address of a poster image, which is a custom preview image shown in the player until the user starts the video
+
+### Accessibility Tab
+
+* **Title** – describes the purpose of the video, for example "Video tutorial on accessibility"; it is set as the `title` of the embedded player to give a meaningful description of the video content
+
+### Controls Tab
+
+* **Auto start** – automatically starts playing the video when the page loads (default: **No**)
+* **Show Controls** – displays the video controls, such as the control bar, display icons, and dock buttons; available for YouTube, Dailymotion, and external videos (default: **Yes**)
+* **Muted** – starts the video on mute (default: **No**)
+* **Loop** – loops the video after it finishes; available for YouTube, Vimeo, and external videos (default: **No**)
+
+### Dimensions Tab
+
+* **Width Unit** – **Percentage** (default) is a portion of the parent size, and **Pixels** is an absolute amount of pixels
+* **Width** – default: **100**
+* **Height unit** – one of the following options:
+    * **Aspect ratio** (default) – the ratio of width to height, set in **Aspect ratio**: **16:9** (default), **4:3**, **3:2**, **21:9**, or **1:1**
+    * **Percentage of parent** – a portion of the parent height
+    * **Percentage of width** – a portion of the width
+    * **Pixels** – an absolute amount of pixels
+* **Height** – used when **Height unit** is not **Aspect ratio** (default: **500**)
+
 ### Cordova Configuration
 
 If your are building a hybrid mobile app, you need to add the following lines to enable access to YouTube, Vimeo, and Dailymotion videos as well as MP4 extensions through your Sprint in **Apps** > **Mobile App** > [Custom Cordova Configuration](/developerportal/deploy/mobileapp/#custom):

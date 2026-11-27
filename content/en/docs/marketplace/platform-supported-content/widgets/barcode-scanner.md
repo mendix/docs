@@ -11,7 +11,7 @@ The [Barcode Scanner](https://marketplace.mendix.com/link/component/117627) widg
 
 The widget does the following:
 
-* Displays a full-screen canvas overlay that allows the end-user to scan a barcode
+* Displays the camera feed of the end-user's device so the end-user can scan a barcode
 * Supports QR codes and a wide range of different barcode types
 * Allows for additional styling customizations through Atlas UI
 
@@ -27,25 +27,40 @@ The only requirement for the Barcode Scanner widget is that it needs to be place
 Make sure the length of this string attribute is long enough to store the barcode detection results for your use case, or the application will throw an error. If you are not sure about what length is required, then Mendix recommends setting the string attribute length to **Unlimited**.
 {{% /alert %}}
 
-When the widget is placed on a page, it will automatically put a black canvas overlay on top of the entire page. This canvas will provide end-users with the ability to see their device's camera feed and scan barcodes if they allow the permission request from the application.
+When the widget is placed on a page, it shows a black canvas with the size configured on the [Dimensions](#dimensions) tab. This canvas will provide end-users with the ability to see their device's camera feed and scan barcodes if they allow the permission request from the application.
 
-### Data Source Tab
+### General Tab
 
-* **Barcode** (required) – the attribute of the data view object that will store the barcode detection result as a string
+The **General** section has the following properties:
 
-### Mask Tab
+* **Scanned result** (required) – the string attribute of the data view object that will store the barcode detection result
+* **Show barcode mask** (enabled by default) – determines whether a mask with a focus square is shown on top of the end-user's camera feed, as a specific target area for the barcode
+    * If this property is disabled, the entire widget area shows the end-user's camera feed
+* **Use all barcode formats** (enabled by default) – determines whether the widget scans for all [supported barcode types](#supported-barcode-types)
+    * Disable this property to restrict scanning to specific formats and prevent incorrect scanning
+* **Enabled barcode formats** – the list of barcode formats the scanner recognizes; for each item, select a **Barcode format**
+    * Configurable when **Use all barcode formats** is disabled
 
-* **Show barcode mask** (enabled by default) – determines whether the black canvas overlay with a focus square is shown on top of the end-user's camera feed
-    * If this property is disabled, the entire screen will be the end-user's camera feed when the barcode scanner is open
+The **Events** section has the following property, which provides control over situations where the end-user interacts with the widget:
 
-### Events Tab
+* **On detect action** – an optional action that is triggered when the widget successfully detects a barcode
 
-These widget properties provide control over situations where the end-user interacts with the widget:
+### Dimensions Tab {#dimensions}
 
-* **On detect** – an optional event handler that is triggered when the widget detects a barcode
-* **On close** – an optional nanoflow that is triggered once when the end-user closes the black canvas overlay of the widget
+* **Width unit** – determines the unit of the width: **Percentage** (portion of the parent size, default) or **Pixels** (absolute amount of pixels)
+* **Width** – the width of the widget
+    * Default: **100**
+* **Height unit** – determines the unit of the height: **Percentage of width** (default), **Pixels**, or **Percentage of parent**
+* **Height** – the height of the widget
+    * Default: **75**
 
-## Supported Barcode Types
+### Advanced Tab
+
+* **Detection logic** – determines the detection logic used for barcode scanning
+    * **BarcodeDetector API (experimental fast scan, fallback to ZXing)** (default) – uses the native BarcodeDetector API of the browser when it is available, and the ZXing library otherwise
+    * **ZXing** – always uses the ZXing library
+
+## Supported Barcode Types {#supported-barcode-types}
 
 | 1D Product | 1D Industrial       | 2D             |
 | ---------- | ------------------- | -------------- |

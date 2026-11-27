@@ -14,11 +14,11 @@ This document describes how to configure the styling of your page in Studio Pro.
 
 The styling that is loaded when opening your Mendix application in a web browser is configured in the HTML of your index pages.
 
-To ensure that the same styling is loaded when viewing your page in Studio Pro, you can configure the `"cssFiles"` property in *settings.json* in the theme folder of your app. For example, in this configuration, `theme/web/main.scss` is loaded when viewing a page in Studio Pro:
+To ensure that the same styling is loaded when viewing your page in Studio Pro, you can configure the `"cssFiles"` property in *settings.json* in the theme folder of your app. For example, in the default configuration of an app that uses Atlas, the compiled theme stylesheet *theme.compiled.css* is loaded when viewing a page in Studio Pro:
 
 ```json
 {
-    "cssFiles": [ "theme/web/css/main.scss" ]
+    "cssFiles": [ "theme.compiled.css" ]
 }
 ```
 

@@ -35,11 +35,15 @@ The **General** tab in the **Edit Groups Item** dialog box has the following pro
 * **Render mode** – the text's heading level
     * Default: **Heading 3**
     * Configurable when the header content consists of **Text**
-* **Custom header content** – the widgets to be displayed in the header
-    * Configurable when the header content consists of widgets
+* **Header** – the widgets to be displayed in the header
+    * Configurable when **Header** is set to **Custom**
 * **Visible** – a Boolean expression indicating whether the group should be visible
     * Default: **true**
-* **Dynamic class** (required) – a string expression to apply dynamic classes (separated by a space) to the group
+* **Dynamic class** – a string expression to apply dynamic classes (separated by a space) to the group
+* **Load content** – determines when the widgets in the group content are rendered and their data is fetched
+    * Default: **Always**
+    * **Always** loads the widgets regardless of whether the group is expanded
+    * **When expanded** can reduce the initial page load time, but increases the load time when the group is expanded
 
 The **State** tab in the **Edit Groups Item** dialog box is only visible when [Advanced options](#advanced) is set to **Yes**, and it has the following properties:
 
@@ -66,9 +70,9 @@ Configure the following properties in this section:
     * Default: **Yes**
     * Only visible when [Advanced options](#advanced) is set to **Yes**
 
-### Advanced Tab {#advanced}
+### Advanced Options {#advanced}
 
-The **Enable advanced options** toggle (default: **No**) determines whether advanced configuration properties become visible. 
+The **Enable advanced options** toggle (default: **No**) in the **General** section of the [General](#general) tab determines whether advanced configuration properties become visible. 
 
 When set to **Yes**, the following tabs and properties become visible:
 

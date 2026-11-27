@@ -45,6 +45,10 @@ The **Data source** section (required) is used to configure the data for the wid
 * **Icon** – used to retrieve a static icon or image for the widget
     * Configurable when **Image type** is set to **Icon**
 * **Background image** – used to render an image as a background
+    * When set to **Yes**, more content can be placed inside the image with the **Place content here** property, and design properties have no effect
+    * Not available when **Image type** is set to **Icon**
+* **Place content here** – the widgets displayed on top of the background image
+    * Configurable when **Background image** is set to **Yes**
 
 #### Events Section
 
@@ -62,6 +66,7 @@ The **Events** sections allows you to configure what happens when the user inter
 The **Accessibility** sections allows you to configure accessibility features for the widget. It includes the following properties:
 
 * **Alternative text** – alternative text of the image for accessibility purposes
+    * Not available when **Background image** is set to **Yes**
 
 ### Dimensions Tab {#dimensions}
 
@@ -72,11 +77,24 @@ The **Dimensions** tab allows you to configure settings that are related to the 
     * The **Width** can be set as an appropriate CSS value when **Width unit** is not set to **Auto**
     * These two properties need to be used together to work
 * **Height unit** and **Height** – the height of the widget in relation to the rest of the elements on the page
-    * The available **Height unit** options **Auto** and **Pixels** (**Auto** will keep the aspect ratio of the image)
+    * The available **Height unit** options are **Auto**, **Pixels**, **Percentage**, and **Viewport** (**Auto** will keep the aspect ratio of the image)
     * The **Height** can be set as an appropriate CSS value when **Height unit** is not set to **Auto**
     * These two properties need to be used together to work
+* **Minimum Height unit** and **Minimum height** – the minimum height of the image
+    * Configurable when **Height unit** is set to **Auto**
+    * The available **Minimum Height unit** options are **None** (default), **Pixels**, **Percentage**, and **Viewport**
+    * The **Minimum height** can be set when **Minimum Height unit** is not set to **None**
+* **Maximum Height unit** and **Maximum height** – the maximum height of the image
+    * Configurable when **Height unit** is set to **Auto**
+    * The available **Maximum Height unit** options are **None**, **Pixels** (default), **Percentage**, and **Viewport**
+    * The **Maximum height** can be set when **Maximum Height unit** is not set to **None**
+    * Default **Maximum height**: **250** (for new Image widgets)
+* **Icon size** – the size of the icon in pixels
+    * Default: **14**
+    * Configurable when **Image type** is set to **Icon** and a glyph or icon from an icon collection is selected; the width and height properties are hidden in that case
 * **Show** – determines how the image will be shown
     * Default: **Full image**
+    * Configurable when **Image type** is set to **Image**
     * When set to **Thumbnail**, the widget will try to retrieve the thumbnail version of the image if present
 * **Responsive** – when set to **Yes**, the image will scale with its parent container
     * Default: **Yes**
@@ -94,6 +112,8 @@ These are the design properties shipped with Atlas UI for this widget:
 * **Center image** – determines whether the image is centered horizontally in its container or not
     * **Yes**, **No** (default) 
 * **Image fit** – changes the fit of the image according to the object-fit CSS property
-    * **Fill**, **Contain**, **Cover**, **Scale-down**, **None** (default)
+    * **Fill**, **Contain**, **Cover**, **Scale-down**, **Auto**, **None** (default)
+* **Opacity** – changes the opacity of the image
+    * **Low**, **Medium**, **High**, **None** (default)
 * **Align content** – aligns elements inside the container as a row or as a column
     * **Left align as a row**, **Center align as a row**, **Right align as a row**, **Right align as a column**, **Center align as a column**, **Left align as a column**

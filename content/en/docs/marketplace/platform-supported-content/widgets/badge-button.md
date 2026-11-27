@@ -17,6 +17,19 @@ The [Badge Button](https://marketplace.mendix.com/link/component/52705/) widget 
 
 ## Usage
 
-To use this widget, place it in the context of an object that has a value attribute. However, on the **Badge** tab, the **Badge value attribute** from the data source is optional. If not set, static data should be specified in **Caption** on the **Button** tab.
+To use this widget, place it on a page and configure the following properties on the **General** tab:
 
-Behavior is configured on the **Events** tab.
+* **Caption** (in the **General** section) – the text template displayed on the button
+    * Default: **Button**
+* **Value** (in the **Badge** section) – the text template displayed in the badge on the button
+* **On click** (in the **Events** section) – the action executed when the button is clicked
+
+## Styling
+
+The following design properties are available on the **Appearance** tab:
+
+* **Style** – the brand color of the button: **Brand Primary**, **Brand Secondary**, **Brand Success**, **Brand Warning**, or **Brand Danger**
+    * When no style is selected, the button uses the primary brand style
+* **Size** – **Small** or **Large**
+* **Full width** – makes the button take the full width of its container
+* **Border** – shows the button with a border

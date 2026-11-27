@@ -21,17 +21,19 @@ Several options can be defined in the Gallery widget:
 
 Data source specifies the source of the data being presented in the Gallery. You can select data from **Database** (optionally with an XPath constraint), **Association**, **Microflow**, or **Nanoflow**.
 
+**Refresh time (in seconds)** sets the time the gallery waits between refreshing the data. Auto-refreshing is turned off when the value is 0. The default value is 0.
+
 ### Columns
 
-The Gallery widget applies a different number of columns based on the device being used. You can set **Desktop columns**, **Tablet columns**, and **Phone columns**.
+The Gallery widget applies a different number of columns based on the device being used. You can set **Desktop columns**, **Tablet columns**, and **Phone columns**. Each value must be a number between 1 and 12. The default value is 1.
 
 ### Items
 
-On the **Behavior** tab, you can define the properties related to the items being presented. **Page size**, **Pagination**, and **Position of pagination** are in the **Pagination** group. **Empty message** and **Dynamic item class** are in the **Appearance** group.
+On the **Behavior** tab, you can define the properties related to the items being presented. **Page size**, **Pagination**, **Custom pagination**, **Show paging buttons**, **Show total count**, **Position of pagination**, **Load more caption**, and the dynamic pagination attributes are in the **Pagination** group. **Loading type** and **Show refresh indicator** are in the **Loading state** group. **Empty message** and **Dynamic item class** are in the **Appearance** group. **Custom item key** is in the **Advanced** group.
 
-#### Page size
+#### Page Size
 
-Defines the amount of data shown for each page or the limit to be presented when using virtual scrolling.
+Defines the amount of data shown for each page or the limit to be presented when using virtual scrolling. When **Pagination** is set to **Virtual scrolling** or **Load more**, this number defines how many items are added each time more data is loaded. The default value is 20.
 
 #### Pagination
 
@@ -39,11 +41,44 @@ Defines the amount of data shown for each page or the limit to be presented when
 The pagination status text and the screen reader labels of the paging buttons are currently written in English and cannot be translated. We are working to improve this in the future.
 {{% /alert %}}
 
-You can choose between paging buttons (buttons presented below or above the grid), virtual scrolling (a mechanism that automatically loads data when the user reaches the bottom of the scroll bar), or load more (a button that loads more items).
+You can choose between paging buttons (buttons presented below or above the grid), virtual scrolling (a mechanism that automatically loads data when the user reaches the bottom of the scroll bar), or load more (a button that loads more items). The default value is **Paging buttons**.
+
+#### Custom Pagination
+
+When set to **Yes**, the built-in paging buttons are replaced with your own pagination. A second property, also named **Custom pagination**, then appears. It is a widget area where you place the widgets that make up the custom pagination. The default value is **No**. These properties are only shown when **Pagination** is set to **Paging buttons**.
+
+#### Show Paging Buttons
+
+This controls the visibility of the navigation buttons. When set to **Always** (default), the navigation buttons are always visible. When set to **Auto**, the navigation buttons are only visible when the number of items in the data source exceeds the page size. This property is only shown when **Pagination** is set to **Paging buttons**.
+
+#### Show Total Count
+
+When set to **Yes**, the pagination area shows the number of loaded items and the total number of items, such as "20 of 150". The default value is **No**. This property is only shown when **Pagination** is set to **Virtual scrolling** or **Load more**.
 
 #### Position of Pagination
 
-This option defines the position of the pagination relative to the grid items: **Below grid**, **Above grid**, or **Both**. It is available when **Pagination** is set to **Paging buttons**, or when **Pagination** is set to **Virtual scrolling** or **Load more** and **Show total count** is enabled.
+This option defines the position of the pagination relative to the grid items: **Below grid** (default), **Above grid**, or **Both**. It is available when **Pagination** is set to **Paging buttons**, or when **Pagination** is set to **Virtual scrolling** or **Load more** and **Show total count** is enabled. Custom pagination cannot be shown in both positions. When **Custom pagination** is set to **Yes** and this property is set to **Both**, Studio Pro shows a warning and the custom pagination is rendered below the gallery.
+
+#### Load More Caption
+
+This sets the caption of the button that loads more items. The default value is **Load More**. This property is only shown when **Pagination** is set to **Load more**.
+
+#### Dynamic Pagination Attributes
+
+The **Pagination** group also contains the following optional **Integer** attributes:
+
+* **Page size attribute** – sets the page size dynamically; when this attribute is set, it is used as the page size instead of **Page size**
+* **Page attribute** – sets the current page dynamically; the gallery also writes the current page back to this attribute when the user navigates between pages
+* **Total count** – stores the current total number of items
+* **Loaded items** – a read-only attribute that reflects the number of items currently loaded; this property is only shown when **Pagination** is set to **Virtual scrolling** or **Load more**
+
+#### Loading Type
+
+This sets the type of loading state. The options are **Spinner** (default) and **Skeleton**.
+
+#### Show Refresh Indicator
+
+When set to **Yes**, the gallery shows a progress bar on top of the gallery while the data is being reloaded. The default value is **No**.
 
 #### Empty Message
 
@@ -59,13 +94,52 @@ This example checks the value of `CountryName` and, if the attribute is equal to
 
 {{< figure src="/attachments/appstore/platform-supported-content/modules/data-widgets/gallery/dynamic-item-class.png" alt="Example of dynamic item class"   width="300"  class="no-border" >}}
 
+#### Custom Item Key
+
+This is an expression that returns a stable identifier for each item. Use it to maintain the scroll position during data refreshes when using view entities. When it is not set, the object ID is used.
+
 ### Events
 
 The new Gallery widget can trigger some events while iterating with it.
 
+#### On Click Trigger
+
+This defines which interaction triggers the **On click action**: **Single click** (default) or **Double click**.
+
 #### On Click Action
 
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the items. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
+
+#### On Selection Change
+
+Triggers an action when the selection changes. This property is only shown when **Selection** is set to **Single** or **Multi**.
+
+### Personalization {#personalization}
+
+On the **Personalization** tab, you can store the current filter and sort configuration of the gallery. In this way, if you re-open your page, the filters and sort order remain the same as in the previous state. The following properties are available:
+
+* **Store filters** – When set to **Yes** (default), filter values are stored.
+* **Store sort** – When set to **Yes** (default), the sort order is stored.
+* **Store configuration in** – This sets where the configuration is stored: **Attribute** (default) or **Browser local storage**. Browser local storage is scoped to the browser profile, not to the Mendix user. This property is only shown when **Store filters** or **Store sort** is set to **Yes**.
+* **Attribute** – This is the attribute in which the configuration is stored and from which it is loaded. Select a `String` attribute with `Unlimited` as its size. To select an attribute, surround the gallery with a data view. This property is only shown when **Store configuration in** is set to **Attribute**.
+* **On change** – This is an action that is triggered when the configuration stored in **Attribute** changes. This property is only shown when **Store configuration in** is set to **Attribute**.
+
+### Texts {#texts}
+
+On the **Texts** tab, you can configure the following texts.
+
+The **Aria labels** group contains the texts that assistive technology reads:
+
+* **Filter section** – read upon reaching a filtering or sorting section
+* **Empty message** – read upon reaching an empty message section
+* **Content description** – read upon reaching the gallery
+* **Item description** – read upon reaching each gallery item; this text template can use the attributes of the item
+
+The **Captions** group contains the texts of the selection count:
+
+* **Item count singular** – The default value is "%d item selected". It must include `%d` to denote the position of the number.
+* **Item count plural** – The default value is "%d items selected". It must include `%d` to denote the position of the number.
+* **Clear selection label** – This sets the label of the button that clears the selection. The default value is "Clear selection". This property is only shown when **Selection** is set to **Multi**.
 
 ## Filtering
 
@@ -95,7 +169,7 @@ If the data source of the gallery has a sort order, the Drop-Down Sort widget pr
 The Drop-Down Sort widget lets end-users choose the attribute and direction to sort the gallery items by. Place it inside the filters placeholder of the Gallery widget and configure these properties:
 
 * **Datasource to sort**: the data source of the gallery, linked automatically when the widget is placed in the filters placeholder
-* **Attributes**: the attributes that end-users can sort by; for each attribute, set the **Caption** shown in the drop-down
+* **Attributes**: the attributes that end-users can sort by; for each attribute, set the **Caption** shown in the drop-down; supported attribute types are AutoNumber, Boolean, Date and time, Decimal, Enumeration, Integer, Long, and String
 * **Empty option caption**: the text shown when no sort option is selected
 * **Sort order button caption** and **Input caption**: the text announced by screen readers when using assistive technology
 
@@ -114,6 +188,14 @@ The **Selection** property determines what type of selection is available to use
 * **Multi**: Users can select multiple items simultaneously using various interaction methods.
 
 When **Selection** is enabled, the Gallery automatically provides visual feedback to indicate selected items and supports keyboard navigation for accessibility.
+
+### Auto Select First Item
+
+When set to **Yes**, the first item is selected automatically. This property is only shown when **Selection** is set to **Single** or **Multi**. The default value is **No**.
+
+### Toggle on Click
+
+This defines the selection behavior when an item is clicked. When set to **Yes**, clicking an item toggles its selection and keeps the other selected items. When set to **No** (default), clicking an item selects that item and clears the rest of the selection. This property is only shown when **Selection** is set to **Single** or **Multi**.
 
 ### Selection and Click Actions Constraint
 
@@ -215,6 +297,17 @@ To further improve the user experience, it is also possible to select many items
 ### Accessibility
 
 Employing keyboard navigation is an effective way of ensuring users who cannot use a mouse can still interact with the Gallery widget.
+
+## Styling
+
+The [Data Widgets](/appstore/modules/data-widgets/) module ships the following design properties for the Gallery widget:
+
+* **Borders** – Adds a separator to the items: **Both**, **Vertical**, **Horizontal**, or **Horizontal divider**.
+* **Hover** – Highlights an item when hovering over it. This is only useful when the item is clickable.
+* **Striped** – Adds alternating background colors to items.
+* **Grid spacing** – Changes the gap between grid items: **None**, **Small**, **Medium**, or **Large**.
+* **Pagination** – Aligns the pagination controls above and below the gallery: **Left**, **Center**, or **Right**. The selection count and the load more button move aside so both stay visible on the same row.
+* **Disable selection highlight** – Disables the standard styles for highlighting selected items.
 
 ## Troubleshooting
 

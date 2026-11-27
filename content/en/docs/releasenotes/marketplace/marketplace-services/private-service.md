@@ -7,10 +7,37 @@ weight: 20
 numberless_headings: true
 ---
 
-## 1.0.5 (`latest`)
+## 2.0.0 (`latest`)
+
+**Release date: November 24, 2026**
+
+{{% alert color="warning" %}}
+This is a major release with breaking changes. Review the changes below before you upgrade.
+{{% /alert %}}
+
+### Breaking Changes
+
+* We changed the base image of the service from Alpine Linux to Debian.
+    * If you extend the service image, for example to [import a self-signed certificate](/appstore/services/private-document-generation-service/#importing-a-self-signed-certificate), you need to update your Docker file. Use `apt-get` instead of `apk` to install packages. For an updated Docker file, see [Version 2.0.0 and Above](/appstore/services/private-document-generation-service/#import-certificate-v2).
+* We upgraded the browser that renders documents to Chromium 150. Documents can render slightly differently compared to previous versions, for example in font rendering or page layout. Mendix recommends that you verify your documents before you upgrade a production environment.
+* We moved the Docker image to a new registry: `registry.mendix.com/docgen/document-generation-service`. The new registry contains version 1.0.2 and above. For more information, see [Installing through Docker](/appstore/services/private-document-generation-service/#installing-through-docker).
+
+### Improvements
+
+* When you import a self-signed certificate, the service now also trusts the certificate when it sends the generated document back to your app.
+
+### Fixes
+
+* We fixed an issue where the progress indicator of the Mendix client could be visible in the generated PDF.
+
+### Security
+
+* We upgraded Node.js to version 24.22.2, which includes the fixes from the Node.js 24.22.1 security release.
+* We included routine security updates for third-party dependencies, which do not pose any apparent risk to Mendix customers.
+
+## 1.0.5
 
 **Release date: August 26, 2026**
-
 This release includes routine security updates, which do not pose any apparent risk to Mendix customers.
 
 ## 1.0.4

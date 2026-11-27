@@ -70,6 +70,13 @@ To manually upload a content bundle from your own computer, perform the followin
 2. Click **Upload Marketplace Bundle** to go to the **Import Content** > **Upload Marketplace Bundle** tab.
 3. Follow the steps described in [Company Administrators](/private-mendix-platform/reference-guide/admin/company/#manual-upload).
 
+##### Upgrading to Private Mendix Platform 2.8.2
+
+After upgrading to Private Mendix Platform 2.8.2, environments with versioned widget files (for example, *Widget4_0_0.mpk*, *Widget3_9_9.mpk*) need manual cleanup. You must perform the following steps:
+
+1. Remove old versioned widgets from the *widgets* folder, manually rename them by removing version from the widget name.
+2. Re-download the widget from Private Mendix Platform if needed. The widget will now use the correct naming, for example, Widget.mpk.
+
 #### Importing Marketplace Content from a CDN {#configure-import}
 
 To enable content import from a Content Delivery Network, follow these steps:

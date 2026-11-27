@@ -56,7 +56,7 @@ Enabling SSL establishes a secure connection to the broker. To input your SSL ce
     * Currently supported certificate types are X.509 format (*.crt*, *.cer*)
     * Currently supported key types are X.509 format (*.pem*, *.pkcs*)
   
-#### Custom client ID (introduced in module version 3.1.0+)
+#### Custom Client ID (Introduced in Module Version 3.1.0+)
 
 You can now configure a custom client ID for broker connections. When enabled, the connector uses this client ID consistently for connect, publish, subscribe, and unsubscribe operations. If no custom client ID is configured, behavior remains unchanged and the connector uses its default client ID behavior.
 

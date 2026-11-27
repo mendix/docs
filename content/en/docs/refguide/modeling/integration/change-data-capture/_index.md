@@ -9,19 +9,25 @@ description: "Describes Change Data Capture (CDC) services in Studio Pro, which 
 
 {{% alert color="warning" %}} This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
 
-Change Data Capture (CDC) lets you stream domain model data out of a Mendix app in near real time. When objects in a tracked entity are created, updated, or deleted, the Mendix Runtime captures those changes and publishes them as events to a Kafka topic. Downstream systems, such as data warehouses or analytics pipelines, can then consume the stream without polling the Mendix database.
+Change Data Capture (CDC) lets you stream domain model data out of a Mendix app in near real time. When objects in a tracked entity are created, updated, or deleted, the Mendix Runtime captures those changes and publishes them as events to a Kafka topic, a named stream of records. Downstream systems, such as data warehouses or analytics pipelines, can then consume the stream without polling the Mendix database.
 
 CDC is intended for developers who need to move Mendix domain model data to external data stores, such as a data warehouse, data lake, or blob storage.
 
-## How It Works
+## How It Works {#how-it-works}
 
-A CDC service document in Studio Pro defines which entities the Mendix Runtime should track. On deployment, each tracked entity gets its own Kafka topic. Every time a committed object change occurs (create, update, or delete) the Mendix Runtime publishes an event to the corresponding topic.
+A CDC service document in Studio Pro defines which entities the Mendix Runtime should track. On deployment, each tracked entity gets its own Kafka topic. When an object creation, update, or deletion is committed, the Runtime publishes a CDC event to that entity's topic.
 
-Read events are triggered as snapshots during startup or when a stream changes in a way that constitutes a breaking change. Snapshots populate the new topic with the current data of the tracked entity. For more information, see the [Revisions](/refguide/published-cdc-services/#revisions) section of *Published CDC Services*.
+At startup, CDC checks whether a tracked entity needs a snapshot, for example, after a breaking change creates a new topic. A snapshot populates the topic with the entity's current data as read events. For more information, see the [Revisions](/refguide/published-cdc-services/#revisions) section of *Published CDC Services*.
 
-The broker that receives these events is either the [Mendix Event Broker](/appstore/services/event-broker/) or a Bring Your Own Kafka (BYOK) cluster. For BYOK configuration details, see [Mendix Event Broker](/appstore/services/event-broker/).
+To publish a CDC event, the Runtime submits a [Kafka record](/refguide/kafka-concepts/#record-event-and-message) to the producer, the Kafka client that writes records. The record specifies the [topic for the tracked entity](/refguide/published-cdc-services/#topic) and carries the object ID as the key and the event as the JSON value.
 
-To move the streamed data to a destination (such as Azure Blob Storage or AWS S3), you configure an [Event Broker Bridge](/appstore/services/event-broker-bridges/) separately in the Event Broker Manager after deployment.
+The Runtime processes CDC events in groups but submits each Kafka record individually. The producer chooses a partition for each record. A partition is an ordered log within a topic. The producer can combine records for the same partition into a Kafka record batch. The [batch-size gauges](/refguide/metrics/#cdc-producer-metrics) measure Kafka record batches, not the groups of events the Runtime processes.
+
+If the Runtime closes the producer after an error, it creates a replacement when needed.
+
+The [Mendix Event Broker](/appstore/services/event-broker/) or your own Kafka cluster receives the records. For connection settings, see [Kafka Connection Settings](#kafka-connection-settings). For more about clusters, topics, and partitions, see [Kafka Concepts](/refguide/kafka-concepts/).
+
+After deployment, configure an [Event Broker Bridge](/appstore/services/event-broker-bridges/) in the Event Broker Manager to route the stream to a destination such as Azure Blob Storage or AWS S3.
 
 ## Prerequisites
 
@@ -105,15 +111,21 @@ For an unauthenticated plaintext connection, leave the credentials empty and rem
 
 ### Active-Producer Election {#active-producer-election}
 
-In a horizontally-scaled deployment, multiple app instances would all publish CDC events to the same Kafka topics, producing duplicates. Active-producer election ensures that only one instance publishes at a time.
+In a horizontally-scaled deployment, multiple app instances would all publish CDC events to the same Kafka topics, producing duplicates. CDC active-producer election selects one Mendix app instance to publish events at a time. It does not select the Kafka broker that leads a partition.
 
-When all three election settings are configured, each instance joins the same Kafka consumer group and subscribes to the election topic. Kafka assigns partition 0 of that topic to exactly one group member, and that instance becomes the active producer. All other instances stand by without publishing.
+Active-producer election requires all three runtime settings:
+
+* `EventBroker.CdcActiveProducerElectionTopic` – the Kafka topic used for election
+* `EventBroker.CdcActiveProducerElectionGroupId` – the Kafka consumer group that the app instances join
+* `EventBroker.CdcProducerTransactionId` – the transaction ID for the active producer
+
+With these settings, each instance joins the same Kafka consumer group and subscribes to the election topic. Kafka assigns partition 0 of that topic to exactly one group member, and that instance becomes the active producer. All other instances stand by without publishing.
 
 If the active instance stops sending heartbeats (for example, because it crashed or was scaled down), Kafka triggers a rebalance and assigns the partition to another instance, which then starts producing. Before relinquishing the partition, the departing instance drains any in-flight events to prevent gaps.
 
 The `EventBroker.CdcProducerTransactionId` setting enables Kafka transactions on the active producer, providing exactly-once delivery guarantees during normal operation and a clean handover during failover.
 
-If any of the three election settings is missing, the Mendix Runtime logs a warning and falls back to single-instance mode, where all instances publish independently.
+If any of these settings is missing, each instance starts publishing without election. If some but not all settings are configured, the Runtime logs the missing settings at debug level.
 
 ### Message Format {#message-format}
 
@@ -145,7 +157,7 @@ The `source` block contains the following fields:
 
 Because the format is Debezium-compatible, BYOK consumers that already support Debezium (such as Kafka Connect sink connectors for databases or data warehouses) can consume CDC events without any message transformation.
 
-To parse messages, the schema for each tracked entity is available as an AsyncAPI document. You can download it from the [Event Broker Manager](https://broker.mendix.com/) on the service details page for the CDC service.
+To parse CDC events, use the schema for the tracked entity in its AsyncAPI document. The document uses an [AsyncAPI channel](/refguide/kafka-concepts/#asyncapi-channel) to describe where applications send or receive messages. You can download the AsyncAPI document from the CDC service details page in the [Event Broker Manager](https://broker.mendix.com/).
 
 For details on setting up a BYOK cluster with the Mendix Event Broker, see [Mendix Event Broker](/appstore/services/event-broker/).
 
@@ -155,13 +167,13 @@ As of Studio Pro 11.16.0, CDC supports OpenTelemetry tracing. The runtime genera
 
 | Span | Description | Count Attribute |
 | --- | --- | --- |
-| `CDC publish change events` | Processes fetched event IDs in batches. The count is the number of IDs fetched for the poll. | `mx.cdc.producer.change_events.count` |
-| `CDC process change events` | Processes one batch of loaded change events. The count is the number of events in the batch. | `mx.cdc.producer.change_events.count` |
-| `CDC create producer records` | Creates Kafka records for a batch. The record count is set after successful creation. | `mx.cdc.producer.records.count` |
-| `CDC publish Kafka records` | Publishes a non-empty batch of records to Kafka. The count is the number of submitted records. | `mx.cdc.producer.records.count` |
+| `CDC publish change events` | Processes fetched event IDs in groups. The count is the number of IDs fetched for the poll. | `mx.cdc.producer.change_events.count` |
+| `CDC process change events` | Processes one group of loaded change events. The count is the number of events in the group. | `mx.cdc.producer.change_events.count` |
+| `CDC create producer records` | Creates Kafka records for a group of CDC events. The record count is set after successful creation. | `mx.cdc.producer.records.count` |
+| `CDC publish Kafka records` | Submits the records from a group of CDC events to the Kafka producer if there are records to send. The count is the number of records to publish, measured before submission. | `mx.cdc.producer.records.count` |
 | `CDC update snapshot state` | Plans snapshots and updates snapshot state. The count is the number of entities planned for a snapshot. | `mx.cdc.producer.snapshot.entities.count` |
 
-Record creation and Kafka publishing are nested within batch processing. These spans are not generated for individual change events.
+Record creation and Kafka publishing are nested within the span for processing a group of CDC events. These spans are not generated for individual change events.
 Snapshot updating is a separate operation. Its entity count does not indicate how many snapshots completed.
 
 These spans are excluded when [Minimal Tracing Mode](/refguide/opentelemetry-in-runtime/#minimal-tracing-mode) is enabled.

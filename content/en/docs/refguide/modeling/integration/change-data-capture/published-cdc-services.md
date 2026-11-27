@@ -93,7 +93,7 @@ The following describe how the CDC service behaves at runtime:
 * The CDC service runs in the system context, so no user security applies
 * Events are published for every committed object change (create, update, and delete)
 * Kafka topics are created automatically on deployment for each tracked entity
-* Events use [CloudEvents](https://cloudevents.io/) payload format, consistent with other Mendix Event Broker services
+* Events use the Debezium envelope format described in [Message Format](/refguide/change-data-capture/#message-format)
 
 ## Read More
 

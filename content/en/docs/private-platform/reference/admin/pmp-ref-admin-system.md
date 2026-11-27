@@ -67,15 +67,15 @@ In this tab, you can trigger cleaning the scheduled event queue.
 
 #### Marketplace
 
-For Private Mendix Platform, the Marketplace is also private and hosted entirely within the platform itself. The settings in this section allow you to configure the administrative settings for publishing and downloading content to and from the private Marketplace.
+For Private Mendix Platform, the Marketplace is also private and hosted entirely within the platform itself. The settings in this section allow you to configure the administrative settings for publishing and downloading content to and from the PMP Marketplace.
 
 ##### Content Approvals
 
-In this tab, you can configure whether contents that users publish to the private Marketplace requires administrator approval before publishing. To view all [pending, published, and rejected content items](/private-mendix-platform/reference-guide/admin/company/#content), click **Go to Marketplace Management**.
+In this tab, you can configure whether contents that users publish to the PMP Marketplace requires administrator approval before publishing. To view all [pending, published, and rejected content items](/private-mendix-platform/reference-guide/admin/company/#content), click **Go to Marketplace Management**.
 
 ##### Content Import {#import}
 
-You can populate your private Marketplace with contents by importing a zip file that contains the content packages along with a *package.json* file. You can upload the file from a Content Delivery Network, or manually from your local machine.
+You can populate your PMP Marketplace with contents by importing a zip file that contains the content packages along with a *package.json* file. You can upload the file from a Content Delivery Network, or manually from your local machine.
 
 {{< figure src="/attachments/private-platform/pmp-admin9.png" class="no-border" >}}
 

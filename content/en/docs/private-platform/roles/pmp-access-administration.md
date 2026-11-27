@@ -61,7 +61,7 @@ Assigning a Platform Role gives a user platform-wide capability to perform speci
 
 ### Accounts Used by Services
 
-A service that calls the platform API signs in as an ordinary account, and what it can do is determined by that account's platform role. A role such as *API User*, carrying only the permissions one integration needs, is an example of a platform role defined for this purpose.
+A service that calls the platform API signs in as an ordinary account, and what it can do is determined by that account's platform role. A role such as *API User*, carrying only the permissions one integration needs, is an example of a platform role that you can define for this purpose.
 
 Give each integration its own account and its own narrowly scoped role rather than reusing an administrator account. Accounts used by services behave the same as all other accounts. That is, they can be blocked, their roles can be changed, and their actions appear in the activity log.
 
@@ -159,11 +159,20 @@ If a team reports that they can build an app but not deploy it, verify that the 
 
 #### Marketplace Contents
 
-Components published to the private Marketplace are owned by the user who published them rather than by a group, and are shared with groups by their publisher. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups). Administering Marketplace content is a platform role capability, and is documented in [Marketplace](/private-mendix-platform/reference-guide/admin/company/#marketplace).
+Components published to the PMP Marketplace are owned by the user who published them rather than by a group, and are shared with groups by their publisher. See [Sharing Content with Groups](/private-mendix-platform/user-guide/#sharing-content-with-groups). Administering Marketplace content is a platform role capability, and is documented in [Marketplace](/private-mendix-platform/reference-guide/admin/company/#marketplace).
 
 ### Automating Group Assignment {#automating-group-assignment}
 
-**Automation Settings** on the Group Management page let group membership follow the identity provider information mapped onto users' profiles, rather than being assigned by hand.
+**Automation Settings** on the Group Management page let group membership follow the identity provider information mapped onto users' profiles, rather than being assigned by hand. This includes the following attributes:
+
+* Team
+* Unit
+* Department
+* Company
+* Auxilliary 1
+* Auxilliary 2
+
+For more information about mapping the information, see [Identity and Access](/private-mendix-platform/admin-system/integrations/#identity).
 
 Once configured for a profile attribute, membership is derived from that attribute's value when a user arrives:
 

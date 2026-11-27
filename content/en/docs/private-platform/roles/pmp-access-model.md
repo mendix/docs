@@ -46,9 +46,7 @@ Every permission in a resource role is expressed as an action on an app, which i
 
 #### Per-Environment Scoping
 
-Deployment is the only permission category that can be limited by environment. Each permission in it can be restricted to any combination of Development, Test, Acceptance, and Production. No other category offers this.
-
-This is what makes it possible to express a role such as *may deploy freely to Development and Test, and may not deploy to Production at all* without creating separate roles per environment, and it is the mechanism to reach for when a compliance requirement separates production deployment from everyday development.
+Deployment permissions can be restricted by combining an environment's deployment purpose, and the target namespace's permitted deployment purpose. For example, to create a new environment in namespace A with purpose TEST and deploy an app to it, or to deploy a new package to an environment in A with purpose TEST, a user must be a member of *Group X* with the *Namespace (resource) A* associated with the *TEST* deployment purpose.
 
 ### Platform Roles
 
@@ -134,7 +132,7 @@ Settings permissions involve the capabilities available in the **Settings** sect
 
     * **Access notification setting pane**
     * **Access general setting pane**
-    * **Access marketplace setting pane**
+    * **Access Marketplace setting pane**
     * **Access version support setting pane**
 
 * **Integrations** - Includes the following permissions:
@@ -230,7 +228,7 @@ This rule is specific to deployment namespaces. App projects are already exclusi
 
 #### Marketplace Components
 
-Marketplace component ownership does not follow the group hierarchy. A component published to the private Marketplace is owned by the user who published it, rather than by a group. 
+Marketplace component ownership does not follow the group hierarchy. A component published to the PMP Marketplace is owned by the user who published it, rather than by a group. 
 
 Access to the Marketplace administration area, where content is approved, categorized, and imported, is a platform role permission and not a resource role. Administering Marketplace content does not require any resource roles.
 
@@ -263,7 +261,7 @@ Every incoming user with no other placement is put into a configured group with 
 
 ### Role Parsing
 
-When enabled, Private Mendix Platform reads group and role claims from the incoming token and maps them onto platform roles and groups automatically. When disabled, no such mapping occurs and every federated user lands on the defaults above, to be assigned afterwards manually, through SCIM, or through the platform API.
+When enabled, Private Mendix Platform reads group and role claims from the incoming token and maps them onto platform roles and groups automatically. When disabled, no such mapping occurs and every federated user lands on the defaults above, to be assigned afterward manually, through SCIM, or through the platform API.
 
 ### Automation Settings
 
@@ -301,18 +299,12 @@ When designing your access hierarchy, keep in mind the following recommendations
 
 The following figure shows a sample group hierarchy.
 
-```text
-Mendix (root)
-├── Platform Admin
-│   └── App Portfolios
-│       └── App Portfolio 1
-└── Preboarding
-```
+{{< figure src="/attachments/private-platform/pmp-roles2.png" class="no-border" >}}
 
-A user who is a member of *App Portfolios* with the Developer role is also, by inheritance, a Developer in *App Portfolio 1*, and can develop and deploy the apps that group owns. That same user is not a member of *Preboarding*, which is not beneath their group, and has no access to anything Preboarding owns.
+A user who is a member of *Company Division X* with the Developer role is also, by inheritance, a Developer in *Project A Group*, and can develop and deploy the apps that group owns. That same user is not a member of *Preboarding*, which is not beneath their group, and has no access to anything Preboarding owns.
 
-A user who is a member of *Platform Admin* with the Administrator role holds it in *App Portfolios* and *App Portfolio 1* as well, because both are beneath Platform Admin. Adding a new portfolio group under App Portfolios extends that user's Administrator role into it automatically. This is the reason to grant Administrator low rather than high.
+A user who is a member of *PMP Root* with the Administrator role holds it in *Company Division X* and *Preboarding* as well, because both are beneath Platform Admin. Adding a new group under Company Division X extends that user's Administrator role into it automatically. This is the reason to grant Administrator low rather than high.
 
-If *App Portfolio 1* owns an app that must deploy to a namespace, App Portfolio 1 must be associated with that namespace itself. Associating the namespace with *App Portfolios*, or with *Mendix*, does not enable the deployment.
+If *Project A Group* owns an app that must deploy to a namespace, Project A Group must be associated with that namespace itself. Associating the namespace with *Company Division X*, or with *PMP Root*, does not enable the deployment.
 
 *Preboarding* is a good choice for the Default Group in an SSO configuration. Users who arrive without a recognized placement land there, hold whatever low-privilege Default Role is configured, and cannot reach anything owned elsewhere in the tree.

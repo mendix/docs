@@ -138,7 +138,7 @@ The findings are divided into the following types:
 
 * Vulnerable - A finding is generated when a component is published on the [Security Advisories](/releasenotes/security-advisories/) page, and is assigned a specific CVSS score. CVSS scores are based on the [NVD Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics) framework, and cannot be orverriden.
 * Outdated - A finding is generated when a component becomes outdated, meaning when a new runtime compatible version is published.
-* Deprecated - A finding is generated when a component has been labeled as deprecated in the Private Marketplace.
+* Deprecated - A finding is generated when a component has been labeled as deprecated in the PMP Marketplace.
 
 These are the severity levels of a finding:
 
@@ -208,7 +208,7 @@ Predefined app categories cannot be edited or deleted. To edit or delete a custo
 
 #### Import Content
 
-You can populate your private Marketplace with contents by importing a zip file that contains the content packages along with a *package.json* file. You can upload the file from a Content Delivery Network, or manually from your local machine.
+You can populate your PMP Marketplace with contents by importing a zip file that contains the content packages along with a *package.json* file. You can upload the file from a Content Delivery Network, or manually from your local machine.
 
 {{< figure src="/attachments/private-platform/pmp-admin9.png" class="no-border" >}}
 

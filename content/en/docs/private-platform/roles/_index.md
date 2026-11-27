@@ -18,7 +18,7 @@ Both axes are configured by administrators at runtime through Dynamic Role Manag
 
 This document explains the two axes. Other articles in this section describe the model, the administrative tasks that configure it, and the day-to-day tasks that users, group administrators, and app owners perform within it.
 
-## Understanding the Two Role Systems {#role-systems}
+## Understanding Platform Roles and Resource Roles {#role-systems}
 
 Instead of a single ladder of roles, with an administrator at the top who can do everything, Private Mendix Platform has two role systems, that is, [platform roles](#platform-role) and [resource roles](#resource-role). Each role system has its own permission schema, its own assignment mechanism, and its own scope.
 
@@ -32,7 +32,7 @@ Platform roles define what a user can do on the platform in general. They are as
 
 ### Resource Roles {#resource-role}
 
-Resource roles define what a user can do with specific resources, such as a specific app or namespace. They are assigned to an individual, as a member of a group, or directly on an app team. Their scope involves only the resources the relevant group owns or is associated with. Multiple resource roles are only combined where two roles apply to the same resource.
+Resource roles define what a user can do with specific resources, such as a specific app or namespace. They are assigned to an individual, as a member of a group, or directly on an app team. Their scope involves only the resources the relevant group owns or is associated with. Multiple resource roles are only combined where two roles apply to the same resource, in which case the permissions of all applicable roles are combined.
 
 ## Read More
 

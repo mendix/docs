@@ -138,7 +138,7 @@ The App Implementer must perform the following tasks:
 
 2. Verify Marketplace modules and dependencies at build time.
 
-    Validate every Marketplace module (imported through the private Marketplace hosted inside Private Mendix Platform), Java or JS library, and third-party dependency against its published checksum or signature during the build, and fail the build on any mismatch or missing signature; record verification evidence as a build attestation.
+    Validate every Marketplace module (imported through the PMP Marketplace hosted inside Private Mendix Platform), Java or JS library, and third-party dependency against its published checksum or signature during the build, and fail the build on any mismatch or missing signature; record verification evidence as a build attestation.
 
 3. Document and restrict access to signing keys.
 

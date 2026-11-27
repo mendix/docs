@@ -29,7 +29,7 @@ If you have been named a group admin on a group, you can manage that group's mem
 For each group you can:
 
 * View its current members.
-* Search the platform's users by name or email address and add them to the group.
+* Search the platform's users by name or email address and add them to the group with a specific role.
 * Remove members from the group.
 
 Being a group admin lets you change who is in the group. It does not let you create groups, change the hierarchy, change which resources the group owns, or edit roles. Those require an administrator. See [Administering Users, Groups, and Roles in Private Mendix Platform](/private-mendix-platform/access-administration/).
@@ -59,11 +59,13 @@ In this way, direct membership handles the individual exceptions, and inherited 
 
 ### Inviting a Member
 
-As the app's owner, you can invite users to the team and assign roles such as the following:
+As the app's owner, you can invite users to the team and assign them roles. The following roles are available by default:
 
 * **Developer** - To change the app's source and deploy it.
 * **Contributor** - To change the app's source but should not deploy it.
 * **Operator** - To deploy the app but should not change its source.
+
+You can also create your own roles as needed.
 
 For more information about the roles, see [Resource Roles](/private-mendix-platform/access-model/#resource-roles).
 
@@ -79,13 +81,16 @@ You can share your app with groups that do not own it. Sharing makes the app vis
 
 Members of a group the app has been shared with can request access from you. You decide whether to grant it, and with which role.
 
-Share an app when you want it discoverable across the organization, for example a reference implementation or an internal service other teams may want to build against. Do not use sharing to grant access; use a team invitation or group membership for that.
+Share an app when you want it discoverable across the organization, for example as a reference implementation or an internal service other teams may want to build against. Do not use sharing to grant access. Use a team invitation or group membership for that purpose.
 
 ### Deploying to a Namespace
 
-In addition to holding a role that permits deployment, the group that owns the app must also be associated with the namespace you are deploying to. That association is made by an administrator, and it does not follow the group hierarchy, so a parent group's association does not help.
+In addition to holding a role that permits deployment, the group that owns the app must also be associated with the namespace to which you are deploying. That association is made by an administrator, and it does not follow the group hierarchy, so a parent group's association does not help.
 
-If you cannot deploy an app despite having a Developer or Operator role, the likely cause is a missing namespace association rather than a role problem. Ask an administrator to confirm that the group owning the app is directly associated with the target namespace. For more information, see [Associating Resources with a Group](/private-mendix-platform/access-administration/#associating-resources-with-a-group).
+If you cannot deploy an app despite having a Developer or Operator role, the likely cause is a missing namespace association or incorrect [DTAP mode](/private-mendix-platform/user-guide/) rather than a role problem. To resolve the issue, erify the following settings:
+
+* Ask an administrator to confirm that the group owning the app is directly associated with the target namespace. For more information, see [Associating Resources with a Group](/private-mendix-platform/access-administration/#associating-resources-with-a-group).
+* Ensure that the deployment purpose of the environment matches the target namespace's deployment purpose. On Private Mendix Platform, environments with the Development and Test purpose set the `dtapMode` to `D` (for Development), while Acceptance and Production environments operate in `dtapMode` `P` (for Production). This association cannot be changed. Please select the appropriate environment purpose when you're creating a new environment.
 
 ## Finding Your Group's Apps and Content
 

@@ -93,7 +93,7 @@ Users who can manage an end-user can make the following changes:
 * UserRoles – Grant or remove the selected user roles, but only those user roles which are selected under **User management**
 * Name
 * User_TimeZone
-* Blocked – see [Blocked and Inactive Users and Existing Sessions](/refguide/login-behavior/#blocked-inactive)
+* Blocked
 * Active
 * User_Language
 

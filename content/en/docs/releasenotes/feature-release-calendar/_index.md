@@ -3,7 +3,7 @@ title: "Mendix 11 Feature Release Calendar"
 linktitle: "Mx11 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
 description: "Describes the calendar of expected release dates for new features in Mendix 11."
-weight: 45
+weight: 55
 ##layout: wide
 ---
 

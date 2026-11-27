@@ -17,7 +17,7 @@ For the Teamcenter, Teamcenter X, and Studio Pro versions that each release supp
 
 ### 2606.1.1
 
-**Release Date:** November 26, 2026
+**Release date:** November 26, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -33,7 +33,7 @@ For the Teamcenter, Teamcenter X, and Studio Pro versions that each release supp
 
 ### 2606.1.0
 
-**Release Date:** November 19, 2026
+**Release date:** November 19, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -96,7 +96,7 @@ For the Teamcenter, Teamcenter X, and Studio Pro versions that each release supp
 
 ### 2606.0.1
 
-**Release Date:** September 23, 2026
+**Release date:** September 23, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -145,7 +145,7 @@ For the Teamcenter, Teamcenter X, and Studio Pro versions that each release supp
 
 ### 2606.0.0
 
-**Release Date:** July 31, 2026
+**Release date:** July 31, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -321,7 +321,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2512.1.3
 
-**Release Date:** October 14, 2026
+**Release date:** October 14, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -345,7 +345,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2512.1.2
 
-**Release Date:** September 11, 2026
+**Release date:** September 11, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -365,7 +365,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2512.1.1
 
-**Release Date:** May 22, 2026
+**Release date:** May 22, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -379,7 +379,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2512.1.0
 
-**Release Date:** March 30, 2026
+**Release date:** March 30, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -399,7 +399,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2512.0.1
 
-**Release Date:** February 23, 2026
+**Release date:** February 23, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -414,7 +414,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2512.0.0
 
-**Release Date:** February 16, 2026
+**Release date:** February 16, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -462,7 +462,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2506.0.1
 
-**Release Date:** May 22, 2026
+**Release date:** May 22, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -483,7 +483,7 @@ We removed the following microflow and Java actions. If they are still used in y
 
 ### 2506.0.0
 
-**Release Date:** August 21, 2025
+**Release date:** August 21, 2025
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -539,7 +539,7 @@ We have implemented the following exclusions:
 
 ### 2412.3.0
 
-**Release Date:** May 22, 2026
+**Release date:** May 22, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -555,7 +555,7 @@ We have implemented the following exclusions:
 
 ### 2412.225.0
 
-**Release Date:** May 13, 2025
+**Release date:** May 13, 2025
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -584,7 +584,7 @@ Supported with Teamcenter version: 2412
 
 ### 2412.0.0
 
-**Release Date:** February 11, 2025
+**Release date:** February 11, 2025
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -613,7 +613,7 @@ Note: This version of TcConnector is supported on Studio Pro 10.4.0 and above
 
 ### 2406.3.1
 
-**Release Date:** May 22, 2026
+**Release date:** May 22, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -633,7 +633,7 @@ Note: This version of TcConnector is supported on Studio Pro 10.4.0 and above
 
 ### 2406.3.0
 
-**Release Date:** September 13, 2024
+**Release date:** September 13, 2024
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -654,7 +654,7 @@ The following is the list of improvements and/or fixes in Teamcenter Connector v
 
 ### 3.7.1
 
-**Release Date:** November 26, 2026
+**Release date:** November 26, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -669,7 +669,7 @@ The following is the list of improvements and/or fixes in Teamcenter Connector v
 
 ### 3.7.0
 
-**Release Date:** April 28, 2026
+**Release date:** April 28, 2026
 
 {{% button color="info" href="https://marketplace.mendix.com/link/component/111627" text="Go to Marketplace" title="Download the Teamcenter Connector from the Marketplace" %}}
 
@@ -679,5 +679,5 @@ The following is the list of improvements and/or fixes in Teamcenter Connector v
 
 #### Fixes
 
-* Upgraded to Mendix 9.24.41
+* Upgraded to Studio Pro 9.24.41
 * Updated Java dependencies to remove unused JAR files and to resolve vulnerabilities

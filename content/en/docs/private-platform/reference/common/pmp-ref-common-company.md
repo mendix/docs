@@ -12,4 +12,4 @@ The **Marketplace** page is a local version of the Mendix Marketplace, enclosed 
 
 {{< figure src="/attachments/private-platform/pmp-refguide-company-content.png" class="no-border" >}}
 
-The page shows content available to end users, organized by category. You can click **View More** to view all items from a particular category. You can also click a content item to view or download it from the Private Platform Marketplace.
+The page shows content available to end users, organized by category. You can click **View More** to view all items from a particular category. You can also click a Marketplace component to view or download it from the Private Platform Marketplace.

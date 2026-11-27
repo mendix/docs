@@ -16,7 +16,7 @@ This document describes the tasks that configure access in Private Mendix Platfo
 
 ### Prerequisites
 
-To perform the above tasks, you must have the **CompanyAdmin** platform role. Configuring the identity provider that federated users authenticate against is a separate concern requiring **SystemAdmin**, and is documented in [Private Mendix Platform Functionalities - System Administrators](/private-mendix-platform/reference-guide/admin/system/).
+To perform the above tasks, you must have the **CompanyAdmin** platform role, or a platform role with equal permissions pertaining to user, group and role management. Configuring the identity provider that federated users authenticate against is a separate concern requiring **SystemAdmin**, and is documented in [Private Mendix Platform Functionalities - System Administrators](/private-mendix-platform/reference-guide/admin/system/).
 
 Before making structural changes, read [Access Model and Role Reference for Private Mendix Platform](/private-mendix-platform/access-model/). Two rules in particular have consequences that are not visible from the screens described below: group membership inherits downward without limit, and deployment namespace associations do not inherit at all.
 
@@ -31,9 +31,7 @@ From this section, you can manage user accounts, groups, and roles.
 
 ## Managing User Accounts
 
-On the **User Management** page you can create and maintain the accounts that use your platform, whether they belong to people or to services.
-
-What an account can do comes from the platform roles assigned to it, not from any account type, so the same page and the same procedure serve a developer, an administrator, and an integration.
+On the **User Management** page you can create and maintain the accounts that use your platform.
 
 ### Creating Accounts
 
@@ -97,7 +95,7 @@ Select the role and adjust its permissions, which are grouped into the following
 * **Build** - Packaging, the build pipeline, and the software bill of materials
 * **Deployment** - Deploying to and managing environments
 * **Monitoring** - Logs and metrics
-* **Marketplace** - Editing rights to Marketplace content items owned by a group to which the user belongs
+* **Marketplace** - Editing rights to Marketplace components owned by a group to which the user belongs
 
 **Owner** is a special case. It is assigned automatically to whoever creates an app and cannot be granted to anyone manually. To change who holds it, transfer ownership of the app.
 

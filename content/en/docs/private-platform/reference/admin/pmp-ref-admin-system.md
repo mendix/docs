@@ -71,7 +71,7 @@ For Private Mendix Platform, the Marketplace is also private and hosted entirely
 
 ##### Content Approvals
 
-In this tab, you can configure whether contents that users publish to the PMP Marketplace requires administrator approval before publishing. To view all [pending, published, and rejected content items](/private-mendix-platform/reference-guide/admin/company/#content), click **Go to Marketplace Management**.
+In this tab, you can configure whether contents that users publish to the PMP Marketplace requires administrator approval before publishing. To view all [pending, published, and rejected components](/private-mendix-platform/reference-guide/admin/company/#content), click **Go to Marketplace Management**.
 
 ##### Content Import {#import}
 

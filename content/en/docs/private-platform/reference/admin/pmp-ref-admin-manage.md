@@ -184,13 +184,13 @@ You can click on an item to view more information about it, download, approve, o
 
 #### Taxonomy Management
 
-In the **Taxonomy Management** tab, you can configure the supported Studio Pro versions and sub-categories that your users can select when creating Marketplace content. You can also view and edit the available licenses.
+In the **Taxonomy Management** tab, you can configure the supported Studio Pro versions and sub-categories that your users can select when creating Marketplace components. You can also view and edit the available licenses.
 
 {{< figure src="/attachments/private-platform/pmp-admin8.png" class="no-border" >}}
 
 ##### Supported Versions
 
-The versions listed on the **Supported Versions** page indicate the Mendix Studio Pro versions that a Marketplace content item is compatible with. Users can select these versions from a list when uploading new Marketplace content.
+The versions listed on the **Supported Versions** page indicate the Mendix Studio Pro versions that a Marketplace component is compatible with. Users can select these versions from a list when uploading new Marketplace component.
 
 ##### Licenses
 
@@ -202,7 +202,7 @@ The **Licenses** tab allows administrators to specify the licenses that are avai
 
 ##### App Categories
 
-In the **App Categories** tab, you can view the predefined categories that users can specify for their Marketplace content items. You can also add custom categories, for example, for Marketplace contents related to a specific project.
+In the **App Categories** tab, you can view the predefined categories that users can specify for their Marketplace components. You can also add custom categories, for example, for Marketplace contents related to a specific project.
 
 Predefined app categories cannot be edited or deleted. To edit or delete a custom category, click the **Action** menu, and then select one of the available options.
 
@@ -247,7 +247,7 @@ nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
 To import content from a Content Delivery Network, follow these steps:
 
 1. Ensure that your system administrator has [configured the Marketplace import bundle URL](/private-mendix-platform/reference-guide/admin/system/#configure-import).
-2. In the **Import Content** > **Import from CDN** tab, view and download the available content items.
+2. In the **Import Content** > **Import from CDN** tab, view and download the available components.
 
 ### Deployment
 

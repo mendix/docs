@@ -210,9 +210,9 @@ Membership of a child group does not give any roles in the groups higher in the 
 
 A group can own or be associated with the following kinds of resource, with different ownership rules and behavior depending on the resource type:
 
-* **App Projects** - Exclusive. An app is owned by exactly one group, so accountability is unambiguous.
-* **Deployment Namespaces** - Shareable. A namespace can be associated with several groups at once, allowing operational responsibility to be shared between teams.
-* **Marketplace Components** - Owned by the individual user who published the component.
+* **App Projects** - An app can be shared to make it visible for other users and groups, but it is owned by exactly one group. In this way, accountability is unambiguous.
+* **Deployment Namespaces** - A namespace can be associated with several groups at once, allowing operational responsibility to be shared between teams.
+* **Marketplace Components** - Components are owned by the individual user who published the component.
 
 #### App Projects
 

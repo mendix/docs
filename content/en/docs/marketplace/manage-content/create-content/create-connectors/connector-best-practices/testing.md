@@ -6,13 +6,17 @@ weight: 12
 
 ## Introduction
 
-You can use the [Unit Testing](/appstore/modules/unit-testing/) module to test Mendix by calling microflows for whole pieces of functionality. Use unit tests for smaller, more targeted tests at the method-level of your Java code.
+You can use [testflows](/refguide/testflows/) or the [Unit Testing](/appstore/modules/unit-testing/) module to test Mendix by calling microflows for whole pieces of functionality. Use unit tests for smaller, more targeted tests at the method-level of your Java code.
 
 As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing unknown behavior, Mendix recommends risk-based exploratory testing.
 
 ## Testing Microflows
 
-Use the Mendix app where you built the module to test your module. The Unit Testing module can help call microflows and actions to aid in testing. See [Testing Microflows with the Unit Testing Module](/refguide/testing-microflows-with-unit-testing-module/) for more information.
+Use the Mendix app where you built the module to test your module.
+
+In Studio Pro 11.18 and above, you can use [testflows](/refguide/testflows/), which are in beta. A testflow calls the microflows of your module and uses [Assert](/refguide/assert/) activities to check the results. You run testflows from the [Test Runner](/refguide/test-runner/) pane, and each testflow runs in its own runtime with an in-memory database. Testflows are intended to replace the Unit Testing module.
+
+In earlier versions of Studio Pro, the Unit Testing module can help call microflows and actions to aid in testing. For more information, see the [Testing with the Unit Testing Module](/refguide/testing-microflows-with-unit-testing-module/#unit-testing-module) section in *Testing Microflows*.
 
 ## Java Unit Tests {#unit-testing}
 

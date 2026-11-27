@@ -341,7 +341,7 @@ This setting allows you to set the beta version as the default editor.
 
 In Studio Pro 11.15 and above, select **Enable orthogonal flows in the microflow, nanoflow, and rule editor** to allow rendering sequence flows as orthogonal (right-angled) lines in the microflow, nanoflow, and rule editors. When enabled, you can convert flow types between curved and orthogonal through the context menu. For more information, see the [Flow Type](/refguide/sequence-flow/#flow-type) section in *Sequence Flow*.
 
-In Studio Pro 11.17 and above, select **Enable auto layout for microflows (Experimental)** to add an **Auto layout** option to the context menu of the microflow, nanoflow, and rule editors, which automatically arranges activities on the canvas. This setting is enabled by default. For more information, see the [Auto Layout](/refguide/microflows-and-nanoflows/#auto-layout) section in *Microflows and Nanoflows*.
+In Studio Pro 11.17 and above, select **Enable auto layout for microflows (Experimental)** to add an **Auto layout** option to the context menu of the microflow, nanoflow, and rule editors, which automatically arranges activities on the canvas. This setting is enabled by default. For more information, see the [Auto Layout](/refguide/microflows-and-nanoflows/#auto-layout) section in *Microflows, Nanoflows, and Testflows*.
 
 ### Project Loading
 

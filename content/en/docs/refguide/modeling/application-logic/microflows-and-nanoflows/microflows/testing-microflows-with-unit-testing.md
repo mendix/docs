@@ -1,37 +1,121 @@
 ---
-title: "Testing Microflows with the Unit Testing Module"
-linktitle: "Testing Microflows with Unit Test Module"
+title: "Testing Microflows"
 url: /refguide/testing-microflows-with-unit-testing-module/
 weight: 3
+description: "Describes how to test microflows with testflows or with the Unit Testing module."
 ---
 
 ## Introduction
 
-The [Unit Testing](/appstore/modules/unit-testing/) module provides the capabilities to verify if your [microflow](/refguide/microflows/) logic and your custom Java code works as expected. It provides a user-friendly interface to manage and run unit tests that are created by using microflows, as well as unit tests that are by created using JUnit.
+You can test whether your [microflow](/refguide/microflows/) logic works as expected in two ways:
+
+* With [testflows](/refguide/testflows/), which are built into Studio Pro 11.18 and above. Testflows are in beta and are intended to replace the Unit Testing module.
+* With the [Unit Testing](/appstore/modules/unit-testing/) module, which you install from the Marketplace. Besides microflow tests, this module also supports unit tests that are created using JUnit.
 
 This how-to teaches you how to do the following:
 
-* Set up the Unit Testing module
-* Unit test a microflow
+* Create a sample microflow to test
+* Test the microflow with testflows
+* Set up the Unit Testing module and test the microflow with it
 
 ## Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/). To use testflows, you need Studio Pro 11.18 or above.
 
-* Download [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
-* Review the Marketplace components used in this how-to:
+## Creating a Sample Microflow for Testing {#sample-microflow}
 
-    | Component | Version Used in This How-to |
-    | --- | --- |
-    | [Unit Testing](/appstore/modules/unit-testing/) | 9.6.0 |
+For the purpose of this how-to, create a sample microflow that you can then test with testflows or with the Unit Testing module. In a real-life scenario, the steps below may be different, depending on the microflow that you want to create.
 
-    {{% alert color="info" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images or names on your screen may be different than shown in this how-to.{{% /alert %}}
+To create a sample microflow for testing, create a [new app](/refguide/new-app/) and follow these steps:
 
-## Setting up the Unit Testing Module
+1. Create a new [enumeration](/refguide/configuring-a-domain-model/#add-enumeration) with the following properties:
+    * **Name** – *Level*
+    * **Enumeration values** **Caption** and **Name** – *Junior*, *Medior*, and *Senior*.
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/create-level-enumeration.png" alt="Enumeration with three values" max-width=70% >}}
+
+2. Open the domain model of **MyFirstModule**.
+3. Create a new [entity](/refguide/configuring-a-domain-model/#create-entity) with the following properties:
+    * **Name** – *Employee*
+    * **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/employee-entity.png" alt="A view of the Employee entity used by the sample microflow" max-width=80% >}}
+
+4. Create a microflow called **Promote** that changes the **Level** attribute of the **Employee** entity based on the enumeration value:
+    * For the **Change Employee's level to Medior** activity, set the **Level** value to *MyFirstModule.Level.Medior*
+    * For the **Change Employee's level to Senior** activity, set the **Level** value to *MyFirstModule.Level.Senior*
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote-microflow.png" alt="A view of the sample Promote microflow" max-width=80% >}}
+
+{{% alert color="info" %}}As a best practice, do not test every microflow in your application. Instead, test your most essential microflows.{{% /alert %}}
+
+## Testing with Testflows {#testflows}
+
+{{% alert color="warning" %}} This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
+
+This section describes how to create testflows for the sample microflow described in the [Creating a Sample Microflow for Testing](#sample-microflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. For more information on testflows, see [Testflows](/refguide/testflows/).
+
+### Creating a Testflow {#create-testflow}
+
+To create a testflow for the **Promote** microflow, follow these steps:
+
+1. In the App Explorer, expand **MyFirstModule**, right-click the **Testing** node, and then click **Add testflow**.
+2. In the **Name** field, enter *PromoteEmployeeToMedior*.
+3. In the **PromoteEmployeeToMedior** testflow, add a new **Create object** activity for the **Employee** entity with the following members:
+    * **Name** – *'John'*
+    * **Level** – *MyFirstModule.Level.Junior*
+4. Add a **Call microflow** activity that calls the **MyFirstModule.Promote** microflow, with *$NewEmployee* as the argument for the **Employee** parameter.
+5. To test if the employee is promoted to the right level, add an [Assert](/refguide/assert/) activity from the **Testing activities** section of the **Toolbox**, with the following properties:
+    * **Target expression** – *$NewEmployee/Level = MyFirstModule.Level.Medior*
+    * **Failure result expression** – *'Expected employee level to be Medior. Actual value: ' + getCaption($NewEmployee/Level)*
+6. Right-click the **Assert** activity, select **Edit caption**, and then enter *Promoted to Medior?* for the new caption.
+7. Connect the activities from the start event to the end event.
+8. In the **Testing** node, duplicate the **PromoteEmployeeToMedior** testflow twice, and then rename the new testflows in the following way:
+    * *PromoteEmployeeToSenior*
+    * *EmployeeStillSenior*
+9. In the **PromoteEmployeeToSenior** testflow:
+    * Set the value of the **Level** member to *MyFirstModule.Level.Medior* for the **Create object** activity.
+    * Set the following values for the **Assert** activity:
+        * **Target expression** – *$NewEmployee/Level = MyFirstModule.Level.Senior*
+        * **Failure result expression** – *'Expected employee level to be Senior. Actual value: ' + getCaption($NewEmployee/Level)*
+        * Caption – *Promoted to Senior?*
+10. In the **EmployeeStillSenior** testflow:
+    * Set the value of the **Level** member to *MyFirstModule.Level.Senior* for the **Create object** activity.
+    * Set the following values for the **Assert** activity:
+        * **Target expression** – *$NewEmployee/Level = MyFirstModule.Level.Senior*
+        * **Failure result expression** – *'Expected employee level to be Senior. Actual value: ' + getCaption($NewEmployee/Level)*
+        * Caption – *Employee still Senior?*
+
+### Running the Testflows {#run-testflows}
+
+To run the testflows, follow these steps:
+
+1. Click **View** > **Test Runner** to open the [Test Runner](/refguide/test-runner/) pane.
+2. Click **Run all**.
+
+    If your app is running locally, Studio Pro asks you to confirm that it can stop the app. Each testflow runs in a dedicated runtime with its own in-memory database, so the test data does not end up in the database of your app.
+
+3. Verify that all the testflows pass. To see the result of a testflow, select it in the tree. If a testflow fails, the **Result** section shows the failure message of the Assert activity that failed.
+
+## Testing with the Unit Testing Module {#unit-testing-module}
+
+The [Unit Testing](/appstore/modules/unit-testing/) module provides the capabilities to verify if your microflow logic and your custom Java code works as expected. It provides a user-friendly interface to manage and run unit tests that are created by using microflows, as well as unit tests that are created by using JUnit.
+
+### Prerequisites for the Unit Testing Module {#unit-testing-prerequisites}
+
+Review the Marketplace components used in this section:
+
+| Component | Version Used in This How-to |
+| --- | --- |
+| [Unit Testing](/appstore/modules/unit-testing/) | 9.6.0 |
+
+{{% alert color="info" %}}All the images, names, and steps in this section are based on the Marketplace component versions listed above. When using later versions of this content, images or names on your screen may be different than shown in this how-to.{{% /alert %}}
+
+### Setting up the Unit Testing Module {#setup-unit-testing}
 
 To set up the unit testing module and run the example tests, follow these steps:
 
-1. Create a [new app](/refguide/new-app/).
+1. Open the app that contains the [sample microflow](#sample-microflow).
 2. Download and install the [Unit Testing](https://marketplace.mendix.com/link/component/390) module. 
 
     For more information, see [How to Use Marketplace Content](/appstore/use-content/).
@@ -73,40 +157,9 @@ To set up the unit testing module and run the example tests, follow these steps:
 
 17. To view detailed test results, click **Details** in the **UnitTesting.Test_ValidUnitTest** row.
 
-## Unit Testing a Microflow
-
-In this section, you will learn how to create and run a microflow unit test.
-
-### Creating a Sample Microflow for Testing {#sample-microflow}
-
-For the purpose of this how-to, create a sample microflow that you can then test with unit testing. In a real-life scenario, the steps below may be different, depending on the microflow that you want to create.
-
-To create a sample microflow for testing, follow these steps:
-
-1. Create a new [enumeration](/refguide/configuring-a-domain-model/#add-enumeration) with the following properties:
-    * **Name** – *Level*
-    * **Enumeration values** **Caption** and **Name** – *Junior*, *Medior*, and *Senior*.
-
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/create-level-enumeration.png" alt="Enumeration with three values" max-width=70% >}}
-
-2. Open the domain model of **MyFirstModule**.
-3. Create a new [entity](/refguide/configuring-a-domain-model/#create-entity) with the following properties:
-    * **Name** – *Employee*
-    * **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
-
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/employee-entity.png" alt="A view of the Employee entity used by the sample microflow" max-width=80% >}}
-
-4. Create a microflow called **Promote** that changes the **Level** attribute of the **Employee** entity based on the enumeration value:
-    * For the **Change Employee's level to Medior** activity, set the **Level** value to *MyFirstModule.Level.Medior*
-    * For the **Change Employee's level to Senior** activity, set the **Level** value to *MyFirstModule.Level.Senior*
-
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote-microflow.png" alt="A view of the sample Promote microflow" max-width=80% >}}
-
-### Creating a Unit Test
+### Creating a Unit Test {#create-unit-test}
 
 This section describes how to create a microflow-based unit test for the sample microflow described in the [Creating a Sample Microflow for Testing](#sample-microflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. For guidelines on creating unit test microflows, see the [Creating Unit Tests for Microflows](/appstore/modules/unit-testing/#creating-microflow-unit-tests) section of *Unit Testing*.
-
-{{% alert color="info" %}}As a best practice, do not test every microflow in your application. Instead, test your most essential microflows.{{% /alert %}}
 
 To create a sample test microflow, follow these steps:
 
@@ -172,4 +225,6 @@ To create a sample test microflow, follow these steps:
 
 ## Read More
 
+* [Testflows](/refguide/testflows/)
+* [Test Runner](/refguide/test-runner/)
 * [Unit Testing](/appstore/modules/unit-testing/)

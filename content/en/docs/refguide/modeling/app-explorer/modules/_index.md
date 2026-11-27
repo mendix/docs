@@ -39,6 +39,7 @@ There are the following type of modules:
 | --- | --- | --- |
 | [Pages](/refguide/pages/) | [Data view](/refguide/data-view/), [data grid](/refguide/data-grid/), [table](/refguide/table/), [text box](/refguide/text-box/) | Forms are used to create a user interface for the end-user. They are composed of components that are called [widgets](/appstore/widgets/). |
 | [Microflows](/refguide/microflows/) | [Activities](/refguide/activities/), [sequence Flow](/refguide/sequence-flow/) | Microflows describe the logic of your app. They are composed of activities that manipulate objects and interact with the client. |
+| [Testflows](/refguide/testflows/) (beta) | [Assert](/refguide/assert/), [activities](/refguide/activities/) | Testflows test the logic of your app. You create them in the **Testing** node of a module and run them from the [Test Runner](/refguide/test-runner/) pane. |
 | [Enumerations](/refguide/enumerations/) |   | An enumeration is a set of predefined values (for example, in a web shop, an enumeration called MemberType could have the values Gold and Silver). |
 
 ## Page Resources

@@ -143,6 +143,12 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 For [Team Server](/developerportal/repository/team-server/) apps, the **Stories** pane shows the [stories](/developerportal/project-management/epics/planning/) of the current [Sprint](/developerportal/project-management/epics/planning/). For more information, see [Stories Pane](/refguide/stories-pane/). 
 
+### Test Runner {#test-runner}
+
+{{% alert color="warning" %}} This feature is in beta. For more information, see [Release Status](/releasenotes/release-status/). {{% /alert %}}
+
+The **Test Runner** pane shows the [testflows](/refguide/testflows/) in your app. You can use it to run testflows and view their results. For more information, see [Test Runner](/refguide/test-runner/).
+
 ### Toolbox {#toolbox}
 
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data containers](/refguide/data-widgets/)) by dragging them from the **Toolbox** onto your page.

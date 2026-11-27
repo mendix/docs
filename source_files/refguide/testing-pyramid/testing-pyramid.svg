@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="592" viewBox="0 0 1070 592">
+<rect x="504" y="4" width="351" height="581" fill="#F2F2F2"/>
+<rect x="855" y="4" width="209" height="581" fill="#E6E6E6"/>
+<text x="524" y="27.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="start" dominant-baseline="middle">Mendix</text>
+<text x="871" y="27.0" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="start" dominant-baseline="middle">Partner</text>
+<polygon points="115.5,4 380.5,4 414.51270207852195,141 81.48729792147805,141" fill="#45B0E1" stroke="#1A1A1A" stroke-width="2"/>
+<text x="248.0" y="72.5" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="normal" fill="#000000" text-anchor="middle" dominant-baseline="middle">Frontend / UI / E2E</text>
+<text x="871" y="72.5" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Menditect: MTA</text>
+<polygon points="78.75635103926098,152 417.24364896073905,152 451.25635103926095,289 44.74364896073905,289" fill="#83CBEB" stroke="#1A1A1A" stroke-width="2"/>
+<text x="248.0" y="193.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="normal" fill="#000000" text-anchor="middle" dominant-baseline="middle">API tests</text>
+<text x="871" y="193.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Menditect: MTA</text>
+<text x="248.0" y="250.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="normal" fill="#000000" text-anchor="middle" dominant-baseline="middle">Integration tests</text>
+<text x="524" y="250.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Testflows (beta)</text>
+<text x="871" y="250.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Menditect: MTA</text>
+<polygon points="42.012702078521954,300 453.98729792147805,300 488.0,437 8.0,437" fill="#C1E5F5" stroke="#1A1A1A" stroke-width="2"/>
+<text x="248.0" y="341.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="normal" fill="#000000" text-anchor="middle" dominant-baseline="middle">Unit tests</text>
+<text x="524" y="328.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Testflows (beta)</text>
+<text x="524" y="354.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Unit Testing Module</text>
+<text x="248.0" y="398.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="normal" fill="#000000" text-anchor="middle" dominant-baseline="middle">Static code analysis</text>
+<text x="524" y="398.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Best-Practice Recommender</text>
+<text x="871" y="398.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">SIG: QSM</text>
+<rect x="8" y="448" width="480" height="137" fill="#D0D0D0" stroke="#1A1A1A" stroke-width="2"/>
+<text x="248.0" y="489.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="normal" fill="#000000" text-anchor="middle" dominant-baseline="middle">Performance</text>
+<text x="524" y="489.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Tracing</text>
+<text x="871" y="489.1" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Datadog</text>
+<text x="248.0" y="546.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="normal" fill="#000000" text-anchor="middle" dominant-baseline="middle">Security</text>
+<text x="524" y="546.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">Developer Portal Findings</text>
+<text x="871" y="546.64" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="normal" fill="#000000" text-anchor="start" dominant-baseline="middle">SIG: QSM</text>
+</svg>

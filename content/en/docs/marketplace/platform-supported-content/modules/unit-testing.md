@@ -7,6 +7,10 @@ description: "Describes the configuration and usage of the Unit Testing module, 
 
 ## Introduction
 
+{{% alert color="info" %}}
+Studio Pro 11.18 introduces [testflows](/refguide/testflows/) in beta. Testflows let you test your microflow logic in Studio Pro, without installing a module, and they are intended to replace the Unit Testing module. For more information, see [Testflows](/refguide/testflows/).
+{{% /alert %}}
+
 The [Unit Testing](https://marketplace.mendix.com/link/component/390/) module enables developers to implement, run, and manage unit tests within Mendix applications. You can test your microflows, Java actions, and other logic by implementing test microflows and JUnit (Java) tests. Use the module to automate testing, detect issues early, and improve code quality. 
 
 ### Limitations
@@ -208,4 +212,4 @@ The `completed` value will be `false` as long as the test run is not finished. T
 
 ## Read More
 
-* [Testing Microflows with the Unit Testing Module](/refguide/testing-microflows-with-unit-testing-module/)
+* [Testing Microflows](/refguide/testing-microflows-with-unit-testing-module/)

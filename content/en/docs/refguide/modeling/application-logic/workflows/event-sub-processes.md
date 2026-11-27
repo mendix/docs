@@ -30,6 +30,7 @@ Event sub-processes are particularly useful in the following scenarios:
 * **Sequential logic** – If the logic must happen after a specific task, use a standard sequence flow.
 * **Conditional logic based on activity state** – You may want to execute a flow only if a certain condition is met while a specific activity is active. A boundary event should be used here because it is triggered only if the activity it is attached to is active.
 * **Returning to a specific point** – If you need to abort a specific task execution and resume it later, an interrupting boundary event is often more appropriate. Once the event is triggered, the boundary event can utilize a **Jump** activity to return to the original task.
+* **Steps chosen by a person** – If a person decides at runtime which steps to run, and no event triggers them, use an [ad-hoc sub-process](/refguide/workflow-ad-hoc-sub-processes/). For a comparison, see [Ad-Hoc Sub-Processes Compared to Event Sub-Processes](/refguide/workflow-ad-hoc-sub-processes/#compared-to-event-sub-processes).
 
 ### How Event Sub-Processes Work
 
@@ -204,6 +205,7 @@ The `WorkflowSubProcess` entity represents a specific runtime instance of an eve
 | `EndTime` | DateTime | The timestamp when execution ends (either through completion or failure). This is set by the Engine and is read-only. |
 | `State` | Enumeration | The current lifecycle state of the sub-process instance (see [WorkflowSubProcessState](#workflowsubprocessstate-enumeration)). |
 | `Reason` | String (Unlimited) | A technical description providing context for the current state (for example, error details). |
+| `SubProcessType` | Enumeration | The type of the sub-process (`WorkflowSubProcessType`). Defaults to `Event` for event sub-processes; set to `AdHoc` for [ad-hoc sub-processes](/refguide/workflow-ad-hoc-sub-processes/). |
 
 #### Associations
 
@@ -230,6 +232,7 @@ The `WorkflowSubProcessState` enumeration defines the possible lifecycle phases 
 
 ## Read more
 
+* [Ad-Hoc Sub-Processes](/refguide/workflow-ad-hoc-sub-processes/)
 * [Notify Workflow](/refguide/notify-workflow/)
 * [Timer](/refguide/timer/)
 * [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/)

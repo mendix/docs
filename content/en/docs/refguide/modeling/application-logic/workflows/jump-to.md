@@ -46,6 +46,8 @@ Jumping to other activities has a limitation in parallel splits and in boundary 
 
 For more information about jumping rules in a boundary event path, see the [Jump Rules](/refguide/workflow-boundary-events/#jump-rules) section in *Boundary Events*.
 
+For more information about jumping rules in an ad-hoc sub-process, see the [Jump Rules](/refguide/workflow-ad-hoc-sub-processes/#jump-rules) section in *Ad-Hoc Sub-Processes*.
+
 ## Jumping from Current Activity to Itself
 
 It is possible to jump from an active [Multi-user task](/refguide/multi-user-task/) back to itself. When this occurs, the following behavior applies:

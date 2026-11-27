@@ -353,6 +353,10 @@ This option allows you to use the web version of the system texts editor. It is 
 
 If Translation Generator is also enabled, you can use it in this editor. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 
+### Workflow {#workflow}
+
+In Studio Pro 11.18 and above, select **Enable the ad-hoc sub-process in the workflow editor (public Beta)** to add ad-hoc sub-processes to your workflows. When disabled, existing ad-hoc sub-processes give a consistency error. For more information, see [Ad-Hoc Sub-Processes](/refguide/workflow-ad-hoc-sub-processes/).
+
 ## Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

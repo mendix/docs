@@ -114,6 +114,9 @@ The event types listed in the tables below correspond to the enumeration values 
 | User Task Started | Triggered in following cases:<br /><ul><li>User targeting is evaluated</li><li>On-created microflow is successfully scheduled | See [User Task](/refguide/user-task/) or [Multi-User Task](/refguide/multi-user-task/) |
 | Multi-User Task Outcome Selected | Triggered when a vote is specified for a multi-user task | |
 | User Task Ended | Triggered in following cases:<br /><ul><li>User task fails</li><li>Workflow suspended on a user task is aborted, restarted, or when jump-to option is applied</li><li>Parallel path containing a user task is removed and workflow is continued | See [User Task](/refguide/user-task/) or [Multi-User Task](/refguide/multi-user-task/)<br><br>User task can fail due to the following reasons:<br /><ul><li>On-created microflow fails</li><li>When number of required users is more than the targeted users in a multi-user task <br><br>{{% alert color="info" %}}**WorkflowActivityRecord** for failure cases will have the **Failed** activity state.<br><br>**WorkflowActivityRecord** will only have one actor in the case of a single-user task.{{% /alert %}} |
+| Ad-hoc Sub-Process Started | Triggered when the workflow reaches the ad-hoc sub-process | See [Ad-Hoc Sub-Processes](/refguide/workflow-ad-hoc-sub-processes/) |
+| Ad-hoc Sub-Process Ended | Triggered when the ad-hoc sub-process completes, is aborted, or fails because its completion condition cannot be evaluated | See [Ad-Hoc Sub-Processes](/refguide/workflow-ad-hoc-sub-processes/) |
+| Ad-hoc Sub-Process Completion Condition Evaluated | Triggered when the completion condition evaluates to false after a flow ends | See [Ad-Hoc Sub-Processes](/refguide/workflow-ad-hoc-sub-processes/) |
 
 ## Sub-Workflows
 

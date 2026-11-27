@@ -50,6 +50,10 @@ Due to the complex cross-document nature of a workflow, not all properties of th
 * From the workflow document itself
 * [Admin Page](/refguide/workflow-properties/#admin-page)
 
+### Ad-Hoc Sub-Processes
+
+* In Studio Pro 11.18 and above, Maia can create ad-hoc sub-processes only if the beta option is enabled. For more information, see [Enabling Ad-Hoc Sub-Processes](/refguide/workflow-ad-hoc-sub-processes/#enable).
+
 ## Read More
 
 * [Maia Make Capabilities](/refguide/maia-make/)

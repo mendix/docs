@@ -14,6 +14,7 @@ The activities described in this document are in the **Workflow Activities** sec
 
 The following are the workflow activities you can use in your microflow:
 
+* [Activate ad-hoc sub-process activity](/refguide/activate-ad-hoc-sub-process-activity/) – activates a flow of an ad-hoc sub-process
 * [Apply jump-to option](/refguide/apply-jump-to-option/) – allows the workflow to continue from the selected workflow activity
 * [Call workflow](/refguide/workflow-call/) – calls a workflow
 * [Change workflow state](/refguide/change-workflow-state/) – allows you to add **Abort**, **Continue**, **Pause**, **Restart**, and **Resume** operations to a workflow and control workflow instances

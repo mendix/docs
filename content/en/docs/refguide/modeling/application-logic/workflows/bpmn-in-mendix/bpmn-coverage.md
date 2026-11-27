@@ -47,7 +47,7 @@ Each BPMN element is marked with a support level indicator:
 | Call Activity (Reusable Subprocess) | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Call Workflow](/refguide/call-workflow/) |
 | Event Subprocess | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Event Subprocess](/refguide/workflow-event-sub-processes/) |
 | Transaction Subprocess | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
-| Ad-hoc Subprocess | {{< icon name="remove-circle-filled" color="red" >}} Not Supported | Not supported. |
+| Ad-hoc Subprocess | {{< icon name="checkmark-circle-filled" color="green" >}} Workflow Native | [Ad-Hoc Sub-Process](/refguide/workflow-ad-hoc-sub-processes/) (beta in Studio Pro 11.18 and above). Flows are selected by calling the [Activate ad-hoc sub-process activity](/refguide/activate-ad-hoc-sub-process-activity/) from a microflow. Multi-instance parallel execution is not supported. |
 
 ## Swimlanes {#swimlanes}
 

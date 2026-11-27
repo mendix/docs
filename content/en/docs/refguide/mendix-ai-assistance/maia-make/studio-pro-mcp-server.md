@@ -53,11 +53,7 @@ To enable the MCP Server, go to **Preferences** > **AI** > **MCP Server** and se
 
 ### Connecting External Clients
 
-Once enabled, you can connect external clients to the MCP Server. For example, to add it to Claude Code, run the following command:
-    
-`claude mcp add <name> --transport http http://localhost:<port>/mcp`
-
-Replace `<name>` with your preferred server name and `<port>` with the port configured in **Preferences**.
+Once enabled, you can connect external MCP clients to the MCP Server. You can use any AI coding assistant, agent, or other tool that supports MCP servers over HTTP. In the settings of your tool, set the connection type to **HTTP** (streamable HTTP) and the server URL to `http://localhost:<port>/mcp`. Replace `<port>` with the port shown in **Preferences** > **AI** > **MCP Server**.
 
 ## Working Practices {#working-practices}
 

@@ -257,8 +257,25 @@ mx-privatecloud-license-manager:
   ingress:
     enabled: false
 
-mx-privatecloud:
+mxplatform:
   enable: true
+  pclm:
+    serviceUrl: "http://mx-privatecloud-license-manager"
+    username: "administrator"
+    password: "admin-password"
+  spec:
+    appURL: "https://app.example.com"
+    sourceURL: "oci-image://registry/app:tag"
+    database:
+      servicePlan: "your-db-plan"
+    storage:
+      servicePlan: "your-storage-plan"
+    runtime:
+      mxAdminPassword: "admin-password"
+
+## Required for Connected mode
+mx-privatecloud:
+  enable: false
   nats:
     server_addr: "nats://nats.nats.svc:4222"
   authenticator:
@@ -275,30 +292,14 @@ mx-privatecloud:
       password: "password"
 
 maia-appgen:
-  enable: true
+  enable: false
   env:
     - name: MXASSIST_COPILOT_MXID3_URL
       value: "https://pmp.example.com/oidc/"
 
 svix-server:
-  enable: true
+  enable: false
   postgres: "postgresql://user:pass@host:5432/svix"
-
-mxplatform:
-  enable: true
-  pclm:
-    serviceUrl: "http://mx-privatecloud-license-manager"
-    username: "administrator"
-    password: "admin-password"
-  spec:
-    appURL: "https://app.example.com"
-    sourceURL: "oci-image://registry/app:tag"
-    database:
-      servicePlan: "your-db-plan"
-    storage:
-      servicePlan: "your-storage-plan"
-    runtime:
-      mxAdminPassword: "admin-password"
 
 mxplatform-kube-agent:
   enable: false

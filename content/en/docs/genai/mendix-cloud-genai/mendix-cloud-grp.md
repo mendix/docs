@@ -13,10 +13,10 @@ aliases:
 Mendix Cloud GenAI Resource Packs provide turn-key access to Generative AI technology, delivered through Mendix Cloud.
 
 {{% alert color="info" %}}
-Model Resource Packs now use a Cloud Token for the GenAI Units conversion that allows you to use any supported Anthropic Claude model from a single resource, while Cohere Embed models are provided through separate Embeddings Resource Packs.
+Model Resource Packs now use a Cloud Token for the GenAI Units conversion that allows you to use any supported Anthropic Claude model from a single resource, while Cohere Embed models are provided through separate Embeddings Resource Packs. Text generation resources also support optional guardrails.
 {{% /alert %}}
 
-* Model Resource Packs offer access to large language model capacity. You choose a monthly Cloud Token amount, which is converted to [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) at a rate of 100 GenAI Units per Cloud Token. GenAI Units are consumed against a model-specific exchange rate, so you can use any supported Anthropic Claude model, for example, Haiku, Sonnet, or Opus from a single resource.
+* Model Resource Packs offer access to large language model capacity. You choose a monthly Cloud Token amount, which is converted to [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units) at a rate of 100 GenAI Units per Cloud Token. GenAI Units are consumed against a model-specific exchange rate, so you can use any supported Anthropic Claude model, for example, Haiku, Sonnet, or Opus from a single resource. Text generation resources can also use an optional [guardrail](#guardrails) that filters prompts and responses.
 
 * Embeddings Resource Packs provide access to Cohere Embed models for generating embedding vectors. New model versions are automatically available on your existing resource as Mendix adds them. No resource changes or key updates are required. For a full list of available models, see [Supported Models](#supported-models).
 

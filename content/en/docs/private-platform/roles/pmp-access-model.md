@@ -55,7 +55,7 @@ A platform role answers the question *what can this person do on the platform in
 Private Mendix Platform includes the following default platform roles:
 
 * **User** - Baseline access to the platform web interface. Every human user needs this role at minimum.
-* **CompanyAdmin** - Company admins have access to everything under the **Manage** section of the Admin menu, including the following capabilities:
+* **Company Admin** - Company admins have access to everything under the **Manage** section of the Admin menu, including the following capabilities:
 
     * App management
     * User and group management
@@ -66,9 +66,21 @@ Private Mendix Platform includes the following default platform roles:
     
     This role is intended for users who own day-to-day platform operations.
 
-* **SystemAdmin** - Company admins have access to everything under the **Settings** section of the Admin menu, including the following capabilities:
+* **System Admin** - System admins have access to everything under the **Settings** section of the Admin menu, including the following capabilities:
 
-    * Identity provider and SSO configuration, version control and CI/CD integrations, licensing, branding, and platform capabilities. Intended for the people who own the infrastructure the platform depends on.
+    * General configuration
+    * Notifications
+    * Marketplace content approval settings
+    * Version settings
+    * Identity and access settings
+    * Project management settings
+    * Version control settings
+    * Build settings
+    * Deploy settings
+    * Security
+    * Advanced settings
+    
+    This role is intended for users who own the infrastructure the platform depends on.
 
 {{% alert color="info" %}}
 CompanyAdmin and SystemAdmin address different audiences and grant access to different capabilities of Admin mode. Granting CompanyAdmin does not give someone access to identity or licensing settings, and granting SystemAdmin does not give someone the ability to manage users and groups. A user who needs both must be given both.
@@ -275,13 +287,15 @@ When users sign in through your identity provider rather than with a local accou
 
 ### Default Group and Role
 
-Every incoming user with no other placement is put into a configured group with a configured role. Pointing these at a deliberately low-privilege landing group gives new arrivals somewhere to be that has no access to real projects, until they are assigned to their actual team.
+Every incoming user with no other placement can be put into a configured group with a configured role, which you can specify in the **Identity and Access** section of the [System Admin menu](/private-mendix-platform/reference-guide/admin/system/). Make sure to select a low-privilege landing group so that new arrivals have no access to projects until they are assigned to their actual team.
+
+You can also configure Private Mendix Platform to automatically create groups for SSO-provisioned users based on properties such as their company, team, and others. For more information, see the following sections.
 
 ### Role Parsing
 
 When enabled, Private Mendix Platform reads group and role claims from the incoming token and maps them onto platform roles and groups automatically. When disabled, no such mapping occurs and every federated user lands on the defaults above, to be assigned afterward manually, through SCIM, or through the platform API.
 
-### Automation Settings
+#### Automation Settings
 
 For users whose identity provider information is mapped onto their platform profile, group membership can be derived from the values of those profile attributes. When a user arrives with a value that already corresponds to a group, they are added to that group. When a user arrives with a value that does not, a group is created for it and the user is made a member. This is configured on the Group Management page and is separate from Parse Roles. See [Automating Group Assignment](/private-mendix-platform/access-administration/#automating-group-assignment).
 

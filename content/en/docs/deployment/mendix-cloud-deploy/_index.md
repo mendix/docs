@@ -44,7 +44,7 @@ Free Apps make it possible to start creating and deploying apps with Mendix for 
 | Support | No support | Depends on your license option |
 
 {{% alert color="warning" %}}
-When a Free App database reaches 1 GiB, write access is revoked. To restore it, delete data or [upgrade to a licensed app](/developerportal/deploy/licensing-apps/).
+When a Free App database reaches its storage limit, write access is revoked. To restore it, delete data or [upgrade to a licensed app](/developerportal/deploy/licensing-apps/).
 {{% /alert %}}
 
 #### Sleep Mode

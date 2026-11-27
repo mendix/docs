@@ -20,7 +20,7 @@ Guardrails consume additional GenAI Units. For more information, see [Guardrail 
 
 Guardrail tasks are split between two roles:
 
-* **Company Admin** – Enables or disables guardrails for a resource in the Control Center, because guardrails consume additional GenAI Units. For more information, see the [Enabling or Disabling Guardrails](/control-center/genai-resources-self-service/#enabling-or-disabling-guardrails) section of *GenAI Resources*.
+* **Company Admin** – Enables or disables guardrails for a resource in the Control Center, because guardrails consume additional GenAI Units. For more information, see the [Managing Guardrails](/control-center/genai-resources-self-service/#enabling-or-disabling-guardrails) section of *GenAI Resources*.
 * **Resource member** – After guardrails are enabled, any member of the resource team can configure, edit, activate, and deactivate the guardrail on the **Guardrails** tab of the resource in the [Mendix Cloud GenAI Portal](https://genai.home.mendix.com/).
 
 ## Guardrails Tab
@@ -47,6 +47,22 @@ A guardrail does not evaluate every part of a request. The following table shows
 | Tool results that your app returns to the model | No |
 
 Because tool content is not evaluated, a guardrail does not block or mask sensitive information that the model passes to a tool or that a tool returns.
+
+### How Guardrail Evaluation Affects a Conversation {#how-guardrail-evaluation-affects-a-conversation}
+
+The guardrail evaluates the full conversation history with each request. The effect on a conversation depends on the action that the guardrail takes and on whether it applies to a user message or a model response.
+
+#### Block
+
+* **User message** – If a user message contains a prompt attack or a PII type set to **Block**, the message stays in the conversation history and is evaluated again with every later request, so every later request in the same chat is also blocked. To continue, start a new chat.
+* **Model response** – If a model response contains a PII type set to **Block**, only that response is blocked. The chat is not blocked.
+
+#### Anonymize
+
+If a user message or model response contains a PII type set to **Anonymize**, the guardrail replaces the detected information with the name of the PII type, and the chat continues:
+
+* **User message** – The information is masked before the message reaches the model, so the model receives only the placeholder, for example, `{EMAIL}`. Whether the placeholder appears in the model response depends on the model.
+* **Model response** – The information is masked in the response, and the user receives the masked response.
 
 ## Configuring a Guardrail {#configuring-a-guardrail}
 
@@ -81,6 +97,8 @@ The prompt attacks filter detects and blocks user prompts that try to override t
 * **Medium** – Blocks prompts that are likely to be prompt attacks.
 * **High** – Blocks any prompt that may be a prompt attack. This is the strictest setting, and it can also block some harmless prompts.
 
+A blocked prompt attack also blocks the rest of the chat. For more information, see [How Guardrail Evaluation Affects a Conversation](#how-guardrail-evaluation-affects-a-conversation).
+
 ### Sensitive Information Filters {#sensitive-information-filters}
 
 Sensitive information filters detect personally identifiable information (PII) in prompts and responses. To use them, turn on **PII Type Filter**, click **Add PII type**, and select a PII type, for example, **Email** or **IP address**. You can add each PII type once. For each PII type, select one of the following **Guardrail Behaviour** options:
@@ -88,6 +106,8 @@ Sensitive information filters detect personally identifiable information (PII) i
 * **Block** – The guardrail blocks the prompt or response and returns the configured blocked message.
 * **Anonymize** – The guardrail replaces the detected information with the name of the PII type, for example, `{EMAIL}`.
 * **None** – The guardrail detects the information but does not block or mask it.
+
+For more information about how blocking and anonymizing affect a conversation, see [How Guardrail Evaluation Affects a Conversation](#how-guardrail-evaluation-affects-a-conversation).
 
 The following PII types are supported:
 
@@ -109,7 +129,7 @@ You can manage the guardrail as follows:
 * To change the configuration, click **Configure Guardrail**. Saved changes apply to every request on the resource immediately.
 * To stop applying the guardrail without removing its configuration, click **Deactivate Guardrail**. To apply it again, click **Activate Guardrail**.
 
-To remove the guardrail and its configuration, a Company Admin must disable guardrails for the resource. For more information, see the [Enabling or Disabling Guardrails](/control-center/genai-resources-self-service/#enabling-or-disabling-guardrails) section of *GenAI Resources*.
+To remove the guardrail and its configuration, a Company Admin must disable guardrails for the resource. For more information, see the [Managing Guardrails](/control-center/genai-resources-self-service/#enabling-or-disabling-guardrails) section of *GenAI Resources*.
 
 ## Monitoring Guardrail Consumption
 

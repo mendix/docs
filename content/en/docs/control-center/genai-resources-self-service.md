@@ -46,7 +46,7 @@ When provisioning a new resource, enter the following information:
 * **Cross Region Inference** – Select whether to enable cross region inference for this resource. Without cross region inference, the latest model versions may not be available. For more information, see the [Settings](/agents/mx-cloud-genai/Navigate-MxGenAI/#settings) section of *Navigate through the Mendix Cloud GenAI Portal*.
 * **Available Models** – The model versions to enable on the resource. For text generation resources, select one or more versions from the available Claude model families (Haiku, Sonnet, or Opus). For embeddings resources, select a single model from the available options. For a full list of available models, see [Supported Models](/agents/mx-cloud-genai/resource-packs/#supported-models).
 * **Default Model** – The model version used when no model is explicitly specified in an API call. Select one of the model versions chosen in **Available Models**. This ensures backward compatibility with existing apps that use older connector versions.
-* **Enable Guardrails Usage** – Text generation resources only. Allows resource members to set up a guardrail for the resource. For more information, see [Enabling or Disabling Guardrails](#enabling-or-disabling-guardrails).
+* **Enable Guardrails Usage** – Text generation resources only. Allows resource members to set up a guardrail for the resource. For more information, see [Managing Guardrails](#enabling-or-disabling-guardrails).
 * **Cloud Tokens** – The number of Mendix Cloud Tokens to allocate per month (minimum one). Each Cloud Token provides 100 [GenAI Units](/agents/mx-cloud-genai/Navigate-MxGenAI/#what-are-tokens-and-genai-units). **Resource Specification** shows the resulting monthly GenAI Unit allocation.
 * **User** – In the **Technical Contact** section, select the user for whom the resource is created. The list shows each user's name and email address. This user is automatically assigned as the Technical Contact for the resource; they receive notifications about the resource, such as model deprecations, new models, planned maintenance, and overage alerts. You can change the **Technical Contact** later. For more information, see the [Technical Contact](/agents/mx-cloud-genai/Navigate-MxGenAI/#technical-contact) section of *Navigate Through the Mendix Cloud GenAI Portal*.
 
@@ -79,7 +79,7 @@ After a resource is provisioned, you can edit it through the self-service capabi
 3. Make your changes. You can change the following:
     * **Name** and **Default Model** – Change the resource name or the model used when an API call does not specify one.
     * **Cloud Tokens** – For more information, see [Adjusting Resource GenAI Unit Capacity](#adjusting-resource-genai-unit-capacity).
-    * **Enable Guardrails Usage** – Available for text generation resources only. For more information, see [Enabling or Disabling Guardrails](#enabling-or-disabling-guardrails).
+    * **Enable Guardrails Usage** – Available for text generation resources only. For more information, see [Managing Guardrails](#enabling-or-disabling-guardrails).
 4. Review the updated **Cloud Tokens Consumption**.
 5. Click **Edit** to save the changes.
 
@@ -102,12 +102,16 @@ The behavior depends on how much of the current month's allocation has already b
 * Immediate decrease – If the GenAI Units consumed so far in the current bundle month are less than the new allocation, the decrease takes effect immediately and Cloud Tokens are released immediately.
 * Deferred decrease – If the GenAI Units consumed so far in the current bundle month exceed the new allocation, the current month continues at the existing allocation. The decrease takes effect at the start of the next bundle month, and Cloud Tokens are released at that point.
 
-### Enabling or Disabling Guardrails {#enabling-or-disabling-guardrails}
+### Managing Guardrails {#enabling-or-disabling-guardrails}
 
-To allow or stop guardrail use on a text generation resource, [edit the resource](#editing-genai-resources) and turn **Enable Guardrails Usage** on or off in the **Guardrails** section. You can also turn it on when you [provision the resource](#provisioning-genai-resources). After you enable guardrails, resource members configure the guardrail in the Mendix Cloud GenAI Portal. For more information, see [Guardrails for Mendix Cloud GenAI Resources](/agents/mx-cloud-genai/guardrails/).
+Guardrails filter the prompts and responses of a text generation resource and consume additional GenAI Units. As a Company Admin, you decide whether a resource can use them.
+
+To turn guardrails on, [edit the resource](#editing-genai-resources) or [provision a new one](#provisioning-genai-resources). Then turn on **Enable Guardrails Usage** in the **Guardrails** section and click **Edit**, or **Provision** for a new resource. Resource members can then configure the guardrail in the Mendix Cloud GenAI Portal. For more information, see [Guardrails for Mendix Cloud GenAI Resources](/agents/mx-cloud-genai/guardrails/).
+
+To turn guardrails off, edit the resource, turn off **Enable Guardrails Usage**, and click **Edit**.
 
 {{% alert color="warning" %}}
-Disabling guardrails on a resource that has a guardrail permanently deletes the guardrail and its configuration when you save. The resource's prompts and responses are no longer filtered. Enabling guardrails again does not restore the deleted guardrail. Resource members must configure a new guardrail from the start. Check with the resource team before you disable guardrails.
+Turning off guardrails permanently deletes the guardrail and its configuration, and prompts and responses are no longer filtered. If you turn guardrails on again, resource members need to set up a new guardrail. Check with them before you turn guardrails off.
 {{% /alert %}}
 
 {{< figure src="/attachments/control-center/genai-resources/guardrails-disable-warning.png" alt="Guardrails section with the Enable Guardrails Usage switch turned off and a warning that turning guardrails off removes the guardrail and its configuration when you save" max-width="70%" >}}

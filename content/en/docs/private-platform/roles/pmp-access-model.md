@@ -87,6 +87,10 @@ Generic permissions grant basic platform access:
 
 ##### Management Permissions
 
+{{% alert color="info" %}}
+Assigning the permissions listed in this section will automatically provide the user with access to the Private Mendix Platform administrator menu.
+{{% /alert %}}
+
 Management permissions involve the capabilities available in the **Manage** section of the Admin menu, such as app management, user and group management, Marketplace administration, and activity logs:
 
 * **Apps** - Includes the following permissions:
@@ -125,6 +129,10 @@ Management permissions involve the capabilities available in the **Manage** sect
     * **Access Maia pane**
 
 ##### Settings Permissions
+
+{{% alert color="info" %}}
+Assigning the permissions listed in this section will automatically provide the user with access to the Private Mendix Platform administrator menu.
+{{% /alert %}}
 
 Settings permissions involve the capabilities available in the **Settings** section of the Admin menu, such as identity and access configuration, licensing, cluster manager configuration, and webhooks:
 
@@ -176,11 +184,11 @@ Groups organize users and deliver resource roles at scale. They typically mirror
 
 Groups form a hierarchical tree. Private Mendix Platform creates the root group automatically, and it is the foundation of everything beneath it. You can edit the root group's details to match your organization.
 
-Every group other than the root must have the following properties:
+Every group other than the root has the following properties:
 
 * **Parent Group** - The group's place in the hierarchy. There is no such thing as a group outside the tree.
-* **Group Admins** - One or more users who manage the group's membership.
 * **Description** - A clear statement of the group's purpose.
+* **Group Admins** - Optional. One or more users who manage the group's membership.
 
 The depth of the hierarchy is not limited.
 

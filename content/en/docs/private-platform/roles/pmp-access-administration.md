@@ -53,7 +53,7 @@ By clicking **More Actions** by an existing account, you can perform the followi
 
 The **Actions** tab additionally lets you log out every user currently signed in to the platform.
 
-Some of these actions depend on how the account authenticates rather than on what kind of account it is. Setting a password, for instance, applies to accounts that sign in with platform credentials and not to accounts that authenticate through your identity provider.
+Some of these actions depend on how the account authenticates rather than on what kind of account it is. Passwords are not applicable to accounts that use single sign-on (SSO).
 
 {{% alert color="info" %}}
 Assigning a Platform Role gives a user platform-wide capability to perform specific tasks. However, it does not give them access to any app, namespace, or Marketplace item. Access to resources comes from group membership or an app team invitation, as described in the following sections.

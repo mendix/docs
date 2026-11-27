@@ -38,7 +38,7 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
     1. Click **New**.
     2. Enter an identifying name.
     3. For API type, select **OpenAI**.
-    4. For **Endpoint**, enter your Snowflake account URL with the `/api/v2/cortex/v1/` suffix. For example, the URL may look like the following: `https:/<snowflake_accountname>.snowflakecomputing.com/api/v2/cortex/v1/`.
+    4. For **Endpoint**, enter your Snowflake account URL with the `/api/v2/cortex/v1/` suffix. For example, the URL may look like the following: `https:/<snowflake-accountname>.snowflakecomputing.com/api/v2/cortex/v1/`.
 
     5. Save your changes.
 
@@ -71,3 +71,24 @@ Because Snowflake conforms to the API specification of OpenAI, you can use the O
     3. Click **Test**.
 
         {{< figure src="/attachments/appstore/platform-supported-content/modules/snowflake-byok/test.png" >}}
+
+## Troubleshooting
+
+If you encounter any issues with using Snowflake BYOK with your Mendix app, use the following troubleshooting tips to help you solve them.
+
+### Errors When Calling Streaming API
+
+You receive an error like the following:
+
+* `An error occurred when calling the streaming API: com.openai.errors.BadRequestException: 400: null`
+* `An error occurred when calling the streaming API: java.lang.NullPointerException: host must not be null`
+
+#### Cause
+
+The [account identifier](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization) format is incorrect for your version of the OpenAI Connector, or you are attempting to enable streaming for the Snowflake LLM.
+
+#### Solution
+
+If you want to enable streaming for the Snowflake LLM or use OpenAI Connector version 9.5.0 or newer, replace any underscores (`_`) in the account identifier with hyphens (`-`). 
+
+If you do not want to use streaming and your OpenAI Connector version is 9.4.0 or older, disable the setting and replace any hyphens (`-`) in the account identifier with underscores (`_`). 

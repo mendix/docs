@@ -56,9 +56,13 @@ Enabling SSL establishes a secure connection to the broker. To input your SSL ce
     * Currently supported certificate types are X.509 format (*.crt*, *.cer*)
     * Currently supported key types are X.509 format (*.pem*, *.pkcs*)
   
-#### Custom Client ID (Introduced in Module Version 3.1.0+)
+#### Custom Client ID
 
-You can now configure a custom client ID for broker connections. When enabled, the connector uses this client ID consistently for connect, publish, subscribe, and unsubscribe operations. If no custom client ID is configured, behavior remains unchanged and the connector uses its default client ID behavior.
+{{% alert color="info" %}}
+Custom client IDs are available for MQTT connector versions 3.1.0 and above.
+{{% /alert %}}
+
+You can configure a custom client ID for broker connections. When enabled, the connector uses this client ID consistently for connect, publish, subscribe, and unsubscribe operations. If no custom client ID is configured, the behavior remains unchanged, and the connector uses its default client ID behavior.
 
 {{% alert color="warning" %}}
 Specify a custom client ID only when required. In clustered environments, using the same fixed client ID across multiple instances can cause broker disconnections.

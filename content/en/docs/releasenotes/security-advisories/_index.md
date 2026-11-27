@@ -20,6 +20,8 @@ Siemens publishes their common vulnerabilities and exposures (CVE) as soon as a 
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+| <a id="135278">CVE-2026-135278 | 5.4 | [Insufficient Session Expiration Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-579716.html) | See the SSA description for remediation details. |
+| <a id="124981">CVE-2026-124981| 8.7 | [Improper Token Verification Vulnerability in Mendix OIDC Provider Module](https://cert-portal.siemens.com/productcert/html/ssa-545865.html) | See the SSA description for remediation details. |
 | <a id="112137">CVE-2026-112137 | 5.4 | [Multiple Vulnerabilities in Mendix Studio Pro's MCP Server](https://cert-portal.siemens.com/productcert/html/ssa-710379.html) | See the SSA description for remediation details. |
 | <a id="112136">CVE-2026-112136 | 8.8 | [Multiple Vulnerabilities in Mendix Studio Pro's MCP Server](https://cert-portal.siemens.com/productcert/html/ssa-710379.html) | See the SSA description for remediation details. |
 | <a id="80465">CVE-2026-80465 | 8.7 | [Account Hijacking Vulnerability in Mendix SAML module](https://cert-portal.siemens.com/productcert/html/ssa-887643.html) | See the SSA description for remediation details. |

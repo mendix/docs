@@ -84,8 +84,6 @@ For information about the Capital REST API, please refer to the REST API documen
 
 |Capital Connector | Studio Pro version | Supported Capital versions
 | :--- | :--- | :--- |
-| 2512.0.0 | 10.24.8 or above* | 2512, 2408 |
-| 1.1 | 10.24.3 or above* | 2408 |
-| 1.0 | 10.24.3 or above* | 2408 |
+| 2512.0.X | 10.24.8 or above* | 2512, 2408 |
 
 <sub>* Latest Mendix 10 LTS version recommended</sub>

@@ -17,6 +17,6 @@ This table showcases the compatibility between the Teamcenter Connector and vari
 
 X stands for the latest available patch.
 
-<sub>* Latest Mendix 10 LTS version recommended. Also compatible with Mendix 11.</sub>
+<sub>* Latest Studio Pro 10 LTS version recommended. Also compatible with Studio Pro 11.</sub>
 
-<sub>** Latest Mendix 9 LTS version recommended.</sub>
+<sub>** Latest Studio Pro 9 LTS version recommended.</sub>

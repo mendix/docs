@@ -1,7 +1,7 @@
 ---
 title: "Teamcenter Connector Reference"
 url: /appstore/industry/teamcenter-connector/teamcenter-reference/
-weight: 110
+weight: 10
 description: "Lists and describes the Teamcenter Connector reference parameters."
 aliases: 
     - /appstore/modules/siemens-plm/teamcenter-reference/

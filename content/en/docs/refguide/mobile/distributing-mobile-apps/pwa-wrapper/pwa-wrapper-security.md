@@ -35,7 +35,7 @@ To avoid this download in air-gapped environments, pre-populate the Gradle wrapp
 
 ## Bundled Binaries Executed Locally
 
-In addition to the runtime downloads above, PWA Wrapper ships the following binaries inside its own extension package. These are not downloaded at build time—they are included in the extension at install time and are invoked as local subprocesses during Android and HarmonyOS build, signing, and packaging steps. They run with the same operating-system privileges as the Studio Pro process.
+In addition to the runtime downloads above, PWA Wrapper ships the following binaries inside its own extension package. These are not downloaded at build time—they are included in the extension at install time and are invoked as local subprocesses during Android, HarmonyOS, and iOS build, signing, and packaging steps. They run with the same operating-system privileges as the Studio Pro process.
 
 | Binary | Purpose | Platform |
 | --- | --- | --- |
@@ -44,6 +44,9 @@ In addition to the runtime downloads above, PWA Wrapper ships the following bina
 | `aapt2` / `aapt2.exe` | Android Asset Packaging Tool | Android |
 | `apksigner.jar` | APK signing | Android |
 | `android.jar` | Android SDK stub library used during compilation | Android |
+| `adb.exe`, `AdbWinApi.dll`, `AdbWinUsbApi.dll` | Android Debug Bridge, used to install the app on connected devices and emulators | Android (Windows hosts) |
+| `zsign.exe` | iOS code signing when **Build without a Mac** is selected | iOS (Windows hosts) |
+| `zsign` | iOS code signing when **Build without a Mac** is selected | iOS (macOS hosts) |
 
 These binaries are third-party open-source tools redistributed with the extension. They are not fetched from the network at runtime.
 
@@ -53,7 +56,7 @@ When the builder opens, PWA Wrapper inspects the local machine to auto-detect ex
 
 ### JDK Discovery
 
-PWA Wrapper needs a Java runtime to execute the build tools listed above. It searches for an installed JDK in the following order and uses the first usable result it finds.
+PWA Wrapper needs a Java runtime to execute the Java-based build tools listed above. It searches for an installed JDK in the following order and uses the first usable result it finds.
 
 ### macOS Method
 
@@ -85,7 +88,8 @@ Consult the following summary for information at a glance:
 | Category | What happens | When | Data leaves machine? |
 | --- | --- | --- | --- |
 | Gradle distribution download | Downloads `gradle-8.9-bin.zip` from `services.gradle.org` | First Android build only | No (download only; no data sent) |
-| Bundled binary execution | Runs `apktool.jar`, `bundletool.jar`, `aapt2`, `apksigner.jar`, `android.jar` locally | Every applicable build | No |
+| Bundled binary execution | Runs `apktool.jar`, `bundletool.jar`, `aapt2`, `apksigner.jar`, `android.jar`, and `adb.exe` (Windows) locally | Every applicable build | No |
+| iOS signing without a Mac | Runs the bundled `zsign` or `zsign.exe` locally; may run a locally installed `openssl` to re-encode a temporary copy of the `.p12` file | Every iOS build with **Build without a Mac** selected | No |
 | JDK filesystem scan | Reads `JAVA_HOME`, `/Library/Java/JavaVirtualMachines/`, version manager directories, or Windows Studio Pro settings | When the builder opens | No |
 | Studio Pro filesystem scan | Scans `/Applications/` and `~/Applications/` for Studio Pro app bundles (macOS only) | When the builder opens | No |
 
